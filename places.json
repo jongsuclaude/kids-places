@@ -1,0 +1,413 @@
+{
+  "_schema": "category=숙소|대형 놀이터|물놀이터|액티비티, region=수도권|강원|충청|전라|경상|제주, season=봄|여름|가을|겨울|올시즌(액티비티/물놀이용, 없으면 무시), indoor/free=true/false",
+  "places": [
+    {
+      "category": "숙소",
+      "region": "수도권",
+      "name": "곤지암리조트",
+      "area": "경기 광주",
+      "desc": "스키·워터(스파라쿠아)·숲 산책로까지 한 곳에서. 키즈 프로그램 운영",
+      "indoor": true,
+      "free": false,
+      "age": "전연령",
+      "amenities": [
+        "주차",
+        "유아차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "숙소",
+      "region": "강원",
+      "name": "소노벨 비발디파크",
+      "area": "강원 홍천",
+      "desc": "오션월드(워터파크)·스키장 인접. 키즈 객실·놀이방",
+      "indoor": true,
+      "free": false,
+      "age": "전연령",
+      "amenities": [
+        "주차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "숙소",
+      "region": "제주",
+      "name": "제주신화월드",
+      "area": "제주 서귀포",
+      "desc": "신화워터파크·테마파크·키즈타운 결합 리조트",
+      "indoor": true,
+      "free": false,
+      "age": "전연령",
+      "amenities": [
+        "주차",
+        "유아차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "수도권",
+      "name": "서울어린이대공원",
+      "area": "서울 광진",
+      "desc": "무료 입장. 놀이동산·동물원·놀이터·물놀이터까지 종합",
+      "indoor": false,
+      "free": true,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "유아차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "충청",
+      "name": "세종 중앙공원",
+      "area": "세종",
+      "desc": "대형 잔디광장·모험놀이터. 호수공원과 연결돼 종일 놀기 좋음",
+      "indoor": false,
+      "free": true,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "유아차"
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "경상",
+      "name": "부산시민공원",
+      "area": "부산 부산진",
+      "desc": "도심 대형 공원. 어린이 놀이시설·물놀이 바닥분수",
+      "indoor": false,
+      "free": true,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "유아차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "수도권",
+      "name": "뚝섬한강공원 물놀이장",
+      "area": "서울 광진",
+      "desc": "여름 한정 무료 물놀이장. 얕은 수심·그늘",
+      "season": [
+        "여름"
+      ],
+      "indoor": false,
+      "free": true,
+      "age": "유아·초등",
+      "amenities": [
+        "주차"
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "충청",
+      "name": "세종호수공원 물놀이장",
+      "area": "세종",
+      "desc": "여름철 운영 바닥분수·물놀이 구역",
+      "season": [
+        "여름"
+      ],
+      "indoor": false,
+      "free": true,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "유아차"
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "제주",
+      "name": "함덕 서우봉해변",
+      "area": "제주 조천",
+      "desc": "수심 얕고 물이 맑아 아이 물놀이로 인기인 해변",
+      "season": [
+        "여름"
+      ],
+      "indoor": false,
+      "free": true,
+      "age": "전연령",
+      "amenities": [
+        "주차"
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "에버랜드",
+      "area": "경기 용인",
+      "desc": "테마파크·동물원(사파리)·시즌 축제. 사계절 운영",
+      "season": [
+        "올시즌"
+      ],
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "amenities": [
+        "주차",
+        "유아차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "캐리비안베이",
+      "area": "경기 용인",
+      "desc": "대형 워터파크. 유아 풀 별도",
+      "season": [
+        "여름"
+      ],
+      "indoor": false,
+      "free": false,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "국립과천과학관",
+      "area": "경기 과천",
+      "desc": "체험형 과학관·어린이탐구체험관. 실내라 날씨·미세먼지 무관",
+      "season": [
+        "올시즌"
+      ],
+      "indoor": true,
+      "free": false,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "유아차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "안성팜랜드",
+      "area": "경기 안성",
+      "desc": "동물 먹이주기·승마·계절 꽃밭. 봄·가을 추천",
+      "season": [
+        "봄",
+        "가을"
+      ],
+      "indoor": false,
+      "free": false,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "유아차"
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "강원",
+      "name": "비발디파크 스키장",
+      "area": "강원 홍천",
+      "desc": "키즈 슬로프·눈썰매. 겨울 시즌",
+      "season": [
+        "겨울"
+      ],
+      "indoor": false,
+      "free": false,
+      "age": "유아·초등",
+      "amenities": [
+        "주차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "제주",
+      "name": "아쿠아플라넷 제주",
+      "area": "제주 서귀포",
+      "desc": "국내 최대급 아쿠아리움. 실내, 사계절",
+      "season": [
+        "올시즌"
+      ],
+      "indoor": true,
+      "free": false,
+      "age": "전연령",
+      "amenities": [
+        "주차",
+        "유아차",
+        "수유실"
+      ]
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "서울어린이대공원 꿈틀꿈틀 놀이터",
+      "area": "서울 광진구 (서울어린이대공원 내)",
+      "desc": "국내 첫 무장애 통합 놀이터로, 휠체어를 탄 채 이용 가능한 회전놀이대·등받이 안전벨트 그네·바구니 그네를 갖춰 장애·비장애 아이가 함께 논다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등(어린이)",
+      "source": "https://mediahub.seoul.go.kr/archives/952721"
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "삼각어린이공원 창의놀이터",
+      "area": "서울 구로구",
+      "desc": "서울 구로구 새말로18길에 있는 '신호등과 친해지기' 교통안전 테마 창의놀이터로, 레이싱카 모양 미끄럼틀과 도로·과속방지턱·신호등·건널목·작은 육교를 갖춰 교통 놀이를 즐길 수 있다(면적 2,637㎡, 무료·야외).",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등(어린이)",
+      "source": "https://opengov.seoul.go.kr/mediahub/22730844"
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "시흥 갯골생태공원 놀이터",
+      "area": "경기 시흥시 장곡동",
+      "desc": "시흥갯골생태공원 내 배 모양 놀이기구와 농게·짱뚱어 조형물의 모래놀이터로, 22m 흔들전망대와 여름철 바닷물 어린이 물놀이장(해수체험장)을 함께 즐길 수 있는 무료 야외 놀이공간이다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등",
+      "source": "https://www.i-rang.net/place/siheung-gaetgol"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "사정공원 숲속 자연놀이터",
+      "area": "대전 중구 사정동 (보문산 자락)",
+      "desc": "대전 중구 보문산 자락 사정공원 내 숲속에 비행기 모양 모래놀이터·정글짐·밧줄타기·짚라인 등 자연친화형 모험 놀이기구가 모여 있어 도심에서 숲 체험을 겸한 놀이를 즐길 수 있는 무료 야외 놀이터다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등(영유아 모래놀이~큰 어린이 모험놀이)",
+      "source": "https://access.visitkorea.or.kr/ms/detail.do?cotId=90696e3f-8217-4a2a-b863-c9439852605f"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "한밭수목원 동원 어린이놀이터 (무장애통합놀이시설)",
+      "area": "대전 서구 (둔산동, 둔산대로 169 한밭수목원 동원)",
+      "desc": "대전 한밭수목원 동원 어린이놀이터에 전국 지자체 최초로 휠체어·유아차가 탑승 가능한 통합형 휠체어 그네(플라잉카)와 6인용 다인용 그네를 도입한 무장애 통합놀이터로, 장애·비장애 아동이 함께 탈 수 있다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~어린이 (전 연령, 장애·비장애 통합)",
+      "source": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=6825&ntatcSeq=1481907484"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "땀범벅이 될 때까지 노는 놀이터 (보람동)",
+      "area": "세종특별자치시 보람동",
+      "desc": "세종 보람동 금강 남측 3-2생활권 수변에 위치한 약 7,400㎡(축구장 1개 규모) 야외 대형 어린이놀이터로, 4m 와이어로프놀이원·짚라인·회전놀이대·모래놀이원을 BF(무장애) 인증 구조로 갖춰 2020년 7월 개장했다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등 어린이",
+      "source": "https://news.nate.com/view/20200726n13544"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "고운동 모두의 놀이터 '놀자! UFO!'",
+      "area": "세종특별자치시 고운동",
+      "desc": "세종 고운뜰공원(부지 2,000㎡)에 불시착한 UFO를 형상화한 세종시 모두의 놀이터 1호로, 디자인 특허 UFO 조합놀이대·그물타워·영유아 모래놀이·물놀이·휴게 등 5개 구역으로 구성된 야외 테마 놀이터다.",
+      "indoor": false,
+      "free": true,
+      "age": "영유아~전 연령",
+      "source": "https://www.sejong.go.kr/bbs/R0076/view.do?nttId=B000000052544Bx5aI4i"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "문암생태공원 온 가족 힐링놀이터",
+      "area": "충북 청주시 흥덕구",
+      "desc": "청주시 문암생태공원 내 5,000㎡ 규모로 2024년 10월 준공된 야외 무료 통합 놀이터로, 유아 놀이터·무장애 놀이터(5~12세, 누워 타는 시소·회전놀이대)·어드벤처 놀이터(8세 이상, 짚라인·트램펄린) 3개 존으로 구성된 연령별·무장애 대형 놀이터다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~12세 이상 (전 연령)",
+      "source": "https://www.nocutnews.co.kr/news/6233659"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "탄금공원 나무숲놀이터",
+      "area": "충북 충주시",
+      "desc": "충주 탄금공원 내 30m 거목을 살린 자연친화형 놀이터로, 2026년 3월 7일 새 상징물 '무지개 미끄럼틀'과 영유아 동반 네트어드벤처 2개소를 추가해 재개장했으며 오전 10시~오후 5시 무료 운영한다.",
+      "indoor": false,
+      "free": true,
+      "age": "영유아~어린이 (신장 기준 안전수칙 적용)",
+      "source": "https://www.newsis.com/view/NISX20260306_0003537360"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "성성호수공원 숲놀이터",
+      "area": "충남 천안시 서북구",
+      "desc": "2022년 준공한 천안 성성호수공원 내 야외 숲놀이터로, 모래 바닥 위에 아이들이 줄 서서 탈 만큼 인기인 짚라인을 비롯해 미끄럼틀·그네·조합놀이대가 모여 있어 무료로 모험과 스릴을 즐길 수 있다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등",
+      "source": "https://www.welfarehello.com/community/hometownNews/25590ff6-8baa-4673-930a-65df212d396d"
+    },
+    {
+      "category": "놀이터",
+      "region": "충청",
+      "name": "남당항 네트어드벤처",
+      "area": "충남 홍성군 서부면 남당항(남당항 해양분수공원 내)",
+      "desc": "국내 최초 해양형 네트(그물)어드벤처로, 색색 그물을 층층이 쌓은 대형 구조물에 미로길·수직 터널·슬라이드·볼파크를 갖춰 서해 바다를 보며 그물 위를 뛰노는 야외 유료 놀이시설이다.",
+      "indoor": false,
+      "free": false,
+      "age": "유아~초등(전 연령 가족 단위, 어린이 중심)",
+      "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=48f8af92-502a-4b60-9d76-28e8b55dc51c"
+    },
+    {
+      "category": "놀이터",
+      "region": "강원",
+      "name": "꿈자람어린이공원",
+      "area": "강원 춘천",
+      "desc": "옛 미군 기지 터에 조성된 실내외 복합 어드벤처 공원. 에어바운스·트램펄린·실내 암벽과 스카이워크·출렁다리·외줄타기를 연령별 구역으로 운영.",
+      "indoor": false,
+      "free": false,
+      "age": "유아·초등",
+      "source": "https://www.chuncheon.go.kr/tour/destination/all-tour/detail/?tourId=190"
+    },
+    {
+      "category": "놀이터",
+      "region": "강원",
+      "name": "어린이 상상놀이터 놀비숲",
+      "area": "강원 원주",
+      "desc": "혁신도시 미리내공원 인근 공공 대형 실내 놀이터. 영유아 전용 공간과 36개월~초등 2학년 놀이공간을 분리 운영.",
+      "indoor": true,
+      "free": false,
+      "age": "영유아·초등저학년",
+      "source": "https://www.wjsangsang.or.kr/"
+    },
+    {
+      "category": "놀이터",
+      "region": "강원",
+      "name": "꿈틀어울림센터 꿈틀놀이터",
+      "area": "강원 횡성",
+      "desc": "횡성읍 공공 복합시설 내 실내 어린이 놀이터(연면적 1,288㎡). 다양한 놀이기구와 수유실 구비, 만 9세 이하 대상.",
+      "indoor": true,
+      "free": false,
+      "age": "유아·초등저학년",
+      "source": "https://www.welfarehello.com/community/hometownNews/3149df18-f00e-4ed3-9d2e-f86d93b6413e"
+    },
+    {
+      "category": "놀이터",
+      "region": "강원",
+      "name": "365세이프타운 키즈랜드",
+      "area": "강원 태백",
+      "desc": "안전체험 테마파크 365세이프타운 내 우주선 테마 어린이 놀이시설. 트램펄린·볼풀·그물놀이 등 18종, 미취학 아동 위주.",
+      "indoor": true,
+      "free": false,
+      "age": "유아",
+      "source": "https://www.taebaek.go.kr/365safetown/index.do"
+    }
+  ]
+}

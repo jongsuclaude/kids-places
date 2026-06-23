@@ -1,0 +1,10 @@
+# 비공개 키 — 절대 커밋 금지
+keys.json
+
+# 생성물
+public/
+
+# 파이썬/맥 부산물
+__pycache__/
+*.pyc
+.DS_Store

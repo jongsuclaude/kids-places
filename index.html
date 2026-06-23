@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아이랑 갈 만한 곳</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 920px;
+         margin: 28px auto; padding: 0 16px; color: #1d1d1f; background: #fbfbfd; }
+  h1 { font-size: 24px; margin: 0 0 2px; }
+  .meta { color: #6e6e73; font-size: 13px; margin-bottom: 18px; }
+  .muted { color: #86868b; font-weight: 400; font-size: 15px; }
+  .filters { position: sticky; top: 0; background: #fbfbfd; padding: 12px 0;
+             border-bottom: 1px solid #eee; margin-bottom: 8px; z-index: 5; }
+  .frow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0; }
+  .flabel { font-size: 12px; color: #86868b; width: 52px; flex: none; }
+  .chip { font-size: 13px; padding: 4px 11px; border-radius: 999px; border: 1px solid #ddd;
+          background: #fff; cursor: pointer; user-select: none; }
+  .chip.active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
+  section.cat { margin: 26px 0; }
+  h2 { font-size: 19px; margin: 0 0 6px; }
+  h3 { font-size: 14px; color: #6e6e73; margin: 14px 0 8px; font-weight: 600; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .card { background: #fff; border-radius: 14px; padding: 14px 15px;
+          box-shadow: 0 1px 3px rgba(0,0,0,.06); display: flex; flex-direction: column; }
+  .card-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  .cname { font-weight: 700; font-size: 15px; }
+  .carea { font-size: 12px; color: #86868b; flex: none; }
+  .cdesc { font-size: 13px; color: #3a3a3c; margin: 7px 0 10px; line-height: 1.5; flex: 1; }
+  .ctags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+  .tag { font-size: 11px; padding: 2px 8px; border-radius: 999px; background: #f0f0f2; color: #515154; }
+  .tag.place { background: #e6f0ff; color: #0040a0; }
+  .tag.cost { background: #e3f6e9; color: #1a7f37; }
+  .tag.season { background: #fff1e0; color: #9a5b00; }
+  .clink { font-size: 13px; color: #0066cc; text-decoration: none; }
+  .empty { color: #86868b; font-size: 14px; padding: 24px 0; display: none; }
+  .note { color: #86868b; font-size: 12px; margin-top: 24px; line-height: 1.6; }
+</style></head><body>
+<h1>👨‍👩‍👧 아이랑 갈 만한 곳</h1>
+<div class="meta">전국 권역별 큐레이션 가이드 · 총 <b>30</b>곳</div>
+
+<div class="filters">
+  <div class="frow"><span class="flabel">권역</span>
+    <span class="chip active" data-g="region" data-v="all">전체</span>
+    <span class="chip" data-g="region" data-v="수도권">수도권</span>
+    <span class="chip" data-g="region" data-v="강원">강원</span>
+    <span class="chip" data-g="region" data-v="충청">충청</span>
+    <span class="chip" data-g="region" data-v="전라">전라</span>
+    <span class="chip" data-g="region" data-v="경상">경상</span>
+    <span class="chip" data-g="region" data-v="제주">제주</span>
+  </div>
+  <div class="frow"><span class="flabel">실내외</span>
+    <span class="chip active" data-g="place" data-v="all">전체</span>
+    <span class="chip" data-g="place" data-v="y">🏠 실내</span>
+    <span class="chip" data-g="place" data-v="n">🌳 실외</span>
+  </div>
+  <div class="frow"><span class="flabel">비용</span>
+    <span class="chip active" data-g="cost" data-v="all">전체</span>
+    <span class="chip" data-g="cost" data-v="y">무료</span>
+    <span class="chip" data-g="cost" data-v="n">유료</span>
+  </div>
+  <div class="frow"><span class="flabel">계절</span>
+    <span class="chip active" data-g="season" data-v="all">전체</span>
+    <span class="chip" data-g="season" data-v="봄">봄</span>
+    <span class="chip" data-g="season" data-v="여름">여름</span>
+    <span class="chip" data-g="season" data-v="가을">가을</span>
+    <span class="chip" data-g="season" data-v="겨울">겨울</span>
+  </div>
+</div>
+
+<section class="cat" data-cat="숙소"><h2>🛏️ 숙소 <span class="muted">(키즈 프렌들리)</span></h2><div class="region-group" data-region="수도권"><h3>수도권</h3><div class="cards"><div class="card" data-region="수도권" data-indoor="y" data-free="n" data-season=""><div class="card-h"><span class="cname">곤지암리조트</span><span class="carea">경기 광주</span></div><div class="cdesc">스키·워터(스파라쿠아)·숲 산책로까지 한 곳에서. 키즈 프로그램 운영</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag age">👶 전연령</span><span class="tag amen">주차</span><span class="tag amen">유아차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EA%B3%A4%EC%A7%80%EC%95%94%EB%A6%AC%EC%A1%B0%ED%8A%B8" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="강원"><h3>강원</h3><div class="cards"><div class="card" data-region="강원" data-indoor="y" data-free="n" data-season=""><div class="card-h"><span class="cname">소노벨 비발디파크</span><span class="carea">강원 홍천</span></div><div class="cdesc">오션월드(워터파크)·스키장 인접. 키즈 객실·놀이방</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag age">👶 전연령</span><span class="tag amen">주차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%86%8C%EB%85%B8%EB%B2%A8%20%EB%B9%84%EB%B0%9C%EB%94%94%ED%8C%8C%ED%81%AC" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="제주"><h3>제주</h3><div class="cards"><div class="card" data-region="제주" data-indoor="y" data-free="n" data-season=""><div class="card-h"><span class="cname">제주신화월드</span><span class="carea">제주 서귀포</span></div><div class="cdesc">신화워터파크·테마파크·키즈타운 결합 리조트</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag age">👶 전연령</span><span class="tag amen">주차</span><span class="tag amen">유아차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%A0%9C%EC%A3%BC%EC%8B%A0%ED%99%94%EC%9B%94%EB%93%9C" target="_blank">지도에서 보기 ↗</a></div></div></div></section>
+<section class="cat" data-cat="놀이터"><h2>🎠 놀이터 <span class="muted">(순수 놀이터)</span></h2><div class="region-group" data-region="수도권"><h3>수도권</h3><div class="cards"><div class="card" data-region="수도권" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">서울어린이대공원 꿈틀꿈틀 놀이터</span><span class="carea">서울 광진구 (서울어린이대공원 내)</span></div><div class="cdesc">국내 첫 무장애 통합 놀이터로, 휠체어를 탄 채 이용 가능한 회전놀이대·등받이 안전벨트 그네·바구니 그네를 갖춰 장애·비장애 아이가 함께 논다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~초등(어린이)</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8C%80%EA%B3%B5%EC%9B%90%20%EA%BF%88%ED%8B%80%EA%BF%88%ED%8B%80%20%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="수도권" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">삼각어린이공원 창의놀이터</span><span class="carea">서울 구로구</span></div><div class="cdesc">서울 구로구 새말로18길에 있는 &#x27;신호등과 친해지기&#x27; 교통안전 테마 창의놀이터로, 레이싱카 모양 미끄럼틀과 도로·과속방지턱·신호등·건널목·작은 육교를 갖춰 교통 놀이를 즐길 수 있다(면적 2,637㎡, 무료·야외).</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~초등(어린이)</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%82%BC%EA%B0%81%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B3%B5%EC%9B%90%20%EC%B0%BD%EC%9D%98%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="수도권" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">시흥 갯골생태공원 놀이터</span><span class="carea">경기 시흥시 장곡동</span></div><div class="cdesc">시흥갯골생태공원 내 배 모양 놀이기구와 농게·짱뚱어 조형물의 모래놀이터로, 22m 흔들전망대와 여름철 바닷물 어린이 물놀이장(해수체험장)을 함께 즐길 수 있는 무료 야외 놀이공간이다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~초등</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%8B%9C%ED%9D%A5%20%EA%B0%AF%EA%B3%A8%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90%20%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="강원"><h3>강원</h3><div class="cards"><div class="card" data-region="강원" data-indoor="n" data-free="n" data-season=""><div class="card-h"><span class="cname">꿈자람어린이공원</span><span class="carea">강원 춘천</span></div><div class="cdesc">옛 미군 기지 터에 조성된 실내외 복합 어드벤처 공원. 에어바운스·트램펄린·실내 암벽과 스카이워크·출렁다리·외줄타기를 연령별 구역으로 운영.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">유료</span><span class="tag age">👶 유아·초등</span></div><a class="clink" href="https://map.naver.com/p/search/%EA%BF%88%EC%9E%90%EB%9E%8C%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B3%B5%EC%9B%90" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="강원" data-indoor="y" data-free="n" data-season=""><div class="card-h"><span class="cname">어린이 상상놀이터 놀비숲</span><span class="carea">강원 원주</span></div><div class="cdesc">혁신도시 미리내공원 인근 공공 대형 실내 놀이터. 영유아 전용 공간과 36개월~초등 2학년 놀이공간을 분리 운영.</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag age">👶 영유아·초등저학년</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%96%B4%EB%A6%B0%EC%9D%B4%20%EC%83%81%EC%83%81%EB%86%80%EC%9D%B4%ED%84%B0%20%EB%86%80%EB%B9%84%EC%88%B2" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="강원" data-indoor="y" data-free="n" data-season=""><div class="card-h"><span class="cname">꿈틀어울림센터 꿈틀놀이터</span><span class="carea">강원 횡성</span></div><div class="cdesc">횡성읍 공공 복합시설 내 실내 어린이 놀이터(연면적 1,288㎡). 다양한 놀이기구와 수유실 구비, 만 9세 이하 대상.</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag age">👶 유아·초등저학년</span></div><a class="clink" href="https://map.naver.com/p/search/%EA%BF%88%ED%8B%80%EC%96%B4%EC%9A%B8%EB%A6%BC%EC%84%BC%ED%84%B0%20%EA%BF%88%ED%8B%80%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="강원" data-indoor="y" data-free="n" data-season=""><div class="card-h"><span class="cname">365세이프타운 키즈랜드</span><span class="carea">강원 태백</span></div><div class="cdesc">안전체험 테마파크 365세이프타운 내 우주선 테마 어린이 놀이시설. 트램펄린·볼풀·그물놀이 등 18종, 미취학 아동 위주.</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag age">👶 유아</span></div><a class="clink" href="https://map.naver.com/p/search/365%EC%84%B8%EC%9D%B4%ED%94%84%ED%83%80%EC%9A%B4%20%ED%82%A4%EC%A6%88%EB%9E%9C%EB%93%9C" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="충청"><h3>충청</h3><div class="cards"><div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">사정공원 숲속 자연놀이터</span><span class="carea">대전 중구 사정동 (보문산 자락)</span></div><div class="cdesc">대전 중구 보문산 자락 사정공원 내 숲속에 비행기 모양 모래놀이터·정글짐·밧줄타기·짚라인 등 자연친화형 모험 놀이기구가 모여 있어 도심에서 숲 체험을 겸한 놀이를 즐길 수 있는 무료 야외 놀이터다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~초등(영유아 모래놀이~큰 어린이 모험놀이)</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%82%AC%EC%A0%95%EA%B3%B5%EC%9B%90%20%EC%88%B2%EC%86%8D%20%EC%9E%90%EC%97%B0%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">한밭수목원 동원 어린이놀이터 (무장애통합놀이시설)</span><span class="carea">대전 서구 (둔산동, 둔산대로 169 한밭수목원 동원)</span></div><div class="cdesc">대전 한밭수목원 동원 어린이놀이터에 전국 지자체 최초로 휠체어·유아차가 탑승 가능한 통합형 휠체어 그네(플라잉카)와 6인용 다인용 그네를 도입한 무장애 통합놀이터로, 장애·비장애 아동이 함께 탈 수 있다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~어린이 (전 연령, 장애·비장애 통합)</span></div><a class="clink" href="https://map.naver.com/p/search/%ED%95%9C%EB%B0%AD%EC%88%98%EB%AA%A9%EC%9B%90%20%EB%8F%99%EC%9B%90%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%86%80%EC%9D%B4%ED%84%B0%20%28%EB%AC%B4%EC%9E%A5%EC%95%A0%ED%86%B5%ED%95%A9%EB%86%80%EC%9D%B4%EC%8B%9C%EC%84%A4%29" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">땀범벅이 될 때까지 노는 놀이터 (보람동)</span><span class="carea">세종특별자치시 보람동</span></div><div class="cdesc">세종 보람동 금강 남측 3-2생활권 수변에 위치한 약 7,400㎡(축구장 1개 규모) 야외 대형 어린이놀이터로, 4m 와이어로프놀이원·짚라인·회전놀이대·모래놀이원을 BF(무장애) 인증 구조로 갖춰 2020년 7월 개장했다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~초등 어린이</span></div><a class="clink" href="https://map.naver.com/p/search/%EB%95%80%EB%B2%94%EB%B2%85%EC%9D%B4%20%EB%90%A0%20%EB%95%8C%EA%B9%8C%EC%A7%80%20%EB%85%B8%EB%8A%94%20%EB%86%80%EC%9D%B4%ED%84%B0%20%28%EB%B3%B4%EB%9E%8C%EB%8F%99%29" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">고운동 모두의 놀이터 &#x27;놀자! UFO!&#x27;</span><span class="carea">세종특별자치시 고운동</span></div><div class="cdesc">세종 고운뜰공원(부지 2,000㎡)에 불시착한 UFO를 형상화한 세종시 모두의 놀이터 1호로, 디자인 특허 UFO 조합놀이대·그물타워·영유아 모래놀이·물놀이·휴게 등 5개 구역으로 구성된 야외 테마 놀이터다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 영유아~전 연령</span></div><a class="clink" href="https://map.naver.com/p/search/%EA%B3%A0%EC%9A%B4%EB%8F%99%20%EB%AA%A8%EB%91%90%EC%9D%98%20%EB%86%80%EC%9D%B4%ED%84%B0%20%27%EB%86%80%EC%9E%90%21%20UFO%21%27" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">문암생태공원 온 가족 힐링놀이터</span><span class="carea">충북 청주시 흥덕구</span></div><div class="cdesc">청주시 문암생태공원 내 5,000㎡ 규모로 2024년 10월 준공된 야외 무료 통합 놀이터로, 유아 놀이터·무장애 놀이터(5~12세, 누워 타는 시소·회전놀이대)·어드벤처 놀이터(8세 이상, 짚라인·트램펄린) 3개 존으로 구성된 연령별·무장애 대형 놀이터다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~12세 이상 (전 연령)</span></div><a class="clink" href="https://map.naver.com/p/search/%EB%AC%B8%EC%95%94%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90%20%EC%98%A8%20%EA%B0%80%EC%A1%B1%20%ED%9E%90%EB%A7%81%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">탄금공원 나무숲놀이터</span><span class="carea">충북 충주시</span></div><div class="cdesc">충주 탄금공원 내 30m 거목을 살린 자연친화형 놀이터로, 2026년 3월 7일 새 상징물 &#x27;무지개 미끄럼틀&#x27;과 영유아 동반 네트어드벤처 2개소를 추가해 재개장했으며 오전 10시~오후 5시 무료 운영한다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 영유아~어린이 (신장 기준 안전수칙 적용)</span></div><a class="clink" href="https://map.naver.com/p/search/%ED%83%84%EA%B8%88%EA%B3%B5%EC%9B%90%20%EB%82%98%EB%AC%B4%EC%88%B2%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">성성호수공원 숲놀이터</span><span class="carea">충남 천안시 서북구</span></div><div class="cdesc">2022년 준공한 천안 성성호수공원 내 야외 숲놀이터로, 모래 바닥 위에 아이들이 줄 서서 탈 만큼 인기인 짚라인을 비롯해 미끄럼틀·그네·조합놀이대가 모여 있어 무료로 모험과 스릴을 즐길 수 있다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아~초등</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%84%B1%EC%84%B1%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%EC%88%B2%EB%86%80%EC%9D%B4%ED%84%B0" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="충청" data-indoor="n" data-free="n" data-season=""><div class="card-h"><span class="cname">남당항 네트어드벤처</span><span class="carea">충남 홍성군 서부면 남당항(남당항 해양분수공원 내)</span></div><div class="cdesc">국내 최초 해양형 네트(그물)어드벤처로, 색색 그물을 층층이 쌓은 대형 구조물에 미로길·수직 터널·슬라이드·볼파크를 갖춰 서해 바다를 보며 그물 위를 뛰노는 야외 유료 놀이시설이다.</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">유료</span><span class="tag age">👶 유아~초등(전 연령 가족 단위, 어린이 중심)</span></div><a class="clink" href="https://map.naver.com/p/search/%EB%82%A8%EB%8B%B9%ED%95%AD%20%EB%84%A4%ED%8A%B8%EC%96%B4%EB%93%9C%EB%B2%A4%EC%B2%98" target="_blank">지도에서 보기 ↗</a></div></div></div></section>
+<section class="cat" data-cat="공원"><h2>🌳 공원</h2><div class="region-group" data-region="수도권"><h3>수도권</h3><div class="cards"><div class="card" data-region="수도권" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">서울어린이대공원</span><span class="carea">서울 광진</span></div><div class="cdesc">무료 입장. 놀이동산·동물원·놀이터·물놀이터까지 종합</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">유아차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8C%80%EA%B3%B5%EC%9B%90" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="충청"><h3>충청</h3><div class="cards"><div class="card" data-region="충청" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">세종 중앙공원</span><span class="carea">세종</span></div><div class="cdesc">대형 잔디광장·모험놀이터. 호수공원과 연결돼 종일 놀기 좋음</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">유아차</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%84%B8%EC%A2%85%20%EC%A4%91%EC%95%99%EA%B3%B5%EC%9B%90" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="경상"><h3>경상</h3><div class="cards"><div class="card" data-region="경상" data-indoor="n" data-free="y" data-season=""><div class="card-h"><span class="cname">부산시민공원</span><span class="carea">부산 부산진</span></div><div class="cdesc">도심 대형 공원. 어린이 놀이시설·물놀이 바닥분수</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">유아차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EB%B6%80%EC%82%B0%EC%8B%9C%EB%AF%BC%EA%B3%B5%EC%9B%90" target="_blank">지도에서 보기 ↗</a></div></div></div></section>
+<section class="cat" data-cat="물놀이터"><h2>💦 물놀이터 <span class="muted">(여름 위주)</span></h2><div class="region-group" data-region="수도권"><h3>수도권</h3><div class="cards"><div class="card" data-region="수도권" data-indoor="n" data-free="y" data-season="여름"><div class="card-h"><span class="cname">뚝섬한강공원 물놀이장</span><span class="carea">서울 광진</span></div><div class="cdesc">여름 한정 무료 물놀이장. 얕은 수심·그늘</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag season">여름</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span></div><a class="clink" href="https://map.naver.com/p/search/%EB%9A%9D%EC%84%AC%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90%20%EB%AC%BC%EB%86%80%EC%9D%B4%EC%9E%A5" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="충청"><h3>충청</h3><div class="cards"><div class="card" data-region="충청" data-indoor="n" data-free="y" data-season="여름"><div class="card-h"><span class="cname">세종호수공원 물놀이장</span><span class="carea">세종</span></div><div class="cdesc">여름철 운영 바닥분수·물놀이 구역</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag season">여름</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">유아차</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%84%B8%EC%A2%85%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%EB%AC%BC%EB%86%80%EC%9D%B4%EC%9E%A5" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="제주"><h3>제주</h3><div class="cards"><div class="card" data-region="제주" data-indoor="n" data-free="y" data-season="여름"><div class="card-h"><span class="cname">함덕 서우봉해변</span><span class="carea">제주 조천</span></div><div class="cdesc">수심 얕고 물이 맑아 아이 물놀이로 인기인 해변</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">무료</span><span class="tag season">여름</span><span class="tag age">👶 전연령</span><span class="tag amen">주차</span></div><a class="clink" href="https://map.naver.com/p/search/%ED%95%A8%EB%8D%95%20%EC%84%9C%EC%9A%B0%EB%B4%89%ED%95%B4%EB%B3%80" target="_blank">지도에서 보기 ↗</a></div></div></div></section>
+<section class="cat" data-cat="액티비티"><h2>🎟️ 액티비티</h2><div class="region-group" data-region="수도권"><h3>수도권</h3><div class="cards"><div class="card" data-region="수도권" data-indoor="n" data-free="n" data-season="올시즌"><div class="card-h"><span class="cname">에버랜드</span><span class="carea">경기 용인</span></div><div class="cdesc">테마파크·동물원(사파리)·시즌 축제. 사계절 운영</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">유료</span><span class="tag season">사계절</span><span class="tag age">👶 전연령</span><span class="tag amen">주차</span><span class="tag amen">유아차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%97%90%EB%B2%84%EB%9E%9C%EB%93%9C" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="수도권" data-indoor="n" data-free="n" data-season="여름"><div class="card-h"><span class="cname">캐리비안베이</span><span class="carea">경기 용인</span></div><div class="cdesc">대형 워터파크. 유아 풀 별도</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">유료</span><span class="tag season">여름</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%BA%90%EB%A6%AC%EB%B9%84%EC%95%88%EB%B2%A0%EC%9D%B4" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="수도권" data-indoor="y" data-free="n" data-season="올시즌"><div class="card-h"><span class="cname">국립과천과학관</span><span class="carea">경기 과천</span></div><div class="cdesc">체험형 과학관·어린이탐구체험관. 실내라 날씨·미세먼지 무관</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag season">사계절</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">유아차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%EA%B3%BC%EC%B2%9C%EA%B3%BC%ED%95%99%EA%B4%80" target="_blank">지도에서 보기 ↗</a></div>
+<div class="card" data-region="수도권" data-indoor="n" data-free="n" data-season="봄,가을"><div class="card-h"><span class="cname">안성팜랜드</span><span class="carea">경기 안성</span></div><div class="cdesc">동물 먹이주기·승마·계절 꽃밭. 봄·가을 추천</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">유료</span><span class="tag season">봄</span><span class="tag season">가을</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">유아차</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%95%88%EC%84%B1%ED%8C%9C%EB%9E%9C%EB%93%9C" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="강원"><h3>강원</h3><div class="cards"><div class="card" data-region="강원" data-indoor="n" data-free="n" data-season="겨울"><div class="card-h"><span class="cname">비발디파크 스키장</span><span class="carea">강원 홍천</span></div><div class="cdesc">키즈 슬로프·눈썰매. 겨울 시즌</div><div class="ctags"><span class="tag place">🌳 실외</span><span class="tag cost">유료</span><span class="tag season">겨울</span><span class="tag age">👶 유아·초등</span><span class="tag amen">주차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EB%B9%84%EB%B0%9C%EB%94%94%ED%8C%8C%ED%81%AC%20%EC%8A%A4%ED%82%A4%EC%9E%A5" target="_blank">지도에서 보기 ↗</a></div></div></div><div class="region-group" data-region="제주"><h3>제주</h3><div class="cards"><div class="card" data-region="제주" data-indoor="y" data-free="n" data-season="올시즌"><div class="card-h"><span class="cname">아쿠아플라넷 제주</span><span class="carea">제주 서귀포</span></div><div class="cdesc">국내 최대급 아쿠아리움. 실내, 사계절</div><div class="ctags"><span class="tag place">🏠 실내</span><span class="tag cost">유료</span><span class="tag season">사계절</span><span class="tag age">👶 전연령</span><span class="tag amen">주차</span><span class="tag amen">유아차</span><span class="tag amen">수유실</span></div><a class="clink" href="https://map.naver.com/p/search/%EC%95%84%EC%BF%A0%EC%95%84%ED%94%8C%EB%9D%BC%EB%84%B7%20%EC%A0%9C%EC%A3%BC" target="_blank">지도에서 보기 ↗</a></div></div></div></section>
+
+<div class="empty">조건에 맞는 곳이 없어요. 필터를 줄여보세요.</div>
+<p class="note">※ 큐레이션 가이드입니다. 운영시간·요금·물놀이장 개장은 방문 전 확인하세요.
+공공데이터(TourAPI) 연동 시 더 많은 후보가 자동으로 채워집니다.</p>
+
+<script>
+  var F = { region: [], place: "all", cost: "all", season: "all" };
+  function pass(card) {
+    if (F.region.length && F.region.indexOf(card.dataset.region) < 0) return false;
+    if (F.place  !== "all" && card.dataset.indoor !== F.place) return false;
+    if (F.cost   !== "all" && card.dataset.free !== F.cost) return false;
+    if (F.season !== "all") {
+      var s = card.dataset.season;
+      if (s) {
+        var arr = s.split(",");
+        if (arr.indexOf(F.season) < 0 && arr.indexOf("올시즌") < 0) return false;
+      }
+    }
+    return true;
+  }
+  function apply() {
+    document.querySelectorAll(".card").forEach(function (c) {
+      c.style.display = pass(c) ? "flex" : "none";
+    });
+    var anyVisible = false;
+    document.querySelectorAll(".region-group").forEach(function (g) {
+      var vis = g.querySelectorAll('.card[style*="flex"]').length;
+      g.style.display = vis ? "block" : "none";
+    });
+    document.querySelectorAll("section.cat").forEach(function (s) {
+      var vis = s.querySelectorAll('.region-group[style*="block"]').length;
+      s.style.display = vis ? "block" : "none";
+      if (vis) anyVisible = true;
+    });
+    document.querySelector(".empty").style.display = anyVisible ? "none" : "block";
+  }
+  document.querySelectorAll(".chip").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var g = chip.dataset.g, v = chip.dataset.v;
+      if (g === "region") {
+        // 권역은 다중 선택: '전체'는 초기화, 나머지는 토글
+        if (v === "all") {
+          F.region = [];
+        } else {
+          var i = F.region.indexOf(v);
+          if (i >= 0) F.region.splice(i, 1); else F.region.push(v);
+        }
+        document.querySelectorAll('.chip[data-g="region"]').forEach(function (c) {
+          if (c.dataset.v === "all") c.classList.toggle("active", F.region.length === 0);
+          else c.classList.toggle("active", F.region.indexOf(c.dataset.v) >= 0);
+        });
+      } else {
+        F[g] = v;
+        document.querySelectorAll('.chip[data-g="' + g + '"]').forEach(function (c) {
+          c.classList.toggle("active", c === chip);
+        });
+      }
+      apply();
+    });
+  });
+  apply();
+</script>
+</body></html>
