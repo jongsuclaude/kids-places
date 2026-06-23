@@ -8,9 +8,10 @@
   · places_auto.json  = TourAPI 자동수집 (후보, 사진 썸네일·'자동수집' 배지 표시)
 이름이 겹치면 큐레이션이 이긴다(자동수집 중복 제거).
 
-필터: 권역 · 실내/실외 · 무료/유료 · 계절 · 출처(큐레이션/자동수집)
-자동수집분은 실내외·무료 정보가 부정확해 '?'로 두고 해당 태그는 표시하지 않는다.
-→ 실내외/비용 필터를 켜면 (확인 안 된) 자동수집분은 제외된다.
+필터: 검색 · 권역 · 출처 · 실내/실외 · 무료/유료 · 계절
+  · 기본 화면은 큐레이션만 (자동수집은 출처 필터로 펼침)
+  · 권역별 8곳까지만 먼저 보이고 나머지는 '더보기'로 접힘
+  · 자동수집분은 실내외·무료가 미확인('?') → 해당 필터를 켜면 제외
 
 실행:  python3 build.py   →  open index.html
 """
@@ -52,10 +53,12 @@ def tag(text, cls="tag"):
 def card_html(p):
     kind = p.get("_kind", "curated")
     is_auto = kind == "auto"
-    name = html.escape(p.get("name", "?"))
-    area = html.escape(p.get("area", ""))
+    raw_name = p.get("name", "?")
+    raw_area = p.get("area", "")
+    name = html.escape(raw_name)
+    area = html.escape(raw_area)
+    search = html.escape((raw_name + " " + raw_area).lower(), quote=True)
 
-    # 자동수집분은 placeholder 설명을 숨긴다
     desc_raw = p.get("desc", "") or ""
     if is_auto and desc_raw.startswith("(TourAPI"):
         desc_raw = ""
@@ -64,7 +67,6 @@ def card_html(p):
     seasons = p.get("season", []) or []
     season_attr = ",".join(seasons)
 
-    # 실내외/무료: 큐레이션은 실제값, 자동수집은 '?'(미확인)
     if is_auto:
         indoor, free = "?", "?"
     else:
@@ -85,26 +87,25 @@ def card_html(p):
         for a in p.get("amenities", []):
             tags.append(tag(a, "tag amen"))
 
-    # 썸네일 (자동수집분 firstimage)
     img = p.get("_img", "") if is_auto else ""
     thumb = (
         f'<img class="thumb" loading="lazy" src="{html.escape(img)}" alt="">'
         if img else ""
     )
-
     desc_html = f'<div class="cdesc">{desc}</div>' if desc else ""
 
     return (
         f'<div class="card{" auto" if is_auto else ""}" '
         f'data-region="{html.escape(p.get("region",""))}" '
         f'data-indoor="{indoor}" data-free="{free}" '
-        f'data-season="{html.escape(season_attr)}" data-source="{kind}">'
+        f'data-season="{html.escape(season_attr)}" data-source="{kind}" '
+        f'data-search="{search}">'
         f"{thumb}"
         f'<div class="card-h"><span class="cname">{name}</span>'
         f'<span class="carea">{area}</span></div>'
         f"{desc_html}"
         f'<div class="ctags">{"".join(tags)}</div>'
-        f'<a class="clink" href="{naver_map_link(p.get("name",""))}" target="_blank">지도에서 보기 ↗</a>'
+        f'<a class="clink" href="{naver_map_link(raw_name)}" target="_blank">지도에서 보기 ↗</a>'
         f"</div>"
     )
 
@@ -131,36 +132,44 @@ def build():
         auto_dedup.append(p)
     places = curated + auto_dedup  # 큐레이션 우선(앞), 자동수집 뒤
 
+    # 카테고리 점프 내비
+    nav = ['<a class="navchip" href="#top">맨위</a>']
+
     sections = []
     for cat in CATEGORIES:
         in_cat = [p for p in places if p.get("category") == cat]
         if not in_cat:
             continue
+        cat_id = "cat-" + str(CATEGORIES.index(cat))
+        nav.append(
+            f'<a class="navchip" href="#{cat_id}">{CAT_ICON.get(cat,"")} {html.escape(cat)} '
+            f'<b>{len(in_cat)}</b></a>'
+        )
         groups = []
         for region in REGIONS:
             in_region = [p for p in in_cat if p.get("region") == region]
             if not in_region:
                 continue
             cards = "\n".join(card_html(p) for p in in_region)
-            n_auto = sum(1 for p in in_region if p.get("_kind") == "auto")
-            cnt = f' <span class="rcount">{len(in_region)}</span>'
             groups.append(
                 f'<div class="region-group" data-region="{region}">'
-                f"<h3>{region}{cnt}</h3>"
-                f'<div class="cards">{cards}</div></div>'
+                f'<h3>{region} <span class="rcount"></span></h3>'
+                f'<div class="cards">{cards}</div>'
+                f'<button class="more" type="button">더보기</button>'
+                f"</div>"
             )
         sub = CAT_SUB.get(cat, "")
         sub_html = f' <span class="muted">({html.escape(sub)})</span>' if sub else ""
-        n = len(in_cat)
         sections.append(
-            f'<section class="cat" data-cat="{html.escape(cat)}">'
+            f'<section class="cat" id="{cat_id}" data-cat="{html.escape(cat)}">'
             f'<h2>{CAT_ICON.get(cat,"")} {html.escape(cat)}{sub_html}'
-            f' <span class="ccount">{n}</span></h2>'
+            f' <span class="ccount"></span></h2>'
             f'{"".join(groups)}</section>'
         )
 
     page = (
-        PAGE.replace("__SECTIONS__", "\n".join(sections))
+        PAGE.replace("__NAV__", "\n".join(nav))
+        .replace("__SECTIONS__", "\n".join(sections))
         .replace("__TOTAL__", str(len(places)))
         .replace("__CUR__", str(len(curated)))
         .replace("__AUTO__", str(len(auto_dedup)))
@@ -177,23 +186,32 @@ PAGE = """<!DOCTYPE html>
 <title>아이랑 갈 만한 곳</title>
 <style>
   :root { color-scheme: light dark; }
-  body { font-family: -apple-system, system-ui, sans-serif; max-width: 920px;
-         margin: 28px auto; padding: 0 16px; color: #1d1d1f; background: #fbfbfd; }
+  body { font-family: -apple-system, system-ui, sans-serif; max-width: 960px;
+         margin: 0 auto; padding: 24px 16px 60px; color: #1d1d1f; background: #fbfbfd; }
   h1 { font-size: 24px; margin: 0 0 2px; }
-  .meta { color: #6e6e73; font-size: 13px; margin-bottom: 18px; }
+  .meta { color: #6e6e73; font-size: 13px; margin-bottom: 14px; }
   .muted { color: #86868b; font-weight: 400; font-size: 15px; }
-  .filters { position: sticky; top: 0; background: #fbfbfd; padding: 12px 0;
-             border-bottom: 1px solid #eee; margin-bottom: 8px; z-index: 5; }
+  .filters { position: sticky; top: 0; background: rgba(251,251,253,.96);
+             backdrop-filter: blur(8px); padding: 10px 0; border-bottom: 1px solid #eee;
+             margin-bottom: 8px; z-index: 5; }
+  .search { width: 100%; box-sizing: border-box; font-size: 15px; padding: 9px 13px;
+            border: 1px solid #ddd; border-radius: 10px; background: #fff; margin-bottom: 8px; }
   .frow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0; }
-  .flabel { font-size: 12px; color: #86868b; width: 52px; flex: none; }
+  .flabel { font-size: 12px; color: #86868b; width: 46px; flex: none; }
   .chip { font-size: 13px; padding: 4px 11px; border-radius: 999px; border: 1px solid #ddd;
           background: #fff; cursor: pointer; user-select: none; }
   .chip.active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
-  section.cat { margin: 26px 0; }
+  .resultbar { font-size: 13px; color: #6e6e73; margin: 6px 0 2px; }
+  .resultbar b { color: #1d1d1f; }
+  .nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 2px; }
+  .navchip { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: #eef0f2;
+             color: #515154; text-decoration: none; }
+  .navchip b { color: #1d1d1f; }
+  section.cat { margin: 24px 0; scroll-margin-top: 130px; }
   h2 { font-size: 19px; margin: 0 0 6px; }
   h3 { font-size: 14px; color: #6e6e73; margin: 14px 0 8px; font-weight: 600; }
   .ccount, .rcount { font-size: 12px; color: #aeaeb2; font-weight: 500; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
   .card { background: #fff; border-radius: 14px; padding: 14px 15px;
           box-shadow: 0 1px 3px rgba(0,0,0,.06); display: flex; flex-direction: column; }
   .card.auto { background: #fcfcfd; }
@@ -211,14 +229,18 @@ PAGE = """<!DOCTYPE html>
   .tag.cur { background: #efe6ff; color: #6b1ac4; }
   .tag.auto { background: #eef0f2; color: #8a8a8e; }
   .clink { font-size: 13px; color: #0066cc; text-decoration: none; }
+  .more { display: none; margin: 10px auto 0; font-size: 13px; padding: 6px 16px;
+          border: 1px solid #ddd; border-radius: 999px; background: #fff; cursor: pointer; }
   .empty { color: #86868b; font-size: 14px; padding: 24px 0; display: none; }
   .note { color: #86868b; font-size: 12px; margin-top: 24px; line-height: 1.6; }
 </style></head><body>
+<a id="top"></a>
 <h1>👨‍👩‍👧 아이랑 갈 만한 곳</h1>
 <div class="meta">전국 권역별 가이드 · 총 <b>__TOTAL__</b>곳
   (★ 큐레이션 <b>__CUR__</b> · 🤖 자동수집 <b>__AUTO__</b>)</div>
 
 <div class="filters">
+  <input id="q" class="search" type="search" placeholder="🔍 이름·지역 검색 (예: 에버랜드, 제주)">
   <div class="frow"><span class="flabel">권역</span>
     <span class="chip active" data-g="region" data-v="all">전체</span>
     <span class="chip" data-g="region" data-v="수도권">수도권</span>
@@ -229,8 +251,8 @@ PAGE = """<!DOCTYPE html>
     <span class="chip" data-g="region" data-v="제주">제주</span>
   </div>
   <div class="frow"><span class="flabel">출처</span>
-    <span class="chip active" data-g="source" data-v="all">전체</span>
-    <span class="chip" data-g="source" data-v="curated">★ 큐레이션</span>
+    <span class="chip" data-g="source" data-v="all">전체</span>
+    <span class="chip active" data-g="source" data-v="curated">★ 큐레이션</span>
     <span class="chip" data-g="source" data-v="auto">🤖 자동수집</span>
   </div>
   <div class="frow"><span class="flabel">실내외</span>
@@ -250,17 +272,23 @@ PAGE = """<!DOCTYPE html>
     <span class="chip" data-g="season" data-v="가을">가을</span>
     <span class="chip" data-g="season" data-v="겨울">겨울</span>
   </div>
+  <div class="resultbar">표시 <b id="vcount">0</b>곳 <span id="capnote"></span></div>
 </div>
+
+<div class="nav">__NAV__</div>
 
 __SECTIONS__
 
-<div class="empty">조건에 맞는 곳이 없어요. 필터를 줄여보세요.</div>
-<p class="note">※ ★ 큐레이션은 직접 검증한 곳, 🤖 자동수집은 공공데이터(TourAPI)에서 가져온 후보입니다.
+<div class="empty">조건에 맞는 곳이 없어요. 검색어나 필터를 줄여보세요.</div>
+<p class="note">※ ★ 큐레이션은 직접 검증한 곳, 🤖 자동수집은 공공데이터(TourAPI) 후보입니다(기본은 큐레이션만 표시).
 자동수집분은 실내외·요금이 확인되지 않아 해당 필터를 켜면 제외됩니다.
 운영시간·요금·물놀이장 개장은 방문 전 확인하세요.</p>
 
 <script>
-  var F = { region: [], source: "all", place: "all", cost: "all", season: "all" };
+  var CAP = 8;
+  var F = { region: [], source: "curated", place: "all", cost: "all", season: "all", q: "" };
+  var expanded = {};
+
   function pass(card) {
     if (F.region.length && F.region.indexOf(card.dataset.region) < 0) return false;
     if (F.source !== "all" && card.dataset.source !== F.source) return false;
@@ -273,31 +301,67 @@ __SECTIONS__
         if (arr.indexOf(F.season) < 0 && arr.indexOf("올시즌") < 0) return false;
       }
     }
+    if (F.q && card.dataset.search.indexOf(F.q) < 0) return false;
     return true;
   }
+
   function apply() {
-    document.querySelectorAll(".card").forEach(function (c) {
-      c.style.display = pass(c) ? "flex" : "none";
-    });
-    var anyVisible = false;
-    document.querySelectorAll(".region-group").forEach(function (g) {
-      var vis = g.querySelectorAll('.card[style*="flex"]').length;
+    var total = 0;
+    var groups = document.querySelectorAll(".region-group");
+    groups.forEach(function (g, gi) {
+      var shown = 0, vis = 0;
+      g.querySelectorAll(".card").forEach(function (c) {
+        if (pass(c)) {
+          vis++;
+          if (expanded[gi] || shown < CAP) { c.style.display = "flex"; shown++; }
+          else c.style.display = "none";
+        } else c.style.display = "none";
+      });
+      total += vis;
+      var btn = g.querySelector(".more");
+      if (!expanded[gi] && vis > CAP) {
+        btn.style.display = "block";
+        btn.textContent = "더보기 (+" + (vis - CAP) + ")";
+      } else btn.style.display = "none";
+      var rc = g.querySelector(".rcount");
+      if (rc) rc.textContent = vis ? vis : "";
       g.style.display = vis ? "block" : "none";
     });
     document.querySelectorAll("section.cat").forEach(function (s) {
-      var vis = s.querySelectorAll('.region-group[style*="block"]').length;
-      s.style.display = vis ? "block" : "none";
-      if (vis) anyVisible = true;
+      var cv = 0;
+      s.querySelectorAll(".region-group").forEach(function (g) {
+        if (g.style.display !== "none") cv += parseInt(g.querySelector(".rcount").textContent || "0", 10);
+      });
+      s.style.display = cv ? "block" : "none";
+      var cc = s.querySelector(".ccount");
+      if (cc) cc.textContent = cv ? cv : "";
     });
-    document.querySelector(".empty").style.display = anyVisible ? "none" : "block";
+    document.getElementById("vcount").textContent = total;
+    document.querySelector(".empty").style.display = total ? "none" : "block";
   }
+
+  document.querySelectorAll(".more").forEach(function (btn, ignore) {
+    btn.addEventListener("click", function () {
+      var g = btn.closest(".region-group");
+      var gi = Array.prototype.indexOf.call(document.querySelectorAll(".region-group"), g);
+      expanded[gi] = true;
+      apply();
+    });
+  });
+
+  document.getElementById("q").addEventListener("input", function () {
+    F.q = this.value.trim().toLowerCase();
+    expanded = {};
+    apply();
+  });
+
   document.querySelectorAll(".chip").forEach(function (chip) {
     chip.addEventListener("click", function () {
       var g = chip.dataset.g, v = chip.dataset.v;
+      expanded = {};
       if (g === "region") {
-        if (v === "all") {
-          F.region = [];
-        } else {
+        if (v === "all") F.region = [];
+        else {
           var i = F.region.indexOf(v);
           if (i >= 0) F.region.splice(i, 1); else F.region.push(v);
         }
@@ -314,6 +378,7 @@ __SECTIONS__
       apply();
     });
   });
+
   apply();
 </script>
 </body></html>"""
