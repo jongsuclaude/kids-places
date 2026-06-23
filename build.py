@@ -47,10 +47,21 @@ def norm(s):
     return re.sub(r"[\s()·]", "", unicodedata.normalize("NFC", s or "")).lower()
 
 
+# 지도 검색을 방해하는 놀이터 설명 키워드(끝부분에서 제거)
+_PLAYGROUND_DESC = re.compile(
+    r"\s*(?:무장애\s*통합\s*놀이(?:터|시설)|무장애\s*놀이(?:터|시설)|통합\s*놀이터|"
+    r"모험\s*놀이터|창의\s*놀이터|숲\s*놀이터|자연\s*놀이터|어린이\s*놀이(?:터|시설)|"
+    r"놀이터|놀이시설)\s*$"
+)
+
+
 def map_query(name, area):
-    # 괄호 별칭 제거 + 지역 결합 → 별칭이어도 위치가 잡히게
-    name_clean = re.sub(r"\s*\([^)]*\)", "", name).strip()
-    return (name_clean + " " + (area or "")).strip()
+    # 괄호 별칭 제거 + 끝의 놀이터 설명 키워드 제거 + 지역 결합 → 네이버 지도에서 잡히게
+    base = re.sub(r"\s*\([^)]*\)", "", name).strip()
+    stripped = _PLAYGROUND_DESC.sub("", base).strip()
+    if stripped:  # 전부 지워졌으면(이름 자체가 'OO놀이터') 원래 이름 사용
+        base = stripped
+    return (base + " " + (area or "")).strip()
 
 
 def naver_map_link(query):
