@@ -47,8 +47,14 @@ def norm(s):
     return re.sub(r"[\s()·]", "", unicodedata.normalize("NFC", s or "")).lower()
 
 
-def naver_map_link(name):
-    return "https://map.naver.com/p/search/" + urllib.parse.quote(name)
+def map_query(name, area):
+    # 괄호 별칭 제거 + 지역 결합 → 별칭이어도 위치가 잡히게
+    name_clean = re.sub(r"\s*\([^)]*\)", "", name).strip()
+    return (name_clean + " " + (area or "")).strip()
+
+
+def naver_map_link(query):
+    return "https://map.naver.com/p/search/" + urllib.parse.quote(query)
 
 
 def tag(text, cls="tag"):
@@ -112,7 +118,7 @@ def card_html(p):
         f'<span class="carea">{area}</span></div>'
         f"{desc_html}"
         f'<div class="ctags">{"".join(tags)}</div>'
-        f'<a class="clink" href="{naver_map_link(raw_name)}" target="_blank">지도에서 보기 ↗</a>'
+        f'<a class="clink" href="{naver_map_link(map_query(raw_name, raw_area))}" target="_blank">지도에서 보기 ↗</a>'
         f"</div>"
     )
 
