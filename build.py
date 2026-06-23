@@ -62,7 +62,8 @@ def card_html(p):
     raw_area = p.get("area", "")
     name = html.escape(raw_name)
     area = html.escape(raw_area)
-    search = html.escape((raw_name + " " + raw_area).lower(), quote=True)
+    # 검색용: 공백 제거 + 소문자 (띄어쓰기 편차 무시)
+    search = html.escape(re.sub(r"\s+", "", raw_name + raw_area).lower(), quote=True)
 
     desc_raw = p.get("desc", "") or ""
     if is_auto and desc_raw.startswith("(TourAPI"):
@@ -352,7 +353,12 @@ __SECTIONS__
         if (arr.indexOf(F.season) < 0 && arr.indexOf("올시즌") < 0) return false;
       }
     }
-    if (F.q && card.dataset.search.indexOf(F.q) < 0) return false;
+    if (F.qtoks && F.qtoks.length) {
+      var hay = card.dataset.search;
+      for (var qi = 0; qi < F.qtoks.length; qi++) {
+        if (hay.indexOf(F.qtoks[qi]) < 0) return false;
+      }
+    }
     return true;
   }
 
@@ -424,6 +430,7 @@ __SECTIONS__
 
   document.getElementById("q").addEventListener("input", function () {
     F.q = this.value.trim().toLowerCase();
+    F.qtoks = F.q.split(/\\s+/).filter(Boolean);  // 공백 단위 토큰 (AND 매칭)
     expanded = {};
     apply();
   });
