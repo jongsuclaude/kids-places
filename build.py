@@ -106,6 +106,17 @@ def card_html(p):
     )
     desc_html = f'<div class="cdesc">{desc}</div>' if desc else ""
 
+    # 링크: 지도 + (출처가 URL이면) 정보 글
+    map_url = naver_map_link(map_query(raw_name, raw_area))
+    links = f'<a class="clink" href="{map_url}" target="_blank" rel="noopener">🗺️ 지도</a>'
+    src = (p.get("source") or "").strip()
+    if src.startswith("http"):
+        links += (
+            f'<a class="clink src" href="{html.escape(src, quote=True)}" '
+            f'target="_blank" rel="noopener">📄 정보 글</a>'
+        )
+    links_html = f'<div class="clinks">{links}</div>'
+
     return (
         f'<div class="card{" auto" if is_auto else ""}" '
         f'data-region="{html.escape(p.get("region",""))}" '
@@ -118,7 +129,7 @@ def card_html(p):
         f'<span class="carea">{area}</span></div>'
         f"{desc_html}"
         f'<div class="ctags">{"".join(tags)}</div>'
-        f'<a class="clink" href="{naver_map_link(map_query(raw_name, raw_area))}" target="_blank">지도에서 보기 ↗</a>'
+        f"{links_html}"
         f"</div>"
     )
 
@@ -294,7 +305,10 @@ PAGE = """<!DOCTYPE html>
   .tag.season { background: #fff1e0; color: #9a5b00; }
   .tag.cur { background: #efe6ff; color: #6b1ac4; }
   .tag.auto { background: #eef0f2; color: #8a8a8e; }
-  .clink { font-size: 13px; color: #0066cc; text-decoration: none; }
+  .clinks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+  .clink { font-size: 13px; color: #0066cc; text-decoration: none; padding: 5px 10px;
+           border: 1px solid #d6e4f5; border-radius: 8px; background: #f4f8fd; }
+  .clink.src { color: #6b6b70; border-color: #e3e3e6; background: #f5f5f7; }
   .more { display: none; margin: 12px auto 0; font-size: 13px; padding: 8px 18px;
           border: 1px solid #ddd; border-radius: 999px; background: #fff; cursor: pointer; }
   .empty { color: #86868b; font-size: 14px; padding: 24px 0; display: none; }
