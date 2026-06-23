@@ -1,6 +1,25 @@
 # 비공개 키 — 절대 커밋 금지
 keys.json
 
+# === 개인 데이터 — 절대 커밋 금지 (NAS/로컬에만 보관) ===
+# 공개 레포라 여기 들어가면 전 세계 노출됨. 후기·사진·별점·블로그 초안 일체 차단.
+posts/
+drafts/
+reviews.json
+review*.json
+# 사진(아이 얼굴·EXIF GPS 등) — 사이트는 외부 이미지 URL만 쓰므로 로컬 이미지는 전부 제외
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.heif
+*.webp
+*.gif
+*.bmp
+*.tiff
+*.mov
+*.mp4
+
 # 생성물
 public/
 
