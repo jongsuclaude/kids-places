@@ -408,6 +408,1158 @@
       "free": false,
       "age": "유아",
       "source": "https://www.taebaek.go.kr/365safetown/index.do"
+    },
+    {
+      "category": "숙소",
+      "region": "수도권",
+      "name": "롤링힐스 호텔",
+      "area": "경기 화성",
+      "desc": "키즈존·실내수영장·사우나를 갖춘 4성급 리조트형 호텔로 아이 동반 가족 호캉스 수요가 많다.",
+      "indoor": true,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.haevichi.com/rollinghills/ko/",
+          "title": "롤링힐스 호텔 공식 사이트"
+        },
+        {
+          "url": "https://mom-mom.net/travel/places/6368c31e94baf0f2c37c8f44",
+          "title": "롤링힐스호텔 - 경기 화성시에서 아이와 갈곳 (맘맘)"
+        }
+      ]
+    },
+    {
+      "category": "숙소",
+      "region": "수도권",
+      "name": "이천 팜스토리키즈펜션",
+      "area": "경기 이천",
+      "desc": "전 객실 실내 수영장과 키즈 놀이방이 구비된 키즈 전용 펜션으로, 수도권 1시간대 접근이 가능하다.",
+      "indoor": true,
+      "free": false,
+      "age": "영유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "http://e-cheon.co.kr/",
+          "title": "팜스토리키즈펜션 공식 사이트"
+        },
+        {
+          "url": "https://nol.yanolja.com/stay/domestic/10060594",
+          "title": "이천 팜스토리키즈펜션 - 야놀자 NOL"
+        }
+      ]
+    },
+    {
+      "category": "숙소",
+      "region": "수도권",
+      "name": "대부도 키즈밸리",
+      "area": "경기 안산",
+      "desc": "트램폴린·워터슬라이드·키즈풀빌라 단지로 구성된 대규모 키즈 전용 리조트 복합단지다.",
+      "indoor": false,
+      "free": false,
+      "age": "영유아~초등",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://kidsvalley.co.kr/",
+          "title": "대부도 키즈밸리 공식 사이트"
+        },
+        {
+          "url": "https://www.yeogi.com/domestic-accommodations/54784",
+          "title": "대부도 키즈밸리 - 여기어때"
+        }
+      ]
+    },
+    {
+      "category": "숙소",
+      "region": "수도권",
+      "name": "양지파인리조트",
+      "area": "경기 용인",
+      "desc": "키즈클럽·겨울 눈썰매장·골프장을 겸한 사계절 종합 리조트로 아이와 어른 모두 즐길 거리가 많다.",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.pineresort.com/",
+          "title": "양지파인리조트 공식 사이트"
+        },
+        {
+          "url": "https://www.yeogi.com/domestic-accommodations/47054",
+          "title": "양지파인리조트 - 여기어때"
+        }
+      ]
+    },
+    {
+      "category": "숙소",
+      "region": "수도권",
+      "name": "사랑별키즈풀",
+      "area": "경기 여주",
+      "desc": "모래놀이·스파·노래방까지 갖춘 아이 전용 독채 키즈풀 펜션으로 리뷰 평점 4.9점의 인기 숙소다.",
+      "indoor": true,
+      "free": false,
+      "age": "영유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://mom-mom.net/travel/places/652e222aad38f0df6396fe06",
+          "title": "사랑별키즈풀 - 경기 여주시 아이와 갈곳 (맘맘)"
+        }
+      ]
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "상동호수공원 어린이놀이터",
+      "area": "경기 부천",
+      "desc": "집라인·흔들다리·경관조명을 갖춘 창의형 모험 놀이터로 2024년 대규모 리모델링 완료 후 연 180만 명이 찾는 공원 내 핵심 시설이다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/cd8f1bd2-38cd-4f69-87c2-910e18446ec6",
+          "title": "부천 상동호수공원 놀이터 새 단장! 직접 방문해 봤습니다! | 웰로"
+        },
+        {
+          "url": "https://kbsn.kr/mobile/article.html?no=180124",
+          "title": "부천 상동호수·도당·넘말공원 어린이놀이시설 새단장 | 한방통신사"
+        }
+      ]
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "만골근린공원 어린이놀이터",
+      "area": "경기 용인",
+      "desc": "98억 원을 투자해 조성한 대형 복합 놀이기구 단지로, 사다리·그물·아찔한 미끄럼틀이 이어지는 미로형 모험 놀이가 특징이다.",
+      "indoor": false,
+      "free": true,
+      "age": "5~10세",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/458b60af-393b-4b10-a705-ec5f4176969f",
+          "title": "용인 아이와 가볼 만한 곳, 대형 놀이터가 있는 만골근린공원 | 웰로"
+        },
+        {
+          "url": "https://ggc.ggcf.kr/p/5a53399f8cbb216489a270ba",
+          "title": "용인_만골근린공원 | 지지씨"
+        }
+      ]
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "서호꽃뫼공원 무장애통합놀이터",
+      "area": "경기 수원",
+      "desc": "15,000㎡ 규모로 조성된 무장애 통합 놀이터로, 경사로·장애인 전용 그네 등 14종 놀이기구를 갖춰 장애·비장애 아동 모두 함께 놀 수 있다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/d42c9c76-0e3c-4517-b7d6-cef462836af8",
+          "title": "서호꽃뫼공원 무장애놀이터 | 웰로"
+        },
+        {
+          "url": "http://www.esuwon.net/41476",
+          "title": "팔달구, 전국 최대 규모 '무장애통합놀이터' 만든다 | 수원화성신문"
+        }
+      ]
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "초막골생태공원 어린이 놀이터",
+      "area": "경기 군포",
+      "desc": "산자락 숲 속에 대형 목재 구조물과 로프 놀이 시설을 갖춘 생태 모험 놀이터로, 여름에도 그늘이 풍부해 쾌적하게 놀 수 있다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gunpo.go.kr/chomakgol/index.do",
+          "title": "초막골생태공원 공식 홈페이지 | 군포시"
+        },
+        {
+          "url": "https://reehongs.com/52",
+          "title": "서울·경기권 대형 실외 어린이 놀이터 5곳 | 리히옹스"
+        }
+      ]
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "미사호수공원 모험놀이터",
+      "area": "경기 하남",
+      "desc": "넓은 호수 공원 내 3개소에 출렁다리·외줄건너기·사다리오르기 등 모험 놀이시설이 조성되어 있어 아이들의 체력과 모험심을 키워준다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=a99290f6-9baf-416a-9c8d-017486f4144d",
+          "title": "미사호수공원 | 대한민국 구석구석"
+        },
+        {
+          "url": "https://www.hanam.go.kr/www/contents.do?key=8023",
+          "title": "이용안내 | 하남시청"
+        }
+      ]
+    },
+    {
+      "category": "놀이터",
+      "region": "수도권",
+      "name": "평촌중앙공원 어린이놀이터",
+      "area": "경기 안양",
+      "desc": "2023년 리모델링 후 자연 모티브 놀이기구와 그늘막·그네·모래놀이 공간을 갖춰 재개장한 도심 공원 내 어린이 놀이터다.",
+      "indoor": false,
+      "free": true,
+      "age": "유아~초등",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://twinrabbithome.com/entry/%ED%8F%89%EC%B4%8C%EC%A4%91%EC%95%99%EA%B3%B5%EC%9B%90-%EB%AC%BC%EB%86%80%EC%9D%B4%EC%9C%84%EC%B9%98-%EA%B5%90%ED%86%B5-%EC%A3%BC%EC%B0%A8-%EC%A3%BC%EB%B3%80-%EC%9D%B8%ED%94%84%EB%9D%BC%EA%B9%8C%EC%A7%80-%EC%B4%9D%EC%A0%95%EB%A6%AC",
+          "title": "평촌중앙공원 물놀이 총정리 | 블로그"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=95157977-d675-4af7-8c7b-cc68d08f4934",
+          "title": "안양 평촌중앙공원 | 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "수도권",
+      "name": "광교호수공원",
+      "area": "경기 수원",
+      "desc": "국내 최대급 도심 수변공원으로 넓은 잔디광장·바닥분수·터널분수 물놀이를 아이와 종일 즐길 수 있다.",
+      "indoor": false,
+      "free": true,
+      "age": "전 연령",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gglakepark.or.kr/",
+          "title": "광교호수공원 공식 홈페이지"
+        },
+        {
+          "url": "https://www.telltrip.com/domestic-travel/gwanggyo-lake-park-suwon-free-night-view/",
+          "title": "수원 광교호수공원 국내 최대급 도심 수변 명소 — 여행을 말하다"
+        }
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "수도권",
+      "name": "만골근린공원",
+      "area": "경기 용인",
+      "desc": "대형 복합 성채 놀이기구와 여름 바닥분수가 있어 어린이 전용 대형 놀이터로 유명하다.",
+      "indoor": false,
+      "free": true,
+      "age": "10세 이하",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/458b60af-393b-4b10-a705-ec5f4176969f",
+          "title": "용인 아이와 가볼 만한 곳, 대형 놀이터가 있는 만골근린공원 — 웰로"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=6ff2cbd0-8036-4481-a07d-2bacace940ae",
+          "title": "만골근린공원 — 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "수도권",
+      "name": "동탄 패밀리풀(동탄 가족 물놀이장)",
+      "area": "경기 화성",
+      "desc": "전국 최대 규모 공공 워터파크(1만9000㎡)로 유아풀·아쿠아풀·플로팅리버풀 등 다양한 물놀이를 저렴하게 즐길 수 있다.",
+      "indoor": false,
+      "free": false,
+      "age": "전 연령",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.khan.co.kr/article/202508181636001",
+          "title": "전국 최대규모 공공 워터파크, 화성시 '동탄 패밀리풀' 가보니 — 경향신문"
+        },
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/d3c3b08e-d10f-4565-9919-e2b53cba681f",
+          "title": "화성시민의 여름을 책임질 2025 동탄 패밀리풀 OPEN — 웰로"
+        }
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "수도권",
+      "name": "안산 호수공원(가족친수놀이터)",
+      "area": "경기 안산",
+      "desc": "22억 원 투자로 조성된 가족친수놀이터와 실내수영장(유아풀 별도)을 갖춘 대형 도심 공원이다.",
+      "indoor": false,
+      "free": true,
+      "age": "전 연령",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.g-enews.com/article/General-News/2025/09/20250916090817659201e71a555b_1",
+          "title": "안산시, 호수공원 가족친수놀이터 물놀이장 무료 시범운영 — 글로벌이코노믹"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=5f39b108-fac6-494d-90e8-d37931b6ffe3",
+          "title": "안산호수공원 실내수영장 — 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "수도권",
+      "name": "미사경정공원(미사한강공원 물놀이장)",
+      "area": "경기 하남",
+      "desc": "올림픽 조정 경기 유산 호수 공원으로 넓은 잔디·자전거·운동시설에 여름 무료 물놀이장까지 갖춰 가족 종일 나들이에 적합하다.",
+      "indoor": false,
+      "free": true,
+      "age": "12세 이하(물놀이장)",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hanam.go.kr/www/selectMisaWaterParkResveWeb.do?key=8024",
+          "title": "미사호수공원 물놀이장 사전예약 — 하남시청"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=f7eaa306-8f87-4642-88ee-f633df074bec",
+          "title": "미사경정공원 — 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "공원",
+      "region": "수도권",
+      "name": "동탄호수공원",
+      "area": "경기 화성",
+      "desc": "동탄 신도시 한가운데 자리한 대형 호수 공원으로 넓은 잔디광장·물놀이장·피톤치드 숲을 갖춰 피크닉과 물놀이를 함께 즐길 수 있다.",
+      "indoor": false,
+      "free": true,
+      "age": "전 연령",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9601cbf8-f259-4ad4-aea1-337c3c634fad",
+          "title": "동탄호수공원 — 대한민국 구석구석"
+        },
+        {
+          "url": "https://www.yugacrew.com/crewletter/hwaseong-kids-places",
+          "title": "화성 아이와 가볼만한곳 TOP 6 — 육아크루"
+        }
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "수도권",
+      "name": "탄천 물놀이장 (탄천 둔치)",
+      "area": "경기 성남",
+      "desc": "탄천 둔치와 공원·놀이터 총 25곳에 무료 물놀이장이 조성되어 여름마다 가족 단위 피서객이 몰리는 성남 대표 물놀이 명소다.",
+      "indoor": false,
+      "free": true,
+      "age": "전 연령(영유아~초등)",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.bundangnews.co.kr/57261",
+          "title": "성남 물놀이장 20일부터 개장 .. 공원 탄천 등 25곳 무료 운영 - 분당신문"
+        },
+        {
+          "url": "https://www.seongnam.go.kr/park/poolList.do?menuIdx=1000814&returnURL=/main.do&searchCode=park",
+          "title": "성남시 공원내 물놀이시설 공식 안내"
+        }
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "수도권",
+      "name": "동탄여울공원 워터리본",
+      "area": "경기 화성",
+      "desc": "동탄신도시 한가운데 위치한 계류형 물놀이시설로 무료이며 5~9월 운영, 2026년에는 그늘막 피크닉존까지 추가돼 아이와 나들이하기 좋다.",
+      "indoor": false,
+      "free": true,
+      "age": "전 연령",
+      "season": [
+        "봄",
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.asiae.co.kr/article/social-general/2026061616041609265",
+          "title": "화성시, 동탄여울공원 '피크닉존' 운영…동탄 패밀리풀도 27일 개장 - 아시아경제"
+        },
+        {
+          "url": "https://www.newspim.com/news/view/20260616001070",
+          "title": "화성시, 동탄여울공원 워터리본 내 한시적 그늘막 설치 허용 - 뉴스핌"
+        }
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "수도권",
+      "name": "안산 문화광장 물의광장 물놀이터",
+      "area": "경기 안산",
+      "desc": "NC백화점 앞 광장의 연못형 수경시설을 활용한 무료 물놀이터로 주말·공휴일마다 열려 도심 속 가족 힐링 스팟으로 입소문난 곳이다.",
+      "indoor": false,
+      "free": true,
+      "age": "영유아~초등",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/edcc4698-1db0-43bf-b23f-bd9a6332f305",
+          "title": "안산문화광장 무료 물놀이터, 도심 속 여름 가족 힐링 스팟 - 웰로"
+        },
+        {
+          "url": "https://www.thereport.co.kr/news/articleView.html?idxno=68192",
+          "title": "안산시 곳곳에 신나는 물놀이장 개장 - 더리포트"
+        }
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "수도권",
+      "name": "수원 고래의모험 물놀이장",
+      "area": "경기 수원",
+      "desc": "권선구 고래의모험공원을 비롯해 수원 시내 10여 개 공원에 무료 물놀이장·바닥분수가 조성되어 매년 여름 아이들로 북적인다.",
+      "indoor": false,
+      "free": true,
+      "age": "영유아~초등",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/%EC%9A%B0%EB%A6%AC%EB%8F%99%EB%84%A4-%EC%9B%8C%ED%84%B0%ED%8C%8C%ED%81%AC-OPEN-%EC%88%98%EC%9B%90%EC%8B%9C-%EB%AC%BC%EB%86%80%EC%9D%B4%EC%9E%A5-%EB%B6%84%EC%88%98-%EB%93%B1-%EC%88%98%EA%B2%BD%EC%8B%9C%EC%84%A4-%EC%9A%B4%EC%98%81%EC%9D%84-%EC%8B%9C%EC%9E%91%ED%95%A9%EB%8B%88%EB%8B%A4--80e040b7-34b7-4308-b3b3-d008ba080257",
+          "title": "수원시 물놀이장·분수 등 수경시설 운영 안내 - 웰로"
+        },
+        {
+          "url": "https://www.suwon.go.kr/sw-www/deptHome/dep_env/env_05/env_05_01/env_05_01_05.jsp",
+          "title": "수원시 수경시설 공식 안내"
+        }
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "수도권",
+      "name": "용인 물내음어린이공원 물놀이장",
+      "area": "경기 용인",
+      "desc": "기흥구 서천동에 위치한 공원으로 워터드롭·워터터널 등 아이 전용 물놀이 시설을 갖춘 무료 야외 물놀이장이다.",
+      "indoor": false,
+      "free": true,
+      "age": "영유아~초등",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.yongin21.co.kr/news/articleView.html?idxno=51653",
+          "title": "용인에서 즐기기 좋은 물놀이장 6선 - 용인시민신문"
+        }
+      ]
+    },
+    {
+      "category": "물놀이터",
+      "region": "수도권",
+      "name": "광주시 수경시설 물놀이장",
+      "area": "경기 광주",
+      "desc": "광주시청이 운영하는 공원 수경시설 및 물놀이장으로 여름철 무료 개방되며 가족 단위 이용객이 찾는 경기 남부 동편 피서지다.",
+      "indoor": false,
+      "free": true,
+      "age": "전 연령",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gjcity.go.kr/depart/contents.do?mId=0704000000",
+          "title": "광주시청 물놀이 수경시설 분야별정보"
+        }
+      ]
+    },
+    {
+      "category": "테마파크·놀이공원",
+      "region": "수도권",
+      "name": "웅진플레이도시",
+      "area": "경기 부천",
+      "desc": "수도권 최대 규모 실내 워터파크·온천스파에 아쿠아리움까지 갖춰 날씨 상관없이 사계절 즐길 수 있다.",
+      "indoor": true,
+      "free": false,
+      "age": "전연령(영유아~)",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.playdoci.com/",
+          "title": "웅진플레이도시 공식 홈페이지"
+        },
+        {
+          "url": "https://namu.wiki/w/%EC%9B%85%EC%A7%84%ED%94%8C%EB%A0%88%EC%9D%B4%EB%8F%84%EC%8B%9C",
+          "title": "웅진플레이도시 — 나무위키"
+        }
+      ]
+    },
+    {
+      "category": "테마파크·놀이공원",
+      "region": "수도권",
+      "name": "시아테마파크(자이언트제트 플레이파크)",
+      "area": "경기 안산",
+      "desc": "복합 쇼핑몰 내 대형 실내 스포츠·놀이 테마파크로 트램펄린·클라이밍·볼풀 등 아이 에너지를 소진시키기 좋다.",
+      "indoor": true,
+      "free": false,
+      "age": "영유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://siathemepark.com/",
+          "title": "시아테마파크 공식 홈페이지"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=189f4f31-bfea-4a1b-8a92-ade653da2f5f",
+          "title": "시아테마파크 — 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "테마파크·놀이공원",
+      "region": "수도권",
+      "name": "서울랜드",
+      "area": "경기 과천",
+      "desc": "서울대공원 옆 가족 놀이공원으로 어린이 친화 놀이기구가 많아 첫 테마파크 경험에 적합하다.",
+      "indoor": false,
+      "free": false,
+      "age": "영유아~초등",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://seoulland.co.kr/",
+          "title": "서울랜드 공식 홈페이지"
+        },
+        {
+          "url": "https://trends.yanolja.com/trends/%EC%97%90%EB%B2%84%EB%9E%9C%EB%93%9C-%EB%A1%AF%EB%8D%B0%EC%9B%94%EB%93%9C-%EC%84%9C%EC%9A%B8%EB%9E%9C%EB%93%9C-%EB%86%80%EC%9D%B4%EA%B8%B0%EA%B5%AC-%EC%9E%85%EC%9E%A5%EB%A3%8C-%EC%A0%95%EB%A6%AC/",
+          "title": "서울랜드 놀이기구·입장료 정리 — NOL 트렌드"
+        }
+      ]
+    },
+    {
+      "category": "테마파크·놀이공원",
+      "region": "수도권",
+      "name": "웨이브파크",
+      "area": "경기 시흥",
+      "desc": "세계 최대 규모 인공 서핑 파도풀을 갖춘 이색 워터파크로 키즈풀·레크리에이션풀도 있어 온 가족이 즐길 수 있다.",
+      "indoor": false,
+      "free": false,
+      "age": "전연령(영유아~)",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://www.wavepark.co.kr/",
+          "title": "웨이브파크 공식 홈페이지"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=7e4d421b-ddfd-4a3e-b0b1-813edf51d19d",
+          "title": "시흥 웨이브파크 — 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "박물관·과학·전시",
+      "region": "수도권",
+      "name": "경기도어린이박물관",
+      "area": "경기 용인",
+      "desc": "국내 최초·최대 규모 어린이 전용 체험형 박물관으로 9개 상설전시실에서 직접 만지고 놀며 배울 수 있다.",
+      "indoor": true,
+      "free": false,
+      "age": "영아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://gcm.ggcf.kr/",
+          "title": "경기도어린이박물관 공식 홈페이지"
+        },
+        {
+          "url": "https://www.yugacrew.com/crewletter/yongin-kids-museum",
+          "title": "용인 아이와 가볼만한곳 – 경기도 어린이박물관 완벽 가이드"
+        }
+      ]
+    },
+    {
+      "category": "박물관·과학·전시",
+      "region": "수도권",
+      "name": "수원박물관 어린이체험실",
+      "area": "경기 수원",
+      "desc": "역사문화·서예·전통문화 코너로 구성된 어린이 눈높이 맞춤 체험 공간으로 어린이 입장이 무료다.",
+      "indoor": true,
+      "free": true,
+      "age": "유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://smuseum.suwon.go.kr/sw/contents/view?contentsNo=186&menuLevel=2&menuNo=68",
+          "title": "수원박물관 어린이체험실 안내"
+        },
+        {
+          "url": "https://www.yugacrew.com/crewletter/suwon-kids-places",
+          "title": "수원 아이와 가볼만한곳 TOP 6"
+        }
+      ]
+    },
+    {
+      "category": "박물관·과학·전시",
+      "region": "수도권",
+      "name": "성남시박물관 체험동",
+      "area": "경기 성남",
+      "desc": "주말마다 어린이 체험 프로그램이 운영되는 성남시 박물관 내 어린이 전용 체험 공간이다.",
+      "indoor": true,
+      "free": true,
+      "age": "유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://museum.seongnam.go.kr/shm/main/index_edu.do",
+          "title": "성남시박물관 교육·체험 안내"
+        }
+      ]
+    },
+    {
+      "category": "박물관·과학·전시",
+      "region": "수도권",
+      "name": "안산산업역사박물관",
+      "area": "경기 안산",
+      "desc": "산업화 시대 생활용품·기계·차량 실물 전시와 체험 프로그램으로 아이에게 색다른 역사 경험을 준다.",
+      "indoor": true,
+      "free": false,
+      "age": "초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://ansan.go.kr/aim/",
+          "title": "안산산업역사박물관 공식 홈페이지"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=321deafe-71dc-40aa-bf0d-0745d0175089",
+          "title": "안산산업역사박물관 – 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "동물·자연",
+      "region": "수도권",
+      "name": "에버랜드 동물원·로스트밸리",
+      "area": "경기 용인",
+      "desc": "국내 최대 테마파크 내 사파리·동물원으로 코끼리·기린·코뿔소를 도보로 만날 수 있어 아이 체험 만족도가 높다.",
+      "indoor": false,
+      "free": false,
+      "age": "3세 이상",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=c6e61134-7f1d-442f-a2a0-dc17f2ab3272",
+          "title": "대한민국 구석구석 - 에버랜드"
+        },
+        {
+          "url": "https://www.klook.com/ko/activity/96156-everland-ticket-gyeonggi-yongin/",
+          "title": "에버랜드 종일이용권 - 클룩"
+        }
+      ]
+    },
+    {
+      "category": "동물·자연",
+      "region": "수도권",
+      "name": "서울대공원 동물원",
+      "area": "경기 과천",
+      "desc": "국내 최대 규모 동물원으로 13세 미만 어린이 무료 입장이며 코끼리열차·스카이리프트로 넓은 부지를 아이와 편하게 둘러볼 수 있다.",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://grandpark.seoul.go.kr/",
+          "title": "서울대공원 공식 홈페이지"
+        },
+        {
+          "url": "https://www.i-rang.net/place/seoul-grand-park",
+          "title": "과천 서울대공원 아이와 가볼만한곳 가이드"
+        }
+      ]
+    },
+    {
+      "category": "동물·자연",
+      "region": "수도권",
+      "name": "화성시 우리꽃식물원",
+      "area": "경기 화성",
+      "desc": "1,100여 종 식물을 사계절 관람할 수 있고 짚라인·분수 놀이숲·식용꽃 체험 프로그램으로 아이가 지루할 틈 없는 시립 수목원이다.",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://botanic.hscity.go.kr/botanic/index.jsp",
+          "title": "화성시 우리꽃식물원 공식 홈페이지"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2748dad6-30b0-40dd-9260-fedee96dd0b5",
+          "title": "화성 우리꽃식물원 - 대한민국 구석구석"
+        }
+      ]
+    },
+    {
+      "category": "동물·자연",
+      "region": "수도권",
+      "name": "달콤 딸기체험농장",
+      "area": "경기 화성",
+      "desc": "딸기 수확 체험과 함께 토끼·기니피그·아기돼지 먹이주기가 무료로 제공돼 유아·어린이가 동물과 자연을 동시에 경험할 수 있다.",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "봄"
+      ],
+      "sources": [
+        {
+          "url": "https://mom-mom.net/travel/places/659368ec6179429d5d2423a2",
+          "title": "달콤 딸기체험농장 - 맘맘"
+        }
+      ]
+    },
+    {
+      "category": "동물·자연",
+      "region": "수도권",
+      "name": "곤지암베리팜",
+      "area": "경기 광주",
+      "desc": "블루베리 수확·잼 만들기·도예·다육식물 등 다양한 자연 체험을 묶어 제공하는 농촌 체험 농장으로 광주시가 공식 소개하는 검증된 곳이다.",
+      "indoor": false,
+      "free": false,
+      "age": "유치원 이상",
+      "season": [
+        "여름"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gjcity.go.kr/tour/contents.do?mId=0103010700",
+          "title": "곤지암베리팜 - 광주시 공식 관광정보"
+        }
+      ]
+    },
+    {
+      "category": "체험·교육",
+      "region": "수도권",
+      "name": "한국잡월드 어린이체험관",
+      "area": "경기 성남",
+      "desc": "소방관·의사·조종사 등 50여 개 직업을 실제 크기 세트에서 체험할 수 있는 대형 직업체험관.",
+      "indoor": true,
+      "free": false,
+      "age": "만 4세~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.koreajobworld.or.kr/main.do?site=1",
+          "title": "한국잡월드 어린이체험관 공식 홈페이지"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=1a24905a-6a09-4d12-836c-ab352bc18b3b",
+          "title": "대한민국 구석구석 — 미래의 나를 꿈꾸다, 성남 한국잡월드"
+        }
+      ]
+    },
+    {
+      "category": "체험·교육",
+      "region": "수도권",
+      "name": "칠보생태환경체험교육관",
+      "area": "경기 수원",
+      "desc": "칠보산·일월저수지 일대 숲과 습지에서 철새 관찰·자연 공예 등 생태 교육 프로그램을 운영하는 체험 교육관.",
+      "indoor": false,
+      "free": false,
+      "age": "유아~초등",
+      "season": [
+        "봄",
+        "여름",
+        "가을",
+        "겨울"
+      ],
+      "sources": [
+        {
+          "url": "https://www.suwoneco.com/",
+          "title": "칠보생태환경체험교육관 공식 홈페이지"
+        },
+        {
+          "url": "https://www.dongbangilbo.co.kr/news/articleView.html?idxno=77899",
+          "title": "동방일보 — 2026년 겨울방학 프로그램 모집 기사"
+        }
+      ]
+    },
+    {
+      "category": "체험·교육",
+      "region": "수도권",
+      "name": "이천 도자예술마을 예스파크",
+      "area": "경기 이천",
+      "desc": "이천 도자기 명장 공방들이 모인 마을에서 아이도 직접 흙을 빚어 나만의 도자기를 만들 수 있는 전통 체험 명소.",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://2000yespark.or.kr/enjoy/enjoy.php",
+          "title": "예스파크 공식 체험 페이지"
+        },
+        {
+          "url": "https://mom-mom.net/travel/places/63b54a6d8783f82fbf7240fc",
+          "title": "맘맘 — 이천 도자기 마을 예스파크 아이와 갈곳 추천"
+        }
+      ]
+    },
+    {
+      "category": "캠핑",
+      "region": "수도권",
+      "name": "나인힐스 구봉산 오토캠핑장",
+      "area": "경기 용인",
+      "desc": "4계절 온수수영장·짚라인·바이킹·실내놀이터를 갖춘 수도권 대표 키즈 체험 캠핑장",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://ninehills.modoo.at/?link=ve9viclw",
+          "title": "나인힐스 공식 소개"
+        },
+        {
+          "url": "https://hamsdream.com/136",
+          "title": "용인 나인힐스 키즈캠핑장 후기(수영장·바이킹·짚라인)"
+        }
+      ]
+    },
+    {
+      "category": "캠핑",
+      "region": "수도권",
+      "name": "에버베이 카라반",
+      "area": "경기 용인",
+      "desc": "에버랜드 5분 거리, 패밀리 카라반 10동·커플 카라반 10동으로 아이와 리조트형 캠핑 가능",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gocamping.or.kr/bsite/camp/info/read.do?c_no=101776",
+          "title": "한국관광공사 고캠핑 — 에버베이카라반"
+        },
+        {
+          "url": "http://everbay.kr/",
+          "title": "에버베이 카라반 공식 홈페이지"
+        }
+      ]
+    },
+    {
+      "category": "캠핑",
+      "region": "수도권",
+      "name": "안산화랑오토캠핑장",
+      "area": "경기 안산",
+      "desc": "화랑유원지 내 위치한 공영 캠핑장으로 글램핑·카라반·놀이터 완비, 도심 접근성 최고",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://hwarangcamp.ansanuc.net/",
+          "title": "안산도시공사 화랑오토캠핑장 공식"
+        },
+        {
+          "url": "https://mimisolsol.com/entry/%EC%95%88%EC%82%B0%ED%99%94%EB%9E%91%EC%98%A4%ED%86%A0%EC%BA%A0%ED%95%91%EC%9E%A5",
+          "title": "안산화랑오토캠핑장 글램핑 예약·후기"
+        }
+      ]
+    },
+    {
+      "category": "캠핑",
+      "region": "수도권",
+      "name": "이천 인휴글램핑",
+      "area": "경기 이천",
+      "desc": "야외 수영장·트램펄린·잔디 광장 갖춘 호텔급 프리미엄 글램핑, 개별 프라이빗 에어풀 동 있음",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "http://inhueglamping.com/",
+          "title": "이천 인휴글램핑 공식 홈페이지"
+        },
+        {
+          "url": "https://www.gocamping.or.kr/bsite/camp/info/read.do?c_no=100105",
+          "title": "한국관광공사 고캠핑 — 이천 인휴글램핑"
+        }
+      ]
+    },
+    {
+      "category": "캠핑",
+      "region": "수도권",
+      "name": "경기도청소년야영장",
+      "area": "경기 광주",
+      "desc": "경기도 운영 공공 글램핑·오토캠핑으로 합리적 요금에 자연 속 가족 캠핑 가능",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://www.ggyc.kr/gwangju/index",
+          "title": "경기도청소년야영장 공식 홈페이지"
+        },
+        {
+          "url": "https://www.campingtalk.me/pubsec/camp/3797/main",
+          "title": "캠핑톡 — 경기도청소년야영장 정보"
+        }
+      ]
+    },
+    {
+      "category": "캠핑",
+      "region": "수도권",
+      "name": "산들래 야영장",
+      "area": "경기 화성",
+      "desc": "수영장·동물 먹이 체험·에어바운스 등 아이 체험 프로그램이 풍부한 화성 대표 패밀리 캠핑장",
+      "indoor": false,
+      "free": false,
+      "age": "전연령",
+      "season": [
+        "봄",
+        "여름",
+        "가을"
+      ],
+      "sources": [
+        {
+          "url": "https://www.5gcamp.com/?m=camping&page=view&uid=887",
+          "title": "5gcamp — 산들래 야영장 정보"
+        }
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "용인어린이상상의숲",
+      "area": "경기 용인",
+      "desc": "입장 무료인 어린이 복합문화공간으로 미술·공연·로봇 놀이터 등 다양한 체험을 비 오는 날에도 즐길 수 있다.",
+      "indoor": true,
+      "free": true,
+      "age": "영유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.yicf.or.kr/lib",
+          "title": "용인어린이상상의숲 공식 홈페이지"
+        },
+        {
+          "url": "https://outdoor.utrip.kr/p/%EC%9A%A9%EC%9D%B8%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%83%81%EC%83%81%EC%9D%98%EC%88%B2-%EC%99%84%EB%B2%BD-%EC%A0%95%EB%B3%B5-%EA%B0%80%EC%9D%B4%EB%93%9C",
+          "title": "용인어린이상상의숲 완벽 이용 가이드"
+        }
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "광명동굴",
+      "area": "경기 광명",
+      "desc": "폐금속광산을 활용한 실내 동굴 테마파크로 공룡화석 발굴·보석채취·빛의 터널 등 이색 체험을 즐길 수 있다.",
+      "indoor": true,
+      "free": false,
+      "age": "유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.gmuc.co.kr/user/conn/caveIntro.do",
+          "title": "광명동굴 공식 시설소개"
+        },
+        {
+          "url": "https://www.telltrip.com/domestic-travel/gwangmyeong-cave-urban-regeneration-history-experience/",
+          "title": "광명동굴 소개 기사 – telltrip"
+        }
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "한국만화박물관",
+      "area": "경기 부천",
+      "desc": "국내 유일 만화 전문 박물관으로 어린이 열람실·체험 전시·방학 특별 교육 등을 통해 아이들이 만화 세계에 푹 빠질 수 있다.",
+      "indoor": true,
+      "free": false,
+      "age": "유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://www.komacon.kr/comicsmuseum/guide/show_info.asp",
+          "title": "한국만화박물관 공식 홈페이지"
+        },
+        {
+          "url": "https://kidshotplace.com/%EB%B6%80%EC%B2%9C%EB%A7%8C%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80/",
+          "title": "부천만화박물관 입장료·할인·전시 정보"
+        }
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "몽키즈클라이밍 안양평촌점",
+      "area": "경기 안양",
+      "desc": "어린이 전용 실내 클라이밍 센터로 1:1 강사 지도와 어린이 체형 맞춤 홀드 세팅이 특징이며 2026년 우수 클라이밍장으로 선정되었다.",
+      "indoor": true,
+      "free": false,
+      "age": "유아~초등",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://mongkids.co.kr/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%86%8C%EA%B0%9C/",
+          "title": "몽키즈클라이밍 공식 프로그램 소개"
+        },
+        {
+          "url": "https://www.besttimes.co.kr/11090",
+          "title": "몽키즈클라이밍 안양평촌점 2026 우수 클라이밍장 선정 기사"
+        }
+      ]
+    },
+    {
+      "category": "액티비티",
+      "region": "수도권",
+      "name": "바운스 슈퍼파크 하남센터",
+      "area": "경기 하남",
+      "desc": "640평 규모의 초대형 실내 액티비티 파크로 트램폴린·짚코스터·슬라이드·범퍼카 등 다이나믹한 놀이를 한 번에 즐길 수 있다.",
+      "indoor": true,
+      "free": false,
+      "age": "100cm 이상 어린이~성인",
+      "season": [
+        "올시즌"
+      ],
+      "sources": [
+        {
+          "url": "https://babygo.kr/place/771f8974-a607-4a49-87de-c4833621472b",
+          "title": "바운스 슈퍼파크 하남센터 – 애기야가자"
+        },
+        {
+          "url": "https://oneproplus.com/entry/%EB%B0%94%EC%9A%B4%EC%8A%A4-%EC%8A%88%ED%8D%BC%ED%8C%8C%ED%81%AC-%ED%95%98%EB%82%A8%EC%A0%90-%EC%B4%88%EB%93%B1%ED%95%99%EC%83%9D-%EC%8B%A4%EB%82%B4%EC%8A%A4%ED%8F%AC%EC%B8%A0-%EC%B2%B4%ED%97%98-%ED%9B%84%EA%B8%B0",
+          "title": "바운스 슈퍼파크 하남점 초등학생 실내스포츠 체험 후기"
+        }
+      ]
     }
   ]
 }
