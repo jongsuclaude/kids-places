@@ -8,10 +8,13 @@
   · places_auto.json  = TourAPI 자동수집 (후보, 사진 썸네일·'자동수집' 배지 표시)
 이름이 겹치면 큐레이션이 이긴다(자동수집 중복 제거).
 
-필터: 검색 · 권역 · 출처 · 실내/실외 · 무료/유료 · 계절
-  · 기본 화면은 큐레이션만 (자동수집은 출처 필터로 펼침)
-  · 권역별 8곳까지만 먼저 보이고 나머지는 '더보기'로 접힘
-  · 자동수집분은 실내외·무료가 미확인('?') → 해당 필터를 켜면 제외
+UI:
+  · 모바일 최적화(1열·가로스크롤 내비·큰 터치 타깃)
+  · 필터는 기본 접힘 → '필터' 버튼으로 열고 닫기
+  · 검색 · 권역 · 카테고리 · 출처 · 실내외 · 비용 · 계절 필터
+  · 권역=전체일 때 권역을 라벨로 명확히 구분
+  · 권역별 8곳까지 먼저, 나머지는 '더보기'
+  · 자동수집분은 실내외·무료가 미확인('?') → 해당 필터 켜면 제외
 
 실행:  python3 build.py   →  open index.html
 """
@@ -36,6 +39,8 @@ CAT_ICON = {"숙소": "🛏️", "놀이터": "🎠", "공원": "🌳", "물놀�
 CAT_SUB = {"숙소": "키즈 프렌들리", "놀이터": "순수 놀이터", "물놀이터": "여름 위주",
            "박물관·과학·전시": "실내·날씨무관", "캠핑": "키즈"}
 REGIONS = ["수도권", "강원", "충청", "전라", "경상", "제주"]
+REGION_ICON = {"수도권": "🏙️", "강원": "⛰️", "충청": "🌾",
+               "전라": "🌽", "경상": "🌊", "제주": "🌴"}
 
 
 def norm(s):
@@ -97,6 +102,7 @@ def card_html(p):
     return (
         f'<div class="card{" auto" if is_auto else ""}" '
         f'data-region="{html.escape(p.get("region",""))}" '
+        f'data-cat="{html.escape(p.get("category",""))}" '
         f'data-indoor="{indoor}" data-free="{free}" '
         f'data-season="{html.escape(season_attr)}" data-source="{kind}" '
         f'data-search="{search}">'
@@ -117,6 +123,15 @@ def load(path):
         return json.load(f).get("places", [])
 
 
+def chip_row(label, group, values):
+    """values = [(data-v, 표시텍스트, active?)]"""
+    chips = "".join(
+        f'<span class="chip{" active" if act else ""}" data-g="{group}" data-v="{html.escape(v)}">{html.escape(t)}</span>'
+        for v, t, act in values
+    )
+    return f'<div class="frow"><span class="flabel">{html.escape(label)}</span>{chips}</div>'
+
+
 def build():
     curated = load(DATA)
     auto = load(AUTO)
@@ -130,11 +145,10 @@ def build():
         have.add(norm(p.get("name", "")))
         p["_kind"] = "auto"
         auto_dedup.append(p)
-    places = curated + auto_dedup  # 큐레이션 우선(앞), 자동수집 뒤
+    places = curated + auto_dedup
 
-    # 카테고리 점프 내비
-    nav = ['<a class="navchip" href="#top">맨위</a>']
-
+    # 점프 내비
+    nav = ['<a class="navchip" href="#top">⤴ 맨위</a>']
     sections = []
     for cat in CATEGORIES:
         in_cat = [p for p in places if p.get("category") == cat]
@@ -153,7 +167,8 @@ def build():
             cards = "\n".join(card_html(p) for p in in_region)
             groups.append(
                 f'<div class="region-group" data-region="{region}">'
-                f'<h3>{region} <span class="rcount"></span></h3>'
+                f'<h3><span class="rlabel">{REGION_ICON.get(region,"")} {region}</span>'
+                f' <span class="rcount"></span></h3>'
                 f'<div class="cards">{cards}</div>'
                 f'<button class="more" type="button">더보기</button>'
                 f"</div>"
@@ -167,8 +182,25 @@ def build():
             f'{"".join(groups)}</section>'
         )
 
+    # 카테고리 필터칩 (전체 + 10종)
+    cat_vals = [("all", "전체", True)] + [
+        (c, f'{CAT_ICON.get(c,"")} {c}', False)
+        for c in CATEGORIES if any(p.get("category") == c for p in places)
+    ]
+    region_vals = [("all", "전체", True)] + [(r, r, False) for r in REGIONS]
+
+    filters_html = "\n".join([
+        chip_row("권역", "region", region_vals),
+        chip_row("분류", "cat", cat_vals),
+        chip_row("출처", "source", [("all", "전체", False), ("curated", "★ 큐레이션", True), ("auto", "🤖 자동수집", False)]),
+        chip_row("실내외", "place", [("all", "전체", True), ("y", "🏠 실내", False), ("n", "🌳 실외", False)]),
+        chip_row("비용", "cost", [("all", "전체", True), ("y", "무료", False), ("n", "유료", False)]),
+        chip_row("계절", "season", [("all", "전체", True), ("봄", "봄", False), ("여름", "여름", False), ("가을", "가을", False), ("겨울", "겨울", False)]),
+    ])
+
     page = (
         PAGE.replace("__NAV__", "\n".join(nav))
+        .replace("__FILTERS__", filters_html)
         .replace("__SECTIONS__", "\n".join(sections))
         .replace("__TOTAL__", str(len(places)))
         .replace("__CUR__", str(len(curated)))
@@ -182,36 +214,63 @@ def build():
 
 PAGE = """<!DOCTYPE html>
 <html lang="ko"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>아이랑 갈 만한 곳</title>
 <style>
   :root { color-scheme: light dark; }
+  * { -webkit-tap-highlight-color: transparent; }
   body { font-family: -apple-system, system-ui, sans-serif; max-width: 960px;
-         margin: 0 auto; padding: 24px 16px 60px; color: #1d1d1f; background: #fbfbfd; }
-  h1 { font-size: 24px; margin: 0 0 2px; }
-  .meta { color: #6e6e73; font-size: 13px; margin-bottom: 14px; }
+         margin: 0 auto; padding: 20px 16px 60px; color: #1d1d1f; background: #fbfbfd; }
+  h1 { font-size: 23px; margin: 0 0 2px; }
+  .meta { color: #6e6e73; font-size: 13px; margin-bottom: 12px; }
   .muted { color: #86868b; font-weight: 400; font-size: 15px; }
-  .filters { position: sticky; top: 0; background: rgba(251,251,253,.96);
-             backdrop-filter: blur(8px); padding: 10px 0; border-bottom: 1px solid #eee;
-             margin-bottom: 8px; z-index: 5; }
-  .search { width: 100%; box-sizing: border-box; font-size: 15px; padding: 9px 13px;
-            border: 1px solid #ddd; border-radius: 10px; background: #fff; margin-bottom: 8px; }
-  .frow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 4px 0; }
+
+  /* 상단 고정바: 검색 + 필터버튼 */
+  .topbar { position: sticky; top: 0; z-index: 20; background: rgba(251,251,253,.97);
+            backdrop-filter: blur(10px); padding: 10px 0 8px;
+            display: flex; gap: 8px; align-items: center; }
+  .search { flex: 1; min-width: 0; box-sizing: border-box; font-size: 16px; padding: 10px 14px;
+            border: 1px solid #ddd; border-radius: 12px; background: #fff; }
+  .filter-toggle { flex: none; font-size: 14px; font-weight: 600; padding: 10px 14px;
+                   border: 1px solid #ddd; border-radius: 12px; background: #fff; cursor: pointer;
+                   display: flex; align-items: center; gap: 6px; }
+  .fbadge { font-size: 11px; min-width: 17px; height: 17px; padding: 0 4px; box-sizing: border-box;
+            border-radius: 999px; background: #1d1d1f; color: #fff; display: none;
+            align-items: center; justify-content: center; }
+  .fbadge.on { display: inline-flex; }
+
+  /* 필터 패널 (기본 접힘) */
+  .panel { display: none; position: sticky; top: 58px; z-index: 15;
+           background: #fff; border: 1px solid #eee; border-radius: 14px;
+           padding: 12px 14px; margin: 6px 0 4px; box-shadow: 0 6px 20px rgba(0,0,0,.08); }
+  .panel.open { display: block; }
+  .frow { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 7px 0; }
   .flabel { font-size: 12px; color: #86868b; width: 46px; flex: none; }
-  .chip { font-size: 13px; padding: 4px 11px; border-radius: 999px; border: 1px solid #ddd;
+  .chip { font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid #ddd;
           background: #fff; cursor: pointer; user-select: none; }
   .chip.active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
-  .resultbar { font-size: 13px; color: #6e6e73; margin: 6px 0 2px; }
+  .panel-actions { display: flex; gap: 8px; margin-top: 12px; }
+  .pbtn { flex: 1; font-size: 14px; font-weight: 600; padding: 10px; border-radius: 10px;
+          border: 1px solid #ddd; background: #fff; cursor: pointer; }
+  .pbtn.primary { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
+
+  .resultbar { font-size: 13px; color: #6e6e73; margin: 8px 0 2px; }
   .resultbar b { color: #1d1d1f; }
-  .nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 2px; }
-  .navchip { font-size: 12px; padding: 3px 9px; border-radius: 999px; background: #eef0f2;
-             color: #515154; text-decoration: none; }
+  .nav { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 2px; }
+  .navchip { font-size: 12px; padding: 4px 10px; border-radius: 999px; background: #eef0f2;
+             color: #515154; text-decoration: none; white-space: nowrap; }
   .navchip b { color: #1d1d1f; }
-  section.cat { margin: 24px 0; scroll-margin-top: 130px; }
-  h2 { font-size: 19px; margin: 0 0 6px; }
-  h3 { font-size: 14px; color: #6e6e73; margin: 14px 0 8px; font-weight: 600; }
+
+  section.cat { margin: 26px 0; scroll-margin-top: 76px; }
+  h2 { font-size: 19px; margin: 0 0 4px; }
   .ccount, .rcount { font-size: 12px; color: #aeaeb2; font-weight: 500; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+  /* 권역 라벨 — 전체 보기에서 구분 명확히 */
+  h3 { margin: 16px 0 10px; }
+  .rlabel { display: inline-block; font-size: 14px; font-weight: 700; color: #1d1d1f;
+            background: #e8ecf2; padding: 4px 12px; border-radius: 8px;
+            border-left: 4px solid #b9c2d0; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); gap: 12px; }
   .card { background: #fff; border-radius: 14px; padding: 14px 15px;
           box-shadow: 0 1px 3px rgba(0,0,0,.06); display: flex; flex-direction: column; }
   .card.auto { background: #fcfcfd; }
@@ -229,52 +288,42 @@ PAGE = """<!DOCTYPE html>
   .tag.cur { background: #efe6ff; color: #6b1ac4; }
   .tag.auto { background: #eef0f2; color: #8a8a8e; }
   .clink { font-size: 13px; color: #0066cc; text-decoration: none; }
-  .more { display: none; margin: 10px auto 0; font-size: 13px; padding: 6px 16px;
+  .more { display: none; margin: 12px auto 0; font-size: 13px; padding: 8px 18px;
           border: 1px solid #ddd; border-radius: 999px; background: #fff; cursor: pointer; }
   .empty { color: #86868b; font-size: 14px; padding: 24px 0; display: none; }
   .note { color: #86868b; font-size: 12px; margin-top: 24px; line-height: 1.6; }
+
+  /* 모바일 최적화 */
+  @media (max-width: 600px) {
+    body { padding: 14px 12px 50px; }
+    h1 { font-size: 20px; }
+    .cards { grid-template-columns: 1fr; }
+    .chip { padding: 8px 14px; }
+    .nav { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
+           padding-bottom: 4px; }
+    .panel { max-height: 64vh; overflow-y: auto; top: 56px; }
+    .flabel { width: 100%; margin-bottom: 1px; }
+  }
 </style></head><body>
 <a id="top"></a>
 <h1>👨‍👩‍👧 아이랑 갈 만한 곳</h1>
 <div class="meta">전국 권역별 가이드 · 총 <b>__TOTAL__</b>곳
   (★ 큐레이션 <b>__CUR__</b> · 🤖 자동수집 <b>__AUTO__</b>)</div>
 
-<div class="filters">
-  <input id="q" class="search" type="search" placeholder="🔍 이름·지역 검색 (예: 에버랜드, 제주)">
-  <div class="frow"><span class="flabel">권역</span>
-    <span class="chip active" data-g="region" data-v="all">전체</span>
-    <span class="chip" data-g="region" data-v="수도권">수도권</span>
-    <span class="chip" data-g="region" data-v="강원">강원</span>
-    <span class="chip" data-g="region" data-v="충청">충청</span>
-    <span class="chip" data-g="region" data-v="전라">전라</span>
-    <span class="chip" data-g="region" data-v="경상">경상</span>
-    <span class="chip" data-g="region" data-v="제주">제주</span>
-  </div>
-  <div class="frow"><span class="flabel">출처</span>
-    <span class="chip" data-g="source" data-v="all">전체</span>
-    <span class="chip active" data-g="source" data-v="curated">★ 큐레이션</span>
-    <span class="chip" data-g="source" data-v="auto">🤖 자동수집</span>
-  </div>
-  <div class="frow"><span class="flabel">실내외</span>
-    <span class="chip active" data-g="place" data-v="all">전체</span>
-    <span class="chip" data-g="place" data-v="y">🏠 실내</span>
-    <span class="chip" data-g="place" data-v="n">🌳 실외</span>
-  </div>
-  <div class="frow"><span class="flabel">비용</span>
-    <span class="chip active" data-g="cost" data-v="all">전체</span>
-    <span class="chip" data-g="cost" data-v="y">무료</span>
-    <span class="chip" data-g="cost" data-v="n">유료</span>
-  </div>
-  <div class="frow"><span class="flabel">계절</span>
-    <span class="chip active" data-g="season" data-v="all">전체</span>
-    <span class="chip" data-g="season" data-v="봄">봄</span>
-    <span class="chip" data-g="season" data-v="여름">여름</span>
-    <span class="chip" data-g="season" data-v="가을">가을</span>
-    <span class="chip" data-g="season" data-v="겨울">겨울</span>
-  </div>
-  <div class="resultbar">표시 <b id="vcount">0</b>곳 <span id="capnote"></span></div>
+<div class="topbar">
+  <input id="q" class="search" type="search" placeholder="🔍 이름·지역 검색">
+  <button id="filterBtn" class="filter-toggle" type="button">⚙️ 필터 <span id="fbadge" class="fbadge"></span></button>
 </div>
 
+<div id="panel" class="panel">
+  __FILTERS__
+  <div class="panel-actions">
+    <button id="resetBtn" class="pbtn" type="button">초기화</button>
+    <button id="closeBtn" class="pbtn primary" type="button">닫기</button>
+  </div>
+</div>
+
+<div class="resultbar">표시 <b id="vcount">0</b>곳 / 전체 __TOTAL__곳</div>
 <div class="nav">__NAV__</div>
 
 __SECTIONS__
@@ -286,11 +335,13 @@ __SECTIONS__
 
 <script>
   var CAP = 8;
-  var F = { region: [], source: "curated", place: "all", cost: "all", season: "all", q: "" };
+  var DEF = { region: [], cat: "all", source: "curated", place: "all", cost: "all", season: "all", q: "" };
+  var F = JSON.parse(JSON.stringify(DEF));
   var expanded = {};
 
   function pass(card) {
     if (F.region.length && F.region.indexOf(card.dataset.region) < 0) return false;
+    if (F.cat !== "all" && card.dataset.cat !== F.cat) return false;
     if (F.source !== "all" && card.dataset.source !== F.source) return false;
     if (F.place  !== "all" && card.dataset.indoor !== F.place) return false;
     if (F.cost   !== "all" && card.dataset.free !== F.cost) return false;
@@ -305,10 +356,20 @@ __SECTIONS__
     return true;
   }
 
+  function activeCount() {
+    var n = 0;
+    if (F.region.length) n++;
+    if (F.cat !== "all") n++;
+    if (F.source !== "all") n++;
+    if (F.place !== "all") n++;
+    if (F.cost !== "all") n++;
+    if (F.season !== "all") n++;
+    return n;
+  }
+
   function apply() {
     var total = 0;
-    var groups = document.querySelectorAll(".region-group");
-    groups.forEach(function (g, gi) {
+    document.querySelectorAll(".region-group").forEach(function (g, gi) {
       var shown = 0, vis = 0;
       g.querySelectorAll(".card").forEach(function (c) {
         if (pass(c)) {
@@ -323,8 +384,7 @@ __SECTIONS__
         btn.style.display = "block";
         btn.textContent = "더보기 (+" + (vis - CAP) + ")";
       } else btn.style.display = "none";
-      var rc = g.querySelector(".rcount");
-      if (rc) rc.textContent = vis ? vis : "";
+      g.querySelector(".rcount").textContent = vis ? vis : "";
       g.style.display = vis ? "block" : "none";
     });
     document.querySelectorAll("section.cat").forEach(function (s) {
@@ -333,14 +393,27 @@ __SECTIONS__
         if (g.style.display !== "none") cv += parseInt(g.querySelector(".rcount").textContent || "0", 10);
       });
       s.style.display = cv ? "block" : "none";
-      var cc = s.querySelector(".ccount");
-      if (cc) cc.textContent = cv ? cv : "";
+      s.querySelector(".ccount").textContent = cv ? cv : "";
     });
     document.getElementById("vcount").textContent = total;
     document.querySelector(".empty").style.display = total ? "none" : "block";
+    var b = document.getElementById("fbadge"), n = activeCount();
+    b.textContent = n; b.classList.toggle("on", n > 0);
   }
 
-  document.querySelectorAll(".more").forEach(function (btn, ignore) {
+  function syncChips() {
+    document.querySelectorAll(".chip").forEach(function (c) {
+      var g = c.dataset.g, v = c.dataset.v;
+      if (g === "region") {
+        if (v === "all") c.classList.toggle("active", F.region.length === 0);
+        else c.classList.toggle("active", F.region.indexOf(v) >= 0);
+      } else {
+        c.classList.toggle("active", F[g] === v);
+      }
+    });
+  }
+
+  document.querySelectorAll(".more").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var g = btn.closest(".region-group");
       var gi = Array.prototype.indexOf.call(document.querySelectorAll(".region-group"), g);
@@ -365,18 +438,23 @@ __SECTIONS__
           var i = F.region.indexOf(v);
           if (i >= 0) F.region.splice(i, 1); else F.region.push(v);
         }
-        document.querySelectorAll('.chip[data-g="region"]').forEach(function (c) {
-          if (c.dataset.v === "all") c.classList.toggle("active", F.region.length === 0);
-          else c.classList.toggle("active", F.region.indexOf(c.dataset.v) >= 0);
-        });
       } else {
         F[g] = v;
-        document.querySelectorAll('.chip[data-g="' + g + '"]').forEach(function (c) {
-          c.classList.toggle("active", c === chip);
-        });
       }
+      syncChips();
       apply();
     });
+  });
+
+  var panel = document.getElementById("panel");
+  document.getElementById("filterBtn").addEventListener("click", function () { panel.classList.toggle("open"); });
+  document.getElementById("closeBtn").addEventListener("click", function () { panel.classList.remove("open"); });
+  document.getElementById("resetBtn").addEventListener("click", function () {
+    F = JSON.parse(JSON.stringify(DEF));
+    document.getElementById("q").value = "";
+    expanded = {};
+    syncChips();
+    apply();
   });
 
   apply();
