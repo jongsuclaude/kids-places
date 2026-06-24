@@ -42,6 +42,11 @@ REGIONS = ["수도권", "강원", "충청", "전라", "경상", "제주"]
 REGION_ICON = {"수도권": "🏙️", "강원": "⛰️", "충청": "🌾",
                "전라": "🌽", "경상": "🌊", "제주": "🌴"}
 
+# 카테고리별로 의미 있는 태그만 — 자명한 건 숨김
+SHOW_PLACE = {"놀이터", "테마파크·놀이공원", "동물·자연", "체험·교육", "액티비티"}  # 실내외가 갈리는 곳
+SHOW_COST = {"놀이터", "물놀이터", "박물관·과학·전시", "동물·자연", "체험·교육", "액티비티"}  # 무료/유료가 갈리는 곳
+OBVIOUS_AGE = {"전연령", "전 연령", ""}  # 연령 태그 생략 대상
+
 
 def norm(s):
     return re.sub(r"[\s()·]", "", unicodedata.normalize("NFC", s or "")).lower()
@@ -100,13 +105,18 @@ def card_html(p):
     if is_auto:
         tags.append(tag("🤖 자동수집", "tag auto"))
     else:
+        cat = p.get("category", "")
         tags.append(tag("★ 큐레이션", "tag cur"))
-        tags.append(tag("🏠 실내" if indoor == "y" else "🌳 실외", "tag place"))
-        tags.append(tag("무료" if free == "y" else "유료", "tag cost"))
+        if cat in SHOW_PLACE:
+            tags.append(tag("🏠 실내" if indoor == "y" else "🌳 실외", "tag place"))
+        if cat in SHOW_COST:
+            tags.append(tag("무료" if free == "y" else "유료", "tag cost"))
         for s in seasons:
-            tags.append(tag("사계절" if s == "올시즌" else s, "tag season"))
-        if p.get("age"):
-            tags.append(tag("👶 " + p["age"], "tag age"))
+            if s and s != "올시즌":  # 사계절은 자명 → 생략
+                tags.append(tag(s, "tag season"))
+        age = p.get("age", "")
+        if age not in OBVIOUS_AGE:
+            tags.append(tag("👶 " + age, "tag age"))
         for a in p.get("amenities", []):
             tags.append(tag(a, "tag amen"))
 
