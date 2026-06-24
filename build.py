@@ -155,6 +155,7 @@ def card_html(p):
         )
         srclist_html = f'<div class="srclist" hidden>{items}</div>'
 
+    links += '<button class="reviewbtn" type="button">✍️ 평가</button>'
     links_html = f'<div class="clinks">{links}</div>{srclist_html}'
 
     return (
@@ -170,7 +171,6 @@ def card_html(p):
         f"{desc_html}"
         f'<div class="ctags">{"".join(tags)}</div>'
         f"{links_html}"
-        f'<button class="reviewbtn" type="button">✍️ 평가</button>'
         f'<div class="reviewslot"></div>'
         f"</div>"
     )
@@ -349,7 +349,7 @@ PAGE = """<!DOCTYPE html>
   .tag.season { background: #fff1e0; color: #9a5b00; }
   .tag.cur { background: #efe6ff; color: #6b1ac4; }
   .tag.auto { background: #eef0f2; color: #8a8a8e; }
-  .clinks { display: none; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+  .clinks { display: none; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
   .card.open .clinks { display: flex; }
   .card { cursor: pointer; }
   .clink { font-size: 13px; color: #0066cc; text-decoration: none; padding: 5px 10px;
@@ -366,10 +366,10 @@ PAGE = """<!DOCTYPE html>
   .note { color: #86868b; font-size: 12px; margin-top: 24px; line-height: 1.6; }
 
   /* 평가(리뷰) UI — ?edit=1 일 때만 노출 */
-  .reviewbtn { display: none; font-size: 13px; color: #b8860b; margin-top: 8px;
-               padding: 6px 12px; border: 1px solid #f0e0b0; border-radius: 8px;
-               background: #fffbf0; cursor: pointer; align-self: flex-start; }
-  body.edit-mode .card.open .reviewbtn { display: inline-block; }
+  .reviewbtn { display: none; font-size: 13px; color: #b8860b;
+               padding: 5px 11px; border: 1px solid #f0e0b0; border-radius: 8px;
+               background: #fffbf0; cursor: pointer; }
+  body.edit-mode .reviewbtn { display: inline-block; }
   .reviewform { display: none; flex-direction: column; gap: 10px; margin-top: 10px;
                 padding: 12px; border: 1px solid #eee; border-radius: 10px; background: #fafafa; }
   .reviewform.on { display: flex; }
@@ -383,8 +383,12 @@ PAGE = """<!DOCTYPE html>
           width: 27px; text-align: center; }
   .star .fill { position: absolute; left: 0; top: 0; width: 0; overflow: hidden;
                 color: #ffb300; pointer-events: none; }
-  .rv-photos { display: flex; flex-wrap: wrap; gap: 6px; }
-  .rv-photos img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; }
+  .rv-photos { display: flex; flex-wrap: wrap; gap: 12px; }
+  .rv-thumb { position: relative; }
+  .rv-thumb img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; display: block; }
+  .rv-del { position: absolute; top: -7px; right: -7px; width: 20px; height: 20px; padding: 0;
+            border: 0; border-radius: 50%; background: rgba(0,0,0,.72); color: #fff;
+            font-size: 15px; line-height: 20px; text-align: center; cursor: pointer; }
   .rv-save { font-size: 14px; font-weight: 700; padding: 10px; border: 0; border-radius: 8px;
              background: #1d1d1f; color: #fff; cursor: pointer; }
   .rv-msg { font-size: 13px; color: #1a7f37; }
@@ -710,17 +714,30 @@ __SECTIONS__
           });
         });
         var fileInput = form.querySelector('input[type=file]');
-        fileInput.addEventListener("change", function () {
-          var box = form.querySelector(".rv-photos"); box.innerHTML = "";
-          Array.prototype.forEach.call(fileInput.files, function (f) {
-            var img = document.createElement("img"); img.src = URL.createObjectURL(f); box.appendChild(img);
+        var photoBox = form.querySelector(".rv-photos");
+        var selectedFiles = [];
+        function renderPhotos() {
+          photoBox.innerHTML = "";
+          selectedFiles.forEach(function (f, idx) {
+            var wrap = document.createElement("div"); wrap.className = "rv-thumb";
+            var img = document.createElement("img"); img.src = URL.createObjectURL(f);
+            var del = document.createElement("button");
+            del.type = "button"; del.className = "rv-del"; del.textContent = "×";
+            del.addEventListener("click", function (ev) {
+              ev.stopPropagation(); selectedFiles.splice(idx, 1); renderPhotos();
+            });
+            wrap.appendChild(img); wrap.appendChild(del); photoBox.appendChild(wrap);
           });
+        }
+        fileInput.addEventListener("change", function () {
+          Array.prototype.forEach.call(fileInput.files, function (f) { selectedFiles.push(f); });
+          fileInput.value = "";  // 같은 파일 재선택 가능
+          renderPhotos();
         });
         form.querySelector(".rv-save").addEventListener("click", function () {
           var rating = starsEl.dataset.rating || "0";
-          var nphotos = fileInput.files.length;
           form.querySelector(".rv-msg").textContent =
-            "✅ (미리보기) 별점 " + rating + " · 사진 " + nphotos + "장 — 나스 연동 시 실제 저장됩니다.";
+            "✅ (미리보기) 별점 " + rating + " · 사진 " + selectedFiles.length + "장 — 나스 연동 시 실제 저장됩니다.";
         });
       }
       form.classList.toggle("on");
