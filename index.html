@@ -97,6 +97,7 @@
   .reviewform { display: none; flex-direction: column; gap: 10px; margin-top: 10px;
                 padding: 12px; border: 1px solid #eee; border-radius: 10px; background: #fafafa; }
   .reviewform.on { display: flex; }
+  .card:not(.open) .reviewform { display: none; }  /* 카드 닫히면 평가도 숨김 */
   .rv-text { width: 100%; box-sizing: border-box; min-height: 70px; font-size: 14px;
              padding: 10px; border: 1px solid #ddd; border-radius: 8px; resize: vertical; }
   .rv-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
@@ -968,6 +969,10 @@
     c.addEventListener("click", function (e) {
       if (e.target.closest("a, button, .reviewslot")) return;
       c.classList.toggle("open");
+      if (!c.classList.contains("open")) {  // 카드 닫으면 평가 폼도 닫기
+        var rf = c.querySelector(".reviewform");
+        if (rf) rf.classList.remove("on");
+      }
     });
   });
 
