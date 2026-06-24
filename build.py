@@ -585,7 +585,8 @@ __SECTIONS__
   // === 카테고리 아코디언 (기본 접힘, 필터/검색 시 자동 펼침) ===
   var collapsed = {};
   document.querySelectorAll("section.cat").forEach(function (s) { collapsed[s.dataset.cat] = true; });
-  var regionCollapsed = new Set();  // 비어있음 = 권역 기본 펼침, 헤더 탭하면 접힘
+  var regionCollapsed = new Set();  // 권역 기본 접힘 — 카테고리 열면 권역 헤더만, 탭해야 카드 보임
+  document.querySelectorAll(".region-group").forEach(function (g) { regionCollapsed.add(g); });
   function isFiltering() {
     return (F.qtoks && F.qtoks.length) || F.region.length || F.cat !== "all" ||
            F.place !== "all" || F.cost !== "all" || F.season !== "all";
