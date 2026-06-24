@@ -974,6 +974,15 @@
   document.querySelectorAll(".card").forEach(function (c) {
     c.addEventListener("click", function (e) {
       if (e.target.closest("a, button, .reviewslot")) return;
+      var willOpen = !c.classList.contains("open");
+      if (willOpen) {  // 새 카드 열 때 다른 열린 카드 닫기 (한 번에 하나)
+        document.querySelectorAll(".card.open").forEach(function (o) {
+          if (o === c) return;
+          o.classList.remove("open");
+          var orf = o.querySelector(".reviewform"); if (orf) orf.classList.remove("on");
+          var osl = o.querySelector(".srclist"); if (osl) osl.classList.remove("on");
+        });
+      }
       c.classList.toggle("open");
       if (!c.classList.contains("open")) {  // 카드 닫으면 평가·정보글 닫기
         var rf = c.querySelector(".reviewform");
