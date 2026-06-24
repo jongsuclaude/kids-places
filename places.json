@@ -253,7 +253,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~초등(어린이)",
-      "source": "https://mediahub.seoul.go.kr/archives/952721"
+      "source": "https://mediahub.seoul.go.kr/archives/952721",
+      "sources": [
+        {
+          "url": "https://mediahub.seoul.go.kr/archives/952721",
+          "title": "어린이대공원에 '무장애통합놀이터' 개장"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -264,7 +270,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~초등(어린이)",
-      "source": "https://opengov.seoul.go.kr/mediahub/22730844"
+      "source": "https://opengov.seoul.go.kr/mediahub/22730844",
+      "sources": [
+        {
+          "url": "https://opengov.seoul.go.kr/mediahub/22730844",
+          "title": "창의놀이터 '꿈틀' 5곳, 스마트서울맵으로 찾아가다"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -275,7 +287,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~초등",
-      "source": "https://www.i-rang.net/place/siheung-gaetgol"
+      "source": "https://www.i-rang.net/place/siheung-gaetgol",
+      "sources": [
+        {
+          "url": "https://www.i-rang.net/place/siheung-gaetgol",
+          "title": "시흥 갯골생태공원"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -286,7 +304,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~초등(영유아 모래놀이~큰 어린이 모험놀이)",
-      "source": "https://access.visitkorea.or.kr/ms/detail.do?cotId=90696e3f-8217-4a2a-b863-c9439852605f"
+      "source": "https://access.visitkorea.or.kr/ms/detail.do?cotId=90696e3f-8217-4a2a-b863-c9439852605f",
+      "sources": [
+        {
+          "url": "https://access.visitkorea.or.kr/ms/detail.do?cotId=90696e3f-8217-4a2a-b863-c9439852605f",
+          "title": "대한민국 구석구석"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -297,7 +321,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~어린이 (전 연령, 장애·비장애 통합)",
-      "source": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=6825&ntatcSeq=1481907484"
+      "source": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=6825&ntatcSeq=1481907484",
+      "sources": [
+        {
+          "url": "https://www.daejeon.go.kr/drh/board/boardNormalView.do?boardId=normal_0189&menuSeq=6825&ntatcSeq=1481907484",
+          "title": "한밭수목원 어린이놀이터 무장애놀이시설 첫 도입"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -308,7 +338,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~초등 어린이",
-      "source": "https://news.nate.com/view/20200726n13544"
+      "source": "https://news.nate.com/view/20200726n13544",
+      "sources": [
+        {
+          "url": "https://news.nate.com/view/20200726n13544",
+          "title": "행복청, 세종시 보람동에 '땀범벅 놀이터' 개장 : 네이트 뉴스"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -319,7 +355,13 @@
       "indoor": false,
       "free": true,
       "age": "영유아~전 연령",
-      "source": "https://www.sejong.go.kr/bbs/R0076/view.do?nttId=B000000052544Bx5aI4i"
+      "source": "https://www.sejong.go.kr/bbs/R0076/view.do?nttId=B000000052544Bx5aI4i",
+      "sources": [
+        {
+          "url": "https://www.sejong.go.kr/bbs/R0076/view.do?nttId=B000000052544Bx5aI4i",
+          "title": "세종시"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -330,7 +372,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~12세 이상 (전 연령)",
-      "source": "https://www.nocutnews.co.kr/news/6233659"
+      "source": "https://www.nocutnews.co.kr/news/6233659",
+      "sources": [
+        {
+          "url": "https://www.nocutnews.co.kr/news/6233659",
+          "title": "청주 문암생태공원 '온 가족 힐링놀이터' 준공"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -341,7 +389,13 @@
       "indoor": false,
       "free": true,
       "age": "영유아~어린이 (신장 기준 안전수칙 적용)",
-      "source": "https://www.newsis.com/view/NISX20260306_0003537360"
+      "source": "https://www.newsis.com/view/NISX20260306_0003537360",
+      "sources": [
+        {
+          "url": "https://www.newsis.com/view/NISX20260306_0003537360",
+          "title": "자연 품은 '충주 탄금공원 나무숲 놀이터' 시설 개선 완료"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -352,7 +406,13 @@
       "indoor": false,
       "free": true,
       "age": "유아~초등",
-      "source": "https://www.welfarehello.com/community/hometownNews/25590ff6-8baa-4673-930a-65df212d396d"
+      "source": "https://www.welfarehello.com/community/hometownNews/25590ff6-8baa-4673-930a-65df212d396d",
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/25590ff6-8baa-4673-930a-65df212d396d",
+          "title": "웰로"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -363,7 +423,13 @@
       "indoor": false,
       "free": false,
       "age": "유아~초등(전 연령 가족 단위, 어린이 중심)",
-      "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=48f8af92-502a-4b60-9d76-28e8b55dc51c"
+      "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=48f8af92-502a-4b60-9d76-28e8b55dc51c",
+      "sources": [
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=48f8af92-502a-4b60-9d76-28e8b55dc51c",
+          "title": "오색 네트 위로 팡팡! 홍성 남당항 네트어드벤처 여행기사"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -374,7 +440,13 @@
       "indoor": false,
       "free": false,
       "age": "유아·초등",
-      "source": "https://www.chuncheon.go.kr/tour/destination/all-tour/detail/?tourId=190"
+      "source": "https://www.chuncheon.go.kr/tour/destination/all-tour/detail/?tourId=190",
+      "sources": [
+        {
+          "url": "https://www.chuncheon.go.kr/tour/destination/all-tour/detail/?tourId=190",
+          "title": "꿈자람 어린이공원"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -385,7 +457,13 @@
       "indoor": true,
       "free": false,
       "age": "영유아·초등저학년",
-      "source": "https://www.wjsangsang.or.kr/"
+      "source": "https://www.wjsangsang.or.kr/",
+      "sources": [
+        {
+          "url": "https://www.wjsangsang.or.kr/",
+          "title": "상상놀이터 놀비숲"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -396,7 +474,13 @@
       "indoor": true,
       "free": false,
       "age": "유아·초등저학년",
-      "source": "https://www.welfarehello.com/community/hometownNews/3149df18-f00e-4ed3-9d2e-f86d93b6413e"
+      "source": "https://www.welfarehello.com/community/hometownNews/3149df18-f00e-4ed3-9d2e-f86d93b6413e",
+      "sources": [
+        {
+          "url": "https://www.welfarehello.com/community/hometownNews/3149df18-f00e-4ed3-9d2e-f86d93b6413e",
+          "title": "웰로"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -407,7 +491,13 @@
       "indoor": true,
       "free": false,
       "age": "유아",
-      "source": "https://www.taebaek.go.kr/365safetown/index.do"
+      "source": "https://www.taebaek.go.kr/365safetown/index.do",
+      "sources": [
+        {
+          "url": "https://www.taebaek.go.kr/365safetown/index.do",
+          "title": "365세이프타운, 국내 최대 안전체험 테마파크, 한국안전체험관 입니다."
+        }
+      ]
     },
     {
       "category": "숙소",
