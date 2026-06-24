@@ -215,7 +215,8 @@ def build():
             cards = "\n".join(card_html(p) for p in in_region)
             groups.append(
                 f'<div class="region-group" data-region="{region}">'
-                f'<h3><span class="rlabel">{REGION_ICON.get(region,"")} {region}</span>'
+                f'<h3 class="rhead"><span class="rchev">▸</span> '
+                f'<span class="rlabel">{REGION_ICON.get(region,"")} {region}</span>'
                 f' <span class="rcount"></span></h3>'
                 f'<div class="cards">{cards}</div>'
                 f'<button class="more" type="button">더보기</button>'
@@ -361,6 +362,11 @@ PAGE = """<!DOCTYPE html>
   section.cat:not(.collapsed) > .cathead .chev { transform: rotate(90deg); }
   section.cat.collapsed .region-group,
   section.cat.collapsed .more { display: none !important; }
+  .rhead { cursor: pointer; user-select: none; }
+  .rchev { font-size: 11px; color: #aeaeb2; transition: transform .15s; display: inline-block; }
+  .region-group:not(.rcollapsed) > .rhead .rchev { transform: rotate(90deg); }
+  .region-group.rcollapsed > .cards,
+  .region-group.rcollapsed > .more { display: none !important; }
   /* 리스트(compact) 뷰 */
   body.view-list .cards { grid-template-columns: 1fr; gap: 6px; }
   body.view-list .card { padding: 11px 13px; cursor: pointer; }
@@ -579,6 +585,7 @@ __SECTIONS__
   // === 카테고리 아코디언 (기본 접힘, 필터/검색 시 자동 펼침) ===
   var collapsed = {};
   document.querySelectorAll("section.cat").forEach(function (s) { collapsed[s.dataset.cat] = true; });
+  var regionCollapsed = new Set();  // 비어있음 = 권역 기본 펼침, 헤더 탭하면 접힘
   function isFiltering() {
     return (F.qtoks && F.qtoks.length) || F.region.length || F.cat !== "all" ||
            F.place !== "all" || F.cost !== "all" || F.season !== "all";
@@ -589,11 +596,22 @@ __SECTIONS__
       var open = filtering || !collapsed[s.dataset.cat];
       s.classList.toggle("collapsed", !open);
     });
+    document.querySelectorAll(".region-group").forEach(function (g) {
+      var open = filtering || !regionCollapsed.has(g);
+      g.classList.toggle("rcollapsed", !open);
+    });
   }
   document.querySelectorAll(".cathead").forEach(function (h) {
     h.addEventListener("click", function () {
       var s = h.closest("section.cat");
       collapsed[s.dataset.cat] = !collapsed[s.dataset.cat];
+      applyCollapse();
+    });
+  });
+  document.querySelectorAll(".rhead").forEach(function (h) {
+    h.addEventListener("click", function () {
+      var g = h.closest(".region-group");
+      if (regionCollapsed.has(g)) regionCollapsed.delete(g); else regionCollapsed.add(g);
       applyCollapse();
     });
   });
@@ -607,6 +625,8 @@ __SECTIONS__
   document.getElementById("expAll").addEventListener("click", function () {
     allOpen = !allOpen;
     document.querySelectorAll("section.cat").forEach(function (s) { collapsed[s.dataset.cat] = !allOpen; });
+    if (allOpen) regionCollapsed.clear();
+    else document.querySelectorAll(".region-group").forEach(function (g) { regionCollapsed.add(g); });
     this.textContent = allOpen ? "모두 접기" : "모두 펼치기";
     applyCollapse();
   });
