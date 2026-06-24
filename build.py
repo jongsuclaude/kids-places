@@ -141,19 +141,15 @@ def card_html(p):
     ][:3]
 
     srclist_html = ""
-    if len(srcs) == 1:
-        links += (
-            f'<a class="clink src" href="{html.escape(srcs[0]["url"], quote=True)}" '
-            f'target="_blank" rel="noopener">📄 정보 글</a>'
-        )
-    elif len(srcs) >= 2:
-        links += f'<button class="srcbtn" type="button">📄 정보 글 ({len(srcs)})</button>'
+    if srcs:
+        label = "📄 정보 글" + (f" ({len(srcs)})" if len(srcs) > 1 else "")
+        links += f'<button class="srcbtn" type="button">{label}</button>'
         items = "".join(
             f'<a class="clink src" href="{html.escape(x["url"], quote=True)}" '
             f'target="_blank" rel="noopener">📄 {html.escape(x.get("title") or "정보 글")}</a>'
             for x in srcs
         )
-        srclist_html = f'<div class="srclist" hidden>{items}</div>'
+        srclist_html = f'<div class="srclist">{items}</div>'
 
     links += '<button class="reviewbtn" type="button">✍️ 평가</button>'
     links_html = f'<div class="clinks">{links}</div>{srclist_html}'
@@ -357,8 +353,10 @@ PAGE = """<!DOCTYPE html>
   .clink.src { color: #6b6b70; border-color: #e3e3e6; background: #f5f5f7; }
   .srcbtn { font-size: 13px; color: #6b6b70; padding: 5px 10px; border: 1px solid #e3e3e6;
             border-radius: 8px; background: #f5f5f7; cursor: pointer; }
-  .srclist { display: flex; flex-direction: column; gap: 6px; margin-top: 8px;
+  .srclist { display: none; flex-direction: column; gap: 6px; margin-top: 8px;
              padding-left: 2px; }
+  .srclist.on { display: flex; }
+  .card:not(.open) .srclist { display: none; }  /* 카드 닫히면 정보글도 숨김 */
   .srclist .clink.src { align-self: flex-start; }
   .more { display: none; margin: 12px auto 0; font-size: 13px; padding: 8px 18px;
           border: 1px solid #ddd; border-radius: 999px; background: #fff; cursor: pointer; }
@@ -586,9 +584,13 @@ __SECTIONS__
   });
 
   document.querySelectorAll(".srcbtn").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var list = btn.closest(".card").querySelector(".srclist");
-      if (list) list.hidden = !list.hidden;
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var card = btn.closest(".card");
+      var rf = card.querySelector(".reviewform");
+      if (rf) rf.classList.remove("on");  // 평가 열려있으면 닫기(상호배타)
+      var list = card.querySelector(".srclist");
+      if (list) list.classList.toggle("on");
     });
   });
 
@@ -619,9 +621,11 @@ __SECTIONS__
     c.addEventListener("click", function (e) {
       if (e.target.closest("a, button, .reviewslot")) return;
       c.classList.toggle("open");
-      if (!c.classList.contains("open")) {  // 카드 닫으면 평가 폼도 닫기
+      if (!c.classList.contains("open")) {  // 카드 닫으면 평가·정보글 닫기
         var rf = c.querySelector(".reviewform");
         if (rf) rf.classList.remove("on");
+        var sl = c.querySelector(".srclist");
+        if (sl) sl.classList.remove("on");
       }
     });
   });
@@ -704,6 +708,8 @@ __SECTIONS__
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
       var card = btn.closest(".card");
+      var sl = card.querySelector(".srclist");
+      if (sl) sl.classList.remove("on");  // 정보글 열려있으면 닫기(상호배타)
       var slot = card.querySelector(".reviewslot");
       var form = slot.querySelector(".reviewform");
       if (!form) {
