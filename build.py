@@ -225,7 +225,8 @@ def build():
         sub_html = f' <span class="muted">({html.escape(sub)})</span>' if sub else ""
         sections.append(
             f'<section class="cat" id="{cat_id}" data-cat="{html.escape(cat)}">'
-            f'<h2>{CAT_ICON.get(cat,"")} {html.escape(cat)}{sub_html}'
+            f'<h2 class="cathead"><span class="chev">▸</span> '
+            f'{CAT_ICON.get(cat,"")} {html.escape(cat)}{sub_html}'
             f' <span class="ccount"></span></h2>'
             f'{"".join(groups)}</section>'
         )
@@ -349,6 +350,27 @@ PAGE = """<!DOCTYPE html>
   .empty { color: #86868b; font-size: 14px; padding: 24px 0; display: none; }
   .note { color: #86868b; font-size: 12px; margin-top: 24px; line-height: 1.6; }
 
+  /* 보기 토글 · 리스트뷰 · 아코디언 */
+  .resultbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .viewtoggle { display: flex; gap: 4px; }
+  .vbtn { font-size: 12px; padding: 5px 10px; border: 1px solid #ddd; border-radius: 8px;
+          background: #fff; color: #515154; cursor: pointer; }
+  .vbtn.active { background: #1d1d1f; color: #fff; border-color: #1d1d1f; }
+  .cathead { cursor: pointer; user-select: none; display: flex; align-items: center; gap: 7px; }
+  .chev { font-size: 12px; color: #aeaeb2; transition: transform .15s; }
+  section.cat:not(.collapsed) > .cathead .chev { transform: rotate(90deg); }
+  section.cat.collapsed .region-group,
+  section.cat.collapsed .more { display: none !important; }
+  /* 리스트(compact) 뷰 */
+  body.view-list .cards { grid-template-columns: 1fr; gap: 6px; }
+  body.view-list .card { padding: 11px 13px; cursor: pointer; }
+  body.view-list .thumb,
+  body.view-list .cdesc,
+  body.view-list .clinks { display: none; }
+  body.view-list .card.open .cdesc { display: block; }
+  body.view-list .card.open .clinks { display: flex; }
+  body.view-list .ctags { margin: 6px 0 0; }
+
   /* 모바일 최적화 */
   @media (max-width: 600px) {
     body { padding: 14px 12px 50px; }
@@ -360,7 +382,7 @@ PAGE = """<!DOCTYPE html>
     .panel { max-height: 64vh; overflow-y: auto; top: 56px; }
     .flabel { width: 100%; margin-bottom: 1px; }
   }
-</style></head><body>
+</style></head><body class="view-list">
 <a id="top"></a>
 <h1>👨‍👩‍👧 아이랑 갈 만한 곳</h1>
 <div class="meta">전국 권역별 가이드 · 총 <b>__TOTAL__</b>곳
@@ -379,7 +401,14 @@ PAGE = """<!DOCTYPE html>
   </div>
 </div>
 
-<div class="resultbar">표시 <b id="vcount">0</b>곳 / 전체 __TOTAL__곳</div>
+<div class="resultbar">
+  <span>표시 <b id="vcount">0</b>곳 / 전체 __TOTAL__곳</span>
+  <span class="viewtoggle">
+    <button id="expAll" class="vbtn" type="button">모두 펼치기</button>
+    <button id="vList" class="vbtn active" type="button">📋 리스트</button>
+    <button id="vCard" class="vbtn" type="button">🗂️ 카드</button>
+  </span>
+</div>
 <div class="nav">__NAV__</div>
 
 __SECTIONS__
@@ -460,6 +489,7 @@ __SECTIONS__
     document.querySelector(".empty").style.display = total ? "none" : "block";
     var b = document.getElementById("fbadge"), n = activeCount();
     b.textContent = n; b.classList.toggle("on", n > 0);
+    applyCollapse();
   }
 
   function syncChips() {
@@ -526,6 +556,62 @@ __SECTIONS__
     apply();
   });
 
+  // === 보기 토글 (리스트/카드) ===
+  var body = document.body;
+  function setView(v) {
+    body.classList.toggle("view-list", v === "list");
+    body.classList.toggle("view-card", v === "card");
+    document.getElementById("vList").classList.toggle("active", v === "list");
+    document.getElementById("vCard").classList.toggle("active", v === "card");
+  }
+  document.getElementById("vList").addEventListener("click", function () { setView("list"); });
+  document.getElementById("vCard").addEventListener("click", function () { setView("card"); });
+
+  // 리스트뷰에서 카드 탭 → 상세(설명·링크) 펼침
+  document.querySelectorAll(".card").forEach(function (c) {
+    c.addEventListener("click", function (e) {
+      if (!body.classList.contains("view-list")) return;
+      if (e.target.closest("a, button")) return;
+      c.classList.toggle("open");
+    });
+  });
+
+  // === 카테고리 아코디언 (기본 접힘, 필터/검색 시 자동 펼침) ===
+  var collapsed = {};
+  document.querySelectorAll("section.cat").forEach(function (s) { collapsed[s.dataset.cat] = true; });
+  function isFiltering() {
+    return (F.qtoks && F.qtoks.length) || F.region.length || F.cat !== "all" ||
+           F.place !== "all" || F.cost !== "all" || F.season !== "all";
+  }
+  function applyCollapse() {
+    var filtering = isFiltering();
+    document.querySelectorAll("section.cat").forEach(function (s) {
+      var open = filtering || !collapsed[s.dataset.cat];
+      s.classList.toggle("collapsed", !open);
+    });
+  }
+  document.querySelectorAll(".cathead").forEach(function (h) {
+    h.addEventListener("click", function () {
+      var s = h.closest("section.cat");
+      collapsed[s.dataset.cat] = !collapsed[s.dataset.cat];
+      applyCollapse();
+    });
+  });
+  document.querySelectorAll('.navchip[href^="#cat-"]').forEach(function (a) {
+    a.addEventListener("click", function () {
+      var s = document.querySelector(a.getAttribute("href"));
+      if (s && s.dataset.cat) { collapsed[s.dataset.cat] = false; applyCollapse(); }
+    });
+  });
+  var allOpen = false;
+  document.getElementById("expAll").addEventListener("click", function () {
+    allOpen = !allOpen;
+    document.querySelectorAll("section.cat").forEach(function (s) { collapsed[s.dataset.cat] = !allOpen; });
+    this.textContent = allOpen ? "모두 접기" : "모두 펼치기";
+    applyCollapse();
+  });
+
+  setView("list");
   apply();
 </script>
 </body></html>"""
