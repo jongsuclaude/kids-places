@@ -170,6 +170,8 @@ def card_html(p):
         f"{desc_html}"
         f'<div class="ctags">{"".join(tags)}</div>'
         f"{links_html}"
+        f'<button class="reviewbtn" type="button">✍️ 평가</button>'
+        f'<div class="reviewslot"></div>'
         f"</div>"
     )
 
@@ -362,6 +364,30 @@ PAGE = """<!DOCTYPE html>
           border: 1px solid #ddd; border-radius: 999px; background: #fff; cursor: pointer; }
   .empty { color: #86868b; font-size: 14px; padding: 24px 0; display: none; }
   .note { color: #86868b; font-size: 12px; margin-top: 24px; line-height: 1.6; }
+
+  /* 평가(리뷰) UI — ?edit=1 일 때만 노출 */
+  .reviewbtn { display: none; font-size: 13px; color: #b8860b; margin-top: 8px;
+               padding: 6px 12px; border: 1px solid #f0e0b0; border-radius: 8px;
+               background: #fffbf0; cursor: pointer; align-self: flex-start; }
+  body.edit-mode .card.open .reviewbtn { display: inline-block; }
+  .reviewform { display: none; flex-direction: column; gap: 10px; margin-top: 10px;
+                padding: 12px; border: 1px solid #eee; border-radius: 10px; background: #fafafa; }
+  .reviewform.on { display: flex; }
+  .rv-text { width: 100%; box-sizing: border-box; min-height: 70px; font-size: 14px;
+             padding: 10px; border: 1px solid #ddd; border-radius: 8px; resize: vertical; }
+  .rv-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .rv-upload { font-size: 13px; padding: 9px 12px; border: 1px solid #ddd; border-radius: 8px;
+               background: #fff; cursor: pointer; white-space: nowrap; }
+  .stars { display: inline-flex; gap: 3px; }
+  .star { position: relative; color: #dcdce0; font-size: 27px; cursor: pointer; line-height: 1;
+          width: 27px; text-align: center; }
+  .star .fill { position: absolute; left: 0; top: 0; width: 0; overflow: hidden;
+                color: #ffb300; pointer-events: none; }
+  .rv-photos { display: flex; flex-wrap: wrap; gap: 6px; }
+  .rv-photos img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; }
+  .rv-save { font-size: 14px; font-weight: 700; padding: 10px; border: 0; border-radius: 8px;
+             background: #1d1d1f; color: #fff; cursor: pointer; }
+  .rv-msg { font-size: 13px; color: #1a7f37; }
 
   /* 보기 토글 · 리스트뷰 · 아코디언 */
   .resultbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
@@ -586,7 +612,7 @@ __SECTIONS__
   // 리스트뷰에서 카드 탭 → 상세(설명·링크) 펼침
   document.querySelectorAll(".card").forEach(function (c) {
     c.addEventListener("click", function (e) {
-      if (e.target.closest("a, button")) return;
+      if (e.target.closest("a, button, .reviewslot")) return;
       c.classList.toggle("open");
     });
   });
@@ -639,6 +665,66 @@ __SECTIONS__
     else document.querySelectorAll(".region-group").forEach(function (g) { regionCollapsed.add(g); });
     this.textContent = allOpen ? "모두 접기" : "모두 펼치기";
     applyCollapse();
+  });
+
+  // === 평가(리뷰) UI — ?edit=1 일 때만 활성 ===
+  if (/[?&]edit=1(&|$)/.test(location.search)) document.body.classList.add("edit-mode");
+
+  function updateStars(starsEl) {
+    var r = parseFloat(starsEl.dataset.rating || "0");
+    starsEl.querySelectorAll(".star").forEach(function (s, idx) {
+      var i = idx + 1, w = (r >= i) ? 100 : (r >= i - 0.5 ? 50 : 0);
+      s.querySelector(".fill").style.width = w + "%";
+    });
+  }
+  function buildReviewForm() {
+    var stars = "";
+    for (var i = 1; i <= 5; i++) stars += '<span class="star" data-i="' + i + '">★<span class="fill">★</span></span>';
+    return '<div class="reviewform">'
+      + '<textarea class="rv-text" placeholder="다녀온 후기를 적어요 (날씨·아이 반응·머문 시간·꿀팁 등)"></textarea>'
+      + '<div class="rv-row">'
+      + '<label class="rv-upload">📷 사진 업로드<input type="file" accept="image/*" multiple hidden></label>'
+      + '<span class="stars" data-rating="0">' + stars + '</span>'
+      + '</div>'
+      + '<div class="rv-photos"></div>'
+      + '<button class="rv-save" type="button">저장</button>'
+      + '<div class="rv-msg"></div>'
+      + '</div>';
+  }
+  document.querySelectorAll(".reviewbtn").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var card = btn.closest(".card");
+      var slot = card.querySelector(".reviewslot");
+      var form = slot.querySelector(".reviewform");
+      if (!form) {
+        slot.innerHTML = buildReviewForm();
+        form = slot.querySelector(".reviewform");
+        var starsEl = form.querySelector(".stars");
+        starsEl.querySelectorAll(".star").forEach(function (s) {
+          s.addEventListener("click", function () {
+            var i = parseInt(s.dataset.i, 10);
+            var cur = parseFloat(starsEl.dataset.rating || "0");
+            starsEl.dataset.rating = (cur === i) ? (i - 0.5) : i;  // 같은 별 다시 누르면 반개
+            updateStars(starsEl);
+          });
+        });
+        var fileInput = form.querySelector('input[type=file]');
+        fileInput.addEventListener("change", function () {
+          var box = form.querySelector(".rv-photos"); box.innerHTML = "";
+          Array.prototype.forEach.call(fileInput.files, function (f) {
+            var img = document.createElement("img"); img.src = URL.createObjectURL(f); box.appendChild(img);
+          });
+        });
+        form.querySelector(".rv-save").addEventListener("click", function () {
+          var rating = starsEl.dataset.rating || "0";
+          var nphotos = fileInput.files.length;
+          form.querySelector(".rv-msg").textContent =
+            "✅ (미리보기) 별점 " + rating + " · 사진 " + nphotos + "장 — 나스 연동 시 실제 저장됩니다.";
+        });
+      }
+      form.classList.toggle("on");
+    });
   });
 
   setView("list");
