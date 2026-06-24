@@ -1044,7 +1044,18 @@
   });
 
   // === 평가(리뷰) UI — 기본 활성(기존 사이트에 통합) ===
-  document.body.classList.add("edit-mode");  // 에딧(평가) 항상 활성 — 기존 사이트에 통합
+  // 에딧(평가) 모드 — 공개 기본 OFF. 우리 기기에서 ?edit=1 한 번 → localStorage에 저장돼 계속 유지.
+  // 끄기: ?edit=0
+  (function () {
+    var q = location.search;
+    try {
+      if (/[?&]edit=0(&|$)/.test(q)) localStorage.removeItem("kp_edit");
+      else if (/[?&]edit=1(&|$)/.test(q)) localStorage.setItem("kp_edit", "1");
+      if (localStorage.getItem("kp_edit") === "1") document.body.classList.add("edit-mode");
+    } catch (e) {
+      if (/[?&]edit=1(&|$)/.test(q)) document.body.classList.add("edit-mode");
+    }
+  })();
 
   function updateStars(starsEl) {
     var r = parseFloat(starsEl.dataset.rating || "0");
