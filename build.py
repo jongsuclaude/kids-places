@@ -73,6 +73,32 @@ def naver_map_link(query):
     return "https://map.naver.com/p/search/" + urllib.parse.quote(query)
 
 
+# 제목 없는 단일 출처용 — URL에서 출처명 만들기
+SOURCE_DOMAINS = {
+    "i-rang.net": "아이랑넷", "mom-mom.net": "맘맘",
+    "visitkorea.or.kr": "대한민국 구석구석",
+    "seoul.go.kr": "서울시", "sejong.go.kr": "세종시", "daejeon.go.kr": "대전시",
+    "chuncheon.go.kr": "춘천시", "taebaek.go.kr": "태백시", "hanam.go.kr": "하남시",
+    "gunpo.go.kr": "군포시", "seongnam.go.kr": "성남시",
+    "wjsangsang.or.kr": "원주 상상놀이터",
+    "nate.com": "네이트뉴스", "nocutnews.co.kr": "노컷뉴스", "newsis.com": "뉴시스",
+    "welfarehello.com": "웰로", "heraldcorp.com": "헤럴드경제", "khan.co.kr": "경향신문",
+    "asiae.co.kr": "아시아경제", "sijung.co.kr": "시정일보", "jbnews.com": "중부매일",
+    "lafent.com": "라펜트", "yeogi.com": "여기어때", "yanolja.com": "야놀자",
+    "go.kr": "지자체·공공", "or.kr": "공공기관",
+}
+
+
+def source_title(url):
+    host = urllib.parse.urlparse(url).netloc.lower()
+    if host.startswith("www."):
+        host = host[4:]
+    for dom, label in SOURCE_DOMAINS.items():
+        if host == dom or host.endswith("." + dom):
+            return label
+    return host or "정보 글"
+
+
 def tag(text, cls="tag"):
     return f'<span class="{cls}">{html.escape(text)}</span>'
 
@@ -134,11 +160,16 @@ def card_html(p):
     srcs = p.get("sources")
     if not srcs:
         s = (p.get("source") or "").strip()
-        srcs = [{"url": s, "title": "정보 글"}] if s.startswith("http") else []
+        srcs = [{"url": s}] if s.startswith("http") else []
     srcs = [
         x for x in srcs
         if isinstance(x, dict) and str(x.get("url", "")).startswith("http")
     ][:3]
+    # 제목 없거나 일반(정보 글)이면 URL에서 출처명 생성 → 1개여도 제목 노출
+    for x in srcs:
+        t = (x.get("title") or "").strip()
+        if not t or t == "정보 글":
+            x["title"] = source_title(x["url"])
 
     srclist_html = ""
     if srcs:
