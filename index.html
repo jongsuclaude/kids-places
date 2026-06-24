@@ -73,7 +73,9 @@
   .tag.season { background: #fff1e0; color: #9a5b00; }
   .tag.cur { background: #efe6ff; color: #6b1ac4; }
   .tag.auto { background: #eef0f2; color: #8a8a8e; }
-  .clinks { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+  .clinks { display: none; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+  .card.open .clinks { display: flex; }
+  .card { cursor: pointer; }
   .clink { font-size: 13px; color: #0066cc; text-decoration: none; padding: 5px 10px;
            border: 1px solid #d6e4f5; border-radius: 8px; background: #f4f8fd; }
   .clink.src { color: #6b6b70; border-color: #e3e3e6; background: #f5f5f7; }
@@ -107,10 +109,8 @@
   body.view-list .cards { grid-template-columns: 1fr; gap: 6px; }
   body.view-list .card { padding: 11px 13px; cursor: pointer; }
   body.view-list .thumb,
-  body.view-list .cdesc,
-  body.view-list .clinks { display: none; }
+  body.view-list .cdesc { display: none; }
   body.view-list .card.open .cdesc { display: block; }
-  body.view-list .card.open .clinks { display: flex; }
   body.view-list .ctags { margin: 6px 0 0; }
 
   /* 모바일 최적화 */
@@ -938,7 +938,6 @@
   // 리스트뷰에서 카드 탭 → 상세(설명·링크) 펼침
   document.querySelectorAll(".card").forEach(function (c) {
     c.addEventListener("click", function (e) {
-      if (!body.classList.contains("view-list")) return;
       if (e.target.closest("a, button")) return;
       c.classList.toggle("open");
     });
