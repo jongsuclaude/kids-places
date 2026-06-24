@@ -721,7 +721,7 @@ __SECTIONS__
   });
 
   // === 평가(리뷰) UI — ?edit=1 일 때만 활성 ===
-  if (/[?&]edit=1(&|$)/.test(location.search)) document.body.classList.add("edit-mode");
+  document.body.classList.add("edit-mode");  // 에딧(평가) 항상 활성 — 기존 사이트에 통합
 
   function updateStars(starsEl) {
     var r = parseFloat(starsEl.dataset.rating || "0");
