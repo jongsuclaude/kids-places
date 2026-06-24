@@ -14,6 +14,12 @@
         "주차",
         "유아차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.konjiamresort.co.kr",
+          "title": "곤지암 리조트 공식 홈페이지"
+        }
       ]
     },
     {
@@ -28,6 +34,16 @@
       "amenities": [
         "주차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sonohotelsresorts.com/belle_vp",
+          "title": "소노벨 비발디파크 공식 홈페이지"
+        },
+        {
+          "url": "https://www.hongcheon.go.kr/tour/contents.do?key=1811",
+          "title": "소노벨 비발디파크 — 홍천군 문화관광포털"
+        }
       ]
     },
     {
@@ -43,6 +59,12 @@
         "주차",
         "유아차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.shinhwaworld.com/?lang=kr",
+          "title": "제주신화월드 공식 홈페이지"
+        }
       ]
     },
     {
@@ -58,6 +80,16 @@
         "주차",
         "유아차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sisul.or.kr/open_content/childrenpark/",
+          "title": "서울어린이대공원 공식 홈페이지"
+        },
+        {
+          "url": "https://parks.seoul.go.kr/parks/detailView.do?pIdx=26",
+          "title": "서울어린이대공원 — 서울의 공원"
+        }
       ]
     },
     {
@@ -72,6 +104,16 @@
       "amenities": [
         "주차",
         "유아차"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sjfmc.or.kr/sjpark.do",
+          "title": "세종호수·중앙공원 공식 홈페이지"
+        },
+        {
+          "url": "https://www.sejong.go.kr/prog/tursmCn/tour/sub01_18/view.do?cntno=24",
+          "title": "세종중앙공원 — 세종특별자치시 관광 안내"
+        }
       ]
     },
     {
@@ -87,6 +129,16 @@
         "주차",
         "유아차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://citizenpark.or.kr/main.asp",
+          "title": "부산시민공원 공식 홈페이지"
+        },
+        {
+          "url": "https://www.busan.go.kr/citizenpark/index",
+          "title": "부산광역시 부산시민공원 역사관"
+        }
       ]
     },
     {
@@ -103,6 +155,16 @@
       "age": "유아·초등",
       "amenities": [
         "주차"
+      ],
+      "sources": [
+        {
+          "url": "https://hangang.seoul.go.kr/www/contents/774.do?mid=505",
+          "title": "수영장·물놀이장 — 서울시 미래한강본부"
+        },
+        {
+          "url": "https://www.thetrippick.com/news/articleView.html?idxno=3870",
+          "title": "2026 한강공원 수영장·물놀이장 운영 일정"
+        }
       ]
     },
     {
@@ -120,6 +182,16 @@
       "amenities": [
         "주차",
         "유아차"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sjfmc.or.kr/kor/sub02_01/cop/bbs/BBSMSTR_000000000013/selectBoardArticle.do?nttId=11180&pageIndex=34&mno=sub02_01&searchCnd=&searchWrd=",
+          "title": "세종호수공원 물놀이섬 운영 안내 — 세종시설관리공단"
+        },
+        {
+          "url": "https://www.sejong.go.kr/bbs/R3162/view.do?nttId=B000000072653Zq2qZ1b&mno=sub03_01&cmsNoStr=&kind=&pageIndex=9",
+          "title": "세종호수공원 물놀이섬 운영 안내 — 세종특별자치시"
+        }
       ]
     },
     {
@@ -136,6 +208,16 @@
       "age": "전연령",
       "amenities": [
         "주차"
+      ],
+      "sources": [
+        {
+          "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500693",
+          "title": "비짓제주 — 함덕서우봉해변"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=53eddfdf-086c-410e-893c-20258343ac79",
+          "title": "대한민국 구석구석 — 함덕해수욕장(함덕 서우봉 해변)"
+        }
       ]
     },
     {
@@ -154,6 +236,12 @@
         "주차",
         "유아차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.everland.com",
+          "title": "에버랜드 공식 홈페이지"
+        }
       ]
     },
     {
@@ -171,6 +259,16 @@
       "amenities": [
         "주차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.everland.com/caribbeanbay/home/main",
+          "title": "캐리비안베이 공식 홈페이지"
+        },
+        {
+          "url": "https://www.yongin.go.kr/home/yitour/ytour01/yttour02.jsp",
+          "title": "캐리비안베이 — 용인시 관광"
+        }
       ]
     },
     {
@@ -189,6 +287,12 @@
         "주차",
         "유아차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sciencecenter.go.kr/gnsm/",
+          "title": "국립과천과학관 공식 홈페이지"
+        }
       ]
     },
     {
@@ -207,6 +311,16 @@
       "amenities": [
         "주차",
         "유아차"
+      ],
+      "sources": [
+        {
+          "url": "https://www.nhasfarmland.com/",
+          "title": "안성팜랜드 공식 홈페이지"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=3bfbe9d0-fc7d-457b-8abc-ac75dc7ebdbd",
+          "title": "안성팜랜드 — 대한민국 구석구석"
+        }
       ]
     },
     {
@@ -224,6 +338,16 @@
       "amenities": [
         "주차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.sonohotelsresorts.com/skiboard/info",
+          "title": "비발디파크 스키&보드 이용안내 (소노호텔앤리조트 공식)"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=8182d44e-8038-4de6-b6c4-3c310c798a5a",
+          "title": "비발디파크 스키장 — 대한민국 구석구석"
+        }
       ]
     },
     {
@@ -242,6 +366,16 @@
         "주차",
         "유아차",
         "수유실"
+      ],
+      "sources": [
+        {
+          "url": "https://www.aquaplanet.co.kr/jeju/index.do",
+          "title": "아쿠아플라넷 제주 공식 홈페이지"
+        },
+        {
+          "url": "https://www.visitjeju.net/u/Tq",
+          "title": "Visit Jeju - 아쿠아플라넷 제주"
+        }
       ]
     },
     {
@@ -4720,7 +4854,12 @@
         "가을",
         "겨울"
       ],
-      "sources": []
+      "sources": [
+        {
+          "url": "https://www.miniseries.co.kr/boardView.do?menuId=4I1x3&bbsNo=70WiX5LLVZNbol5u04kb",
+          "title": "송도 실내 가볼만한곳 실내동물원 테이블에이 송도점 방문후기"
+        }
+      ]
     },
     {
       "category": "체험·교육",
@@ -5137,7 +5276,16 @@
         "가을",
         "겨울"
       ],
-      "sources": []
+      "sources": [
+        {
+          "url": "https://xn--q20bm03aw8ch7b8xan2bcy4b.com/",
+          "title": "남양주 하이맘 키즈 가족 펜션 블랙"
+        },
+        {
+          "url": "https://www.himomkids.kr/",
+          "title": "하이맘 키즈펜션 공식 홈페이지"
+        }
+      ]
     },
     {
       "category": "놀이터",
@@ -6694,7 +6842,16 @@
       "season": [
         "summer"
       ],
-      "sources": []
+      "sources": [
+        {
+          "url": "https://ygsf.or.kr/facilities/37",
+          "title": "양구군스포츠재단 — 레포츠공원 물놀이장 시설 안내"
+        },
+        {
+          "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=152516e6-6edf-437f-83dd-2beb362bb094",
+          "title": "전국 무료 물놀이장 — 대한민국 구석구석"
+        }
+      ]
     },
     {
       "category": "물놀이터",
