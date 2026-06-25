@@ -11,7 +11,7 @@
 UI:
   · 모바일 최적화(1열·가로스크롤 내비·큰 터치 타깃)
   · 필터는 기본 접힘 → '필터' 버튼으로 열고 닫기
-  · 검색 · 권역 · 카테고리 · 출처 · 실내외 · 비용 · 계절 필터
+  · 검색 · 권역 · 카테고리 · 출처 · 실내외 · 비용 필터
   · 권역=전체일 때 권역을 라벨로 명확히 구분
   · 권역별 8곳까지 먼저, 나머지는 '더보기'
   · 자동수집분은 실내외·무료가 미확인('?') → 해당 필터 켜면 제외
@@ -140,9 +140,6 @@ def card_html(p):
             tags.append(tag("🏠 실내" if indoor == "y" else "🌳 실외", "tag place"))
         if cat in SHOW_COST:
             tags.append(tag("무료" if free == "y" else "유료", "tag cost"))
-        for s in seasons:
-            if s and s != "올시즌":  # 사계절은 자명 → 생략
-                tags.append(tag(s, "tag season"))
         age = p.get("age", "")
         if age not in OBVIOUS_AGE:
             tags.append(tag("👶 " + age, "tag age"))
@@ -289,7 +286,6 @@ def build():
         chip_row("출처", "source", [("all", "전체", False), ("curated", "★ 큐레이션", True), ("suggested", "🙋 우리 추천", False), ("auto", "🤖 자동수집", False)]),
         chip_row("실내외", "place", [("all", "전체", True), ("y", "🏠 실내", False), ("n", "🌳 실외", False)]),
         chip_row("비용", "cost", [("all", "전체", True), ("y", "무료", False), ("n", "유료", False)]),
-        chip_row("계절", "season", [("all", "전체", True), ("봄", "봄", False), ("여름", "여름", False), ("가을", "가을", False), ("겨울", "겨울", False)]),
     ])
 
     page = (
