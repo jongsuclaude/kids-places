@@ -16254,6 +16254,1837 @@
     }
    ],
    "amenities": []
+  },
+  {
+   "category": "숙소",
+   "region": "제주",
+   "name": "그랜드 조선 제주",
+   "area": "제주 서귀포",
+   "desc": "중문관광단지 5성급 호텔로, 테마별 키즈룸·키즈 케어 서비스·쿠킹 클래스 등 아이 전용 프로그램이 풍부하다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://allstay.com/alltrip/post/5-best-kids-friendly-jeju-island-accommodations",
+     "title": "키즈룸 갖춘 제주도숙박 TOP 5 — Allstay"
+    },
+    {
+     "url": "https://brunch.co.kr/@mytriplog/3612",
+     "title": "키즈룸과 수영장이 있는 제주 가족숙소 5곳 추천 — 브런치"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "숙소",
+   "region": "제주",
+   "name": "서머셋 제주신화월드",
+   "area": "제주 서귀포",
+   "desc": "신화테마파크 인접 가족형 레지던스로, 3베드룸 풀옵션 주방·드림카 키즈룸·어린이 놀이터를 갖춰 장기 가족 투숙에 최적이다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.shinhwaworld.com/hotelsm.jhtml?lang=kr",
+     "title": "서머셋 제주신화월드 공식 사이트"
+    },
+    {
+     "url": "https://www.discoverasr.com/en/somerset-serviced-residence/korea-south/somerset-jeju-shinhwa-world/amenities",
+     "title": "어린이 시설을 갖춘 제주 서비스 아파트 — DiscoverASR"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "숙소",
+   "region": "제주",
+   "name": "파미유 스파 리조트",
+   "area": "제주 서귀포",
+   "desc": "서건도 인근 조용한 가족 리조트로, 온수 야외풀·키즈룸(핑크·블루)·잔디 정원이 있어 영유아 동반 가족에게 적합하다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.jejufamille.co.kr/",
+     "title": "파미유 스파 리조트 공식 사이트"
+    },
+    {
+     "url": "https://www.klook.com/ko/hotels/detail/828217-famille-spa-resort/",
+     "title": "파미유 스파 리조트 — 클룩"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "숙소",
+   "region": "제주",
+   "name": "호텔 토스카나",
+   "area": "제주 서귀포",
+   "desc": "강정동 위치의 가족 호텔로, 밤비노 키즈 플레이존·자동차 침대·2층 침대 키즈룸·사계절 온수풀을 갖추고 있다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://allstay.com/alltrip/post/5-best-kids-friendly-jeju-island-accommodations",
+     "title": "키즈룸 갖춘 제주도숙박 TOP 5 — Allstay"
+    },
+    {
+     "url": "https://brunch.co.kr/@mytriplog/3612",
+     "title": "키즈룸과 수영장이 있는 제주 가족숙소 5곳 추천 — 브런치"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "숙소",
+   "region": "제주",
+   "name": "제주 하늘 키즈펜션",
+   "area": "제주 제주시",
+   "desc": "외도일동 해변 전망 키즈 전문 펜션으로, 전 객실 온돌룸·아이용 장난감·전용 어메니티를 구비하고 BBQ도 가능하다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.jejusky.kr/",
+     "title": "제주 하늘 키즈펜션 공식 사이트"
+    },
+    {
+     "url": "https://allstay.com/alltrip/post/5-best-kids-friendly-jeju-island-accommodations",
+     "title": "키즈룸 갖춘 제주도숙박 TOP 5 — Allstay"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "숙소",
+   "region": "제주",
+   "name": "제주 쉼127 키즈펜션 협재점",
+   "area": "제주 제주시",
+   "desc": "협재해수욕장 인근 독채 펜션으로, 안전 울타리·젖병소독기·세탁건조기 등 영유아 맞춤 시설을 갖춘 소규모 가족 전용 숙소다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://brunch.co.kr/@mytriplog/3448",
+     "title": "아이와 함께 봄에 떠나는 제주도 키즈펜션 5곳 — 브런치"
+    },
+    {
+     "url": "https://allstay.com/alltrip/post/5-best-kids-friendly-jeju-island-accommodations",
+     "title": "키즈룸 갖춘 제주도숙박 TOP 5 — Allstay"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "놀이터",
+   "region": "제주",
+   "name": "사라봉 유아숲체험원",
+   "area": "제주 제주시",
+   "desc": "2025년 6월 개원한 도심 숲속 야외 놀이공간으로, 어싱놀이터 등 11개 놀이시설을 갖춘 1만㎡ 규모 유아숲체험원.",
+   "indoor": false,
+   "free": true,
+   "age": "유아(영유아~7세)",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.mediajeju.com/news/articleView.html?idxno=358691",
+     "title": "어린이 위한 자연의 놀이터, 제주 사라봉에 새롭게 선보여 — 미디어제주"
+    },
+    {
+     "url": "https://www.jejudomin.co.kr/news/articleView.html?idxno=312041",
+     "title": "도심 속 첫 유아숲체험원, 사라봉에 문 열다 — 제주도민일보"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "놀이터",
+   "region": "제주",
+   "name": "신산공원 무장애 통합놀이터",
+   "area": "제주 제주시",
+   "desc": "도심 신산공원 내 520㎡ 규모의 무장애 야외 놀이터로, 회전 놀이기구·바구니 그네·누워서 타는 시소 등 장애 여부와 무관하게 이용 가능한 놀이기구를 갖춤.",
+   "indoor": false,
+   "free": true,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://mjeju.nocutnews.co.kr/news/5837030",
+     "title": "\"장애 관계없이 뛰놀아요\"…제주시, 무장애통합놀이터 조성 — 제주 노컷뉴스"
+    },
+    {
+     "url": "https://easyjeju.net/bbs/board.php?bo_table=6_1_1_1&wr_id=337",
+     "title": "신산공원 '무장애 놀이터'를 다녀오다 — 이지제주"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "놀이터",
+   "region": "제주",
+   "name": "렛츠런파크 제주 어린이 놀이시설(담덕의 꿈)",
+   "area": "제주 제주시",
+   "desc": "한국마사회가 운영하는 말 테마 공원 내 야외 어린이 복합놀이시설로, 자전거 광장·담덕의 꿈 등 놀이기구와 넓은 잔디밭·모래밭이 있어 소풍 겸 놀이에 적합.",
+   "indoor": false,
+   "free": false,
+   "age": "어린이",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019539",
+     "title": "렛츠런파크 제주 — Visit Jeju 공식 관광정보"
+    },
+    {
+     "url": "https://park.kra.co.kr/jeju_main.do",
+     "title": "렛츠런파크 제주 공식 홈페이지"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "공원",
+   "region": "제주",
+   "name": "한라수목원",
+   "area": "제주 제주시",
+   "desc": "제주 자생식물과 아열대식물을 무료로 관람할 수 있는 시내 중심 수목원으로, 유모차 대여 및 야외 산책로가 잘 갖춰져 있어 영유아 동반 가족에게 적합하다.",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://visitjeju.net/kr/detail/view?contentsid=CONT_000000000500689",
+     "title": "Visit Jeju : 한라수목원"
+    },
+    {
+     "url": "https://bricksjeju.com/1082",
+     "title": "제주 공항 근처 산책하기 좋은 곳_한라수목원(입장료, 주차료)"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "공원",
+   "region": "제주",
+   "name": "절물자연휴양림",
+   "area": "제주 제주시",
+   "desc": "삼나무 숲 속 무장애 데크 산책로·놀이터·연못이 갖춰진 휴양림으로, 계단 없는 안전한 길 덕분에 유모차·어린아이 동반에 최적이다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.foresttrip.go.kr/pot/rm/ri/selectRcrfrIntrdDtlView.do?hmpgId=ID02030053&menuId=002001",
+     "title": "제주절물자연휴양림 - 자연휴양림안내"
+    },
+    {
+     "url": "https://v.daum.net/v/zlOjfEUll9",
+     "title": "입장료 1,000원·65세 이상 무료, 계단 하나 없는 숲길 삼림욕 명소"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "공원",
+   "region": "제주",
+   "name": "상효원 수목원",
+   "area": "제주 서귀포",
+   "desc": "8만 평 규모에 16개 테마 정원이 조성된 수목원으로, 유모차 이동이 편한 잘 닦인 길과 계절별 꽃 축제가 아이 동반 가족에게 인기가 높다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000020676",
+     "title": "Visit Jeju : 상효원"
+    },
+    {
+     "url": "https://kr.trip.com/travel-guide/attraction/seogwipo/sanghyowon-30623012/",
+     "title": "상효원 티켓 할인, 운영 시간, 후기 [2025년] | Trip.com"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "공원",
+   "region": "제주",
+   "name": "서귀포 치유의숲",
+   "area": "제주 서귀포",
+   "desc": "무장애 나눔길로 유모차·휠체어도 다닐 수 있는 피톤치드 숲길로, 5세 이상 자녀 동반 가족 체험 프로그램(해먹·족욕 등)도 운영한다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000018311",
+     "title": "Visit Jeju : 서귀포 치유의 숲"
+    },
+    {
+     "url": "https://www.welfarehello.com/community/hometownNews/2563b0b4-cd62-47be-b133-b5b33330cf3f",
+     "title": "제주 산책하기 편한 숲길 서귀포 치유의 숲 무장애나눔길"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "공원",
+   "region": "제주",
+   "name": "사려니숲길",
+   "area": "제주 제주시",
+   "desc": "울창한 삼나무·편백 숲 사이 10km 녹지 산책로로, 남조로변 입구에서 출발하는 코스는 유모차도 이동 가능한 비교적 평탄한 구간이다.",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://m.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500281",
+     "title": "Visit Jeju : 사려니숲길"
+    },
+    {
+     "url": "https://mom-mom.net/travel/places/66d1977420bf7003ae3b9d2d",
+     "title": "제주도 사려니숲길 - 서귀포시에서 아이와 갈 곳 추천"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "공원",
+   "region": "제주",
+   "name": "수목원테마파크",
+   "area": "제주 제주시",
+   "desc": "수목원길을 따라 다양한 테마 정원을 산책할 수 있으며, 야간에는 LED 조명 공원과 야시장이 열려 낮·밤 모두 아이와 즐길 수 있다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "http://sumokwonpark.com/",
+     "title": "수목원테마파크 공식 홈페이지"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "물놀이터",
+   "region": "제주",
+   "name": "워터월드 제주",
+   "area": "제주 서귀포",
+   "desc": "제주월드컵경기장 1층 실내 워터 미디어 테마파크로, 사계절 미온수 운영에 36개월 미만 무료입장.",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://outdoor.utrip.kr/p/%EC%A0%9C%EC%A3%BC-%EC%9B%8C%ED%84%B0%EC%9B%94%EB%93%9C-%ED%95%A0%EC%9D%B8-%EC%98%88%EB%A7%A4-%EB%B0%8F-%EC%97%AC%ED%96%89-%EA%BF%80%ED%8C%81-%EC%B4%9D%EC%A0%95%EB%A6%AC",
+     "title": "제주 워터월드 이용 팁 및 할인 예매 방법 총정리"
+    },
+    {
+     "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=221767",
+     "title": "WATERWORLD JEJU - VISITKOREA"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "물놀이터",
+   "region": "제주",
+   "name": "중문천 물놀이 구역",
+   "area": "제주 서귀포",
+   "desc": "서귀포시가 공식 관리하는 하천 물놀이 구역으로 안전요원·구명조끼 무료 대여 운영(7~8월, 10:00~19:00).",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "여름"
+   ],
+   "sources": [
+    {
+     "url": "https://www.telltrip.com/domestic-travel/jeju-jungmuncheon-stream/",
+     "title": "중문천 물놀이 명소 - 여행을말하다"
+    },
+    {
+     "url": "https://triple.guide/articles/2606976f-9e4c-4bfa-b156-863554eb34f7",
+     "title": "물놀이 하기 좋은 제주 계곡·하천 - 트리플"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "물놀이터",
+   "region": "제주",
+   "name": "솜반천",
+   "area": "제주 서귀포",
+   "desc": "서귀포 도심 속 맑은 자연 하천으로 수심이 얕고 안전요원·구명조끼 무료 제공, 아이 물놀이에 적합.",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "여름"
+   ],
+   "sources": [
+    {
+     "url": "https://www.welfarehello.com/community/hometownNews/1a026052-443e-4879-8f16-207dde710692",
+     "title": "솜반천 물놀이장 - 웰로"
+    },
+    {
+     "url": "https://triple.guide/attractions/fd28e864-00cd-4122-81ff-4e4e26ec302b",
+     "title": "솜반천 - 트리플"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "물놀이터",
+   "region": "제주",
+   "name": "논짓물",
+   "area": "제주 서귀포",
+   "desc": "용천수와 바닷물이 만나는 천연 풀장으로 입장 무료, 바닥이 돌이므로 아이에게 신발 착용 필수.",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "여름"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500109",
+     "title": "논짓물 - Visit Jeju 공식 관광정보"
+    },
+    {
+     "url": "https://www.telltrip.com/domestic-travel/jeju-nonjitmul-yongcheonsu-summer/",
+     "title": "논짓물 물놀이 명소 - 여행을말하다"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "물놀이터",
+   "region": "제주",
+   "name": "판포포구",
+   "area": "제주 제주시",
+   "desc": "제주시 한경면 에메랄드빛 포구로 모래 바닥이라 아이 물놀이에 적합, 마을 청년회가 구명조끼·튜브 대여 운영(7~8월).",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "여름"
+   ],
+   "sources": [
+    {
+     "url": "https://www.welfarehello.com/community/hometownNews/18448b2a-9935-433f-8ce3-312bbec885e4",
+     "title": "판포 포구 물놀이 - 웰로"
+    },
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500079",
+     "title": "판포포구 - Visit Jeju 공식 관광정보"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "테마파크·놀이공원",
+   "region": "제주",
+   "name": "신화테마파크",
+   "area": "제주 서귀포",
+   "desc": "라바 캐릭터를 테마로 한 제주 유일의 정통 테마파크로, 롤러코스터 '댄싱 오스카'를 포함한 15개의 놀이기구와 어트랙션을 운영한다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000022771",
+     "title": "Visit Jeju : 신화테마파크"
+    },
+    {
+     "url": "https://www.shinhwaworld.com/themepark.jhtml?lang=kr",
+     "title": "신화테마파크 공식 홈페이지"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "테마파크·놀이공원",
+   "region": "제주",
+   "name": "뽀로로&타요 테마파크",
+   "area": "제주 서귀포",
+   "desc": "뽀로로·타요 캐릭터를 테마로 한 어린이 전용 테마파크로, 실내외에 미니바이킹·회전목마·4D라이더·워터슬라이드 등 다양한 놀이기구를 갖추고 있다.",
+   "indoor": false,
+   "free": false,
+   "age": "유아~초등",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009752",
+     "title": "Visit Jeju : 뽀로로&타요 테마파크 제주"
+    },
+    {
+     "url": "http://www.pororopark.com/",
+     "title": "뽀로로파크 공식 홈페이지"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "박물관·과학·전시",
+   "region": "제주",
+   "name": "국립제주박물관 어린이박물관",
+   "area": "제주 제주시",
+   "desc": "2025년 11월 재개관 후 제주 자연 소재 디지털·아날로그 체험 4종을 갖춘 어린이 전용 공간이 있는 역사박물관.",
+   "indoor": true,
+   "free": true,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://v.daum.net/v/20251126095957260",
+     "title": "신규 체험 콘텐츠 보강, 국립제주박물관 어린이박물관 재개관"
+    },
+    {
+     "url": "https://jeju.museum.go.kr/html/kr/",
+     "title": "국립제주박물관 공식 사이트"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "박물관·과학·전시",
+   "region": "제주",
+   "name": "제주항공우주박물관",
+   "area": "제주 서귀포",
+   "desc": "실물 항공기 13대·항공 시뮬레이터·돔 영상관을 갖춘 항공우주 전문 박물관으로 2025년 우수관광사업체 3회 연속 선정.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령(어린이 8,000원)",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500578&menuId=DOM_000001703010008000",
+     "title": "Visit Jeju : 제주항공우주박물관"
+    },
+    {
+     "url": "https://insidejeju.com/attractions/jeju-aerospace-museum/",
+     "title": "Jeju Aerospace Museum: Fun museum for kids and adults - Inside Jeju"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "박물관·과학·전시",
+   "region": "제주",
+   "name": "제주민속자연사박물관",
+   "area": "제주 제주시",
+   "desc": "제주 자연사·민속 유물을 한 곳에서 볼 수 있고 12세 이하 무료, 2025년 초등생 대상 체험 교육 프로그램 운영 중.",
+   "indoor": true,
+   "free": false,
+   "age": "12세 이하 무료",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.jeju.go.kr/museum/index.htm",
+     "title": "제주특별자치도민속자연사박물관 공식 사이트"
+    },
+    {
+     "url": "https://www.helloplay.kr/program/?bmode=view&idx=160244484",
+     "title": "눈으로 보고 마음으로 느끼는 박물관 체험 프로그램"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "박물관·과학·전시",
+   "region": "제주",
+   "name": "제주교육박물관",
+   "area": "제주 제주시",
+   "desc": "교복 입기·전통놀이(윷놀이·투호) 등 어린이 참여 체험 중심의 무료 박물관, 야외 전통초가 재현 공간 포함.",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://evway.co.kr/%EC%A0%9C%EC%A3%BC%EA%B5%90%EC%9C%A1%EB%B0%95%EB%AC%BC%EA%B4%80%E3%85%A3%EB%8F%85%EB%8F%84%EC%B2%B4%ED%97%98%EA%B4%80/",
+     "title": "제주교육박물관|독도체험관 — 무료 입장 가능한 제주 아이와 함께 가볼만한 2곳"
+    },
+    {
+     "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=7cc63cbe-8eac-4c5e-8a0d-209446507b5c",
+     "title": "제주교육박물관 — 대한민국 구석구석"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "박물관·과학·전시",
+   "region": "제주",
+   "name": "제주별빛누리공원",
+   "area": "제주 제주시",
+   "desc": "4D영상관·천체투영실·주관측실을 갖춘 천문대, 만 6세 이하 무료이며 어린이 별자리 체험 프로그램 운영.",
+   "indoor": true,
+   "free": false,
+   "age": "만 6세 이하 무료, 어린이(7-12세) 2,000원",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500555",
+     "title": "Visit Jeju : 제주별빛누리공원"
+    },
+    {
+     "url": "https://www.gybelife.com/2025/08/blog-post_19.html",
+     "title": "제주 아이와 가볼만한곳 추천: 별빛누리공원 천문대 체험기"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "박물관·과학·전시",
+   "region": "제주",
+   "name": "제주도립미술관",
+   "area": "제주 제주시",
+   "desc": "제주 자연 속 야외 조각 정원과 실내 전시를 함께 즐길 수 있으며, 2025년 어린이 미술학교 무료 프로그램 운영.",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.jejusori.net/news/articleView.html?idxno=435723",
+     "title": "제주도립미술관, 2025 어린이 미술학교 상반기 참가자 모집"
+    },
+    {
+     "url": "https://www.jeju.go.kr/jmoa/index.htm",
+     "title": "제주도립미술관 공식 사이트"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "제주",
+   "name": "휴애리자연생활공원",
+   "area": "제주 서귀포",
+   "desc": "서귀포 한라산 자락의 자연체험공원으로 흑돼지·동물 먹이주기 체험과 계절 꽃 축제(매화·수국·핑크뮬리·동백)를 즐길 수 있음.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500707",
+     "title": "비짓제주 - 휴애리자연생활공원"
+    },
+    {
+     "url": "https://kr.trip.com/moments/poi-hueree-nature-life-park-90990/",
+     "title": "트립닷컴 - 휴애리자연생활공원 가이드"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "제주",
+   "name": "새별프렌즈",
+   "area": "제주 제주시",
+   "desc": "애월읍 2만 평 초지에서 알파카·양·당나귀에게 먹이 주기 체험을 할 수 있는 동물 목장.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://kr.trip.com/moments/theme/poi-saebyeol-friends-zoo-144707553-guides-993135/",
+     "title": "트립닷컴 - 새별프렌즈 동물원 가이드"
+    },
+    {
+     "url": "https://triple.guide/attractions/590b6112-ce0e-4830-99f9-f9a78c9e670e",
+     "title": "트리플 - 새별 프렌즈"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "제주",
+   "name": "라온주(Raon ZOO) 실내체험동물원",
+   "area": "제주 제주시",
+   "desc": "더마파크 내 위치한 실내 동물원으로 50여 종 동물을 비·더위 상관없이 관람하고 일부 동물은 직접 만지고 먹이를 줄 수 있음.",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000009865",
+     "title": "비짓제주 - 라온주 실내체험동물원"
+    },
+    {
+     "url": "https://triple.guide/attractions/b5541a84-5a25-480d-ad52-835c05c995e1",
+     "title": "트리플 - 라온 ZOO"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "제주",
+   "name": "한림공원",
+   "area": "제주 제주시",
+   "desc": "약 10만 평 규모의 아열대 식물원·용암동굴·소동물 구역을 갖춘 서제주 대표 자연 테마파크.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "http://hallimpark.com/",
+     "title": "한림공원 공식 홈페이지"
+    },
+    {
+     "url": "https://www.excursionmania.com/ko/ttd/8031/hallim-park-blg-8031-blg8031",
+     "title": "ExcursionMania - 제주 한림공원"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "제주",
+   "name": "제주안전체험관",
+   "area": "제주 제주시",
+   "desc": "지진·화재·교통·항공 등 21개 재난 안전 체험 프로그램을 갖춘 공립 안전체험관으로, 5세 이상 아이부터 직접 체험 가능하다.",
+   "indoor": true,
+   "free": true,
+   "age": "5세 이상",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.jeju.go.kr/119safe",
+     "title": "제주안전체험관 공식 홈페이지"
+    },
+    {
+     "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=b94ac91c-bbfd-46f3-b828-41194c90d3f6",
+     "title": "대한민국 구석구석 — 제주안전체험관"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "제주",
+   "name": "넥슨뮤지엄 (구 넥슨컴퓨터박물관)",
+   "area": "제주 제주시",
+   "desc": "컴퓨터·게임의 역사를 전시하고 VR·퀘스트 키트 체험을 제공하는 교육형 박물관으로 어린이 입장료는 5,000원이다.",
+   "indoor": true,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://computermuseum.nexon.com/cover",
+     "title": "넥슨뮤지엄 공식 홈페이지"
+    },
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500099",
+     "title": "비짓제주 — 넥슨컴퓨터박물관"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "제주",
+   "name": "제주꿈바당어린이도서관",
+   "area": "제주 제주시",
+   "desc": "제주시 연동 소재 어린이 전용 공립 도서관으로, 독서·자연체험·세대소통 등 맞춤형 프로그램을 운영한다.",
+   "indoor": true,
+   "free": true,
+   "age": "영유아~초등",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://jjdreamlib.or.kr/",
+     "title": "제주꿈바당어린이도서관 공식 홈페이지"
+    },
+    {
+     "url": "https://www.jiles.or.kr/damoa/library/library.htm",
+     "title": "제주평생교육장학진흥원 — 꿈바당어린이도서관 소개"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "제주",
+   "name": "제주특별자치도민속자연사박물관",
+   "area": "제주 제주시",
+   "desc": "제주의 자연 생태와 생활문화를 전시하며, 학기 중 학교 연계 교육과 방학 중 어린이 자연사 체험 프로그램을 운영한다.",
+   "indoor": true,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.jeju.go.kr/museum/index.htm",
+     "title": "제주특별자치도민속자연사박물관 공식 홈페이지"
+    },
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000013332",
+     "title": "비짓제주 — 가족과 함께 여행하기 좋은 관광지"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "제주",
+   "name": "서귀포시 어린이 건강체험관",
+   "area": "제주 서귀포",
+   "desc": "4~9세 아동 대상으로 10개 건강영역을 체험·놀이형으로 배우는 공공 교육시설로, 기관·개인 교육 프로그램을 정기 운영한다.",
+   "indoor": true,
+   "free": true,
+   "age": "4~9세",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.jejudomin.co.kr/news/articleView.html?idxno=308241",
+     "title": "제주도민일보 — 서귀포시 어린이 건강체험관 운영 안내"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "제주",
+   "name": "감귤 체험 농장 (제주 친환경 귤 지도)",
+   "area": "제주 서귀포",
+   "desc": "서귀포 일대 친환경 인증 감귤 농장에서 귤 따기·감귤꽃 체험 등 농촌어촌체험을 계절별로 즐길 수 있다.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000012807",
+     "title": "비짓제주 — 제주 감귤 농장 체험 친환경 귤 지도"
+    },
+    {
+     "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=fbf70ba1-bd61-4b71-9b52-dbb05d173385",
+     "title": "대한민국 구석구석 — 아이와 가기 좋은 체험 농장"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "제주",
+   "name": "제주올레캠핑장",
+   "area": "제주 제주시",
+   "desc": "숲으로 둘러싸인 분지형 캠핑장으로 오토캠핑·글램핑·카라반을 모두 운영하며, 아이 전용 놀이터·수영장·워터슬라이드·트램펄린 완비.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://m.thankqcamping.com/resv/view.hbb?cseq=4181",
+     "title": "땡큐캠핑 — 제주올레캠핑장"
+    },
+    {
+     "url": "https://www.yeogi.com/accommodation/camping/kr/%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84/%EC%A0%9C%EC%A3%BC%EC%8B%9C",
+     "title": "여기어때 — 제주시 캠핑 추천"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "제주",
+   "name": "광이멀스테이 풀빌라&글램핑",
+   "area": "제주 제주시",
+   "desc": "한림읍 한라산·바다 조망 독채 글램핑으로, 사계절 온수풀과 아이용 라탄 장난감·정원 미니텐트 등 가족 특화 시설 갖춤.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "http://gimjeju.co.kr/",
+     "title": "광이멀스테이 공식 홈페이지"
+    },
+    {
+     "url": "https://www.yeogi.com/domestic-accommodations/75163",
+     "title": "여기어때 — 광이멀스테이 풀빌라&글램핑"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "제주",
+   "name": "선셋코스트 카라반&캠핑장",
+   "area": "제주 서귀포",
+   "desc": "돌고래 서식지 영락리 바다 앞 오션뷰 오토캠핑·카라반 시설로, 개별 데크 바베큐 가능하며 아동 요금 체계 별도 운영.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "http://www.sunsetcoast.kr/",
+     "title": "선셋코스트 카라반&캠핑장 공식 홈페이지"
+    },
+    {
+     "url": "https://www.yeogi.com/domestic-accommodations/74996",
+     "title": "여기어때 — 서귀포 선셋코스트"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "제주",
+   "name": "서귀포 코티지캠핑",
+   "area": "제주 서귀포",
+   "desc": "안덕면 프리미엄 독채 글램핑으로 사이트별 프라이빗 대형 자쿠지와 수영장을 갖춰 어린 자녀와 여유롭게 물놀이 가능.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://nol.yanolja.com/stay/domestic/10064085",
+     "title": "야놀자 NOL — 서귀포 코티지캠핑"
+    },
+    {
+     "url": "https://www.yeogi.com/kr/camping/%EC%A0%9C%EC%A3%BC%EB%8F%84/%EC%84%9C%EA%B7%80%ED%8F%AC",
+     "title": "여기어때 — 서귀포 캠핑 추천"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "제주",
+   "name": "이스트몽블루 카라반",
+   "area": "제주 제주시",
+   "desc": "성산일출봉·우도 조망의 종달리 호텔식 카라반으로, 개별 수영장과 바베큐 시설을 갖추고 최대 10인 대가족도 수용 가능.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.yeogi.com/domestic-accommodations/74231",
+     "title": "여기어때 — 제주 이스트몽블루 카라반"
+    },
+    {
+     "url": "https://nol.yanolja.com/stay/domestic/10055703",
+     "title": "야놀자 NOL — 이스트몽블루카라반캠핑"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "제주",
+   "name": "케이글램핑 애월",
+   "area": "제주 제주시",
+   "desc": "애월 해발 300m 소길리의 럭셔리 글램핑으로 바비큐·불멍·일출·별자리 감상 등 체험 프로그램을 갖춘 자연 속 독채 시설.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.kglamping.com/",
+     "title": "케이글램핑 애월 공식 홈페이지"
+    },
+    {
+     "url": "https://m.thankqcamping.com/resv/view.hbb?cseq=16267",
+     "title": "땡큐캠핑 — 케이글램핑 애월"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "제주",
+   "name": "액티브파크 제주 (클립앤클라임)",
+   "area": "제주 제주시",
+   "desc": "실내 암벽등반 시설 클립앤클라임과 레저카트, 키즈카페를 함께 즐길 수 있는 복합 액티비티 파크 (만 6세 이상 클라이밍 이용 가능).",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_200000000010214",
+     "title": "Visit Jeju : 액티브파크 제주"
+    },
+    {
+     "url": "https://mom-mom.net/travel/places/65bc5a6b0c56730fa3cf52be",
+     "title": "액티브파크 클립앤클라임 — 제주 아이와 갈 곳 추천 (맘맘)"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "제주",
+   "name": "제주레포츠랜드 카트",
+   "area": "제주 제주시",
+   "desc": "길이 1.2km 국내 최대 규모 카트장으로, 145cm 미만 아이도 보호자 동승 2인승으로 이용 가능.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000019535",
+     "title": "Visit Jeju : 제주레포츠랜드"
+    },
+    {
+     "url": "https://www.waug.com/ko/activities/102618",
+     "title": "제주 레포츠랜드 카트 체험권 — 와그"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "제주",
+   "name": "다희연 짚라인",
+   "area": "제주 제주시",
+   "desc": "한라산과 녹차밭 위를 가로지르는 4단계 짚라인으로, 아이도 이용 가능한 연중무휴 가족 액티비티.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=53994e14-2ff7-4907-8240-6a7d75b852b1",
+     "title": "다희연 짚라인 체험 — 대한민국 구석구석"
+    },
+    {
+     "url": "https://www.tamnao.com/web/sp/detailPrdt.do?prdtNum=SP00001515",
+     "title": "왕복짚라인 — 제주도 공공플랫폼 탐나오"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "제주",
+   "name": "제주라프 짚라인",
+   "area": "제주 제주시",
+   "desc": "삼나무 숲·연못·녹차밭을 지나는 700m 4코스 짚라인으로 특별한 기술 없이 남녀노소 탑승 가능.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500006",
+     "title": "Visit Jeju : 제주라프 짚라인"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "제주",
+   "name": "히어로플레이파크 제주점",
+   "area": "제주 제주시",
+   "desc": "트램펄린을 포함한 미국식 초대형 실내 체험 테마파크로, 아이들의 신체 활동 액티비티를 폭넓게 제공.",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://mom-mom.net/travel/places/637c65511befbbe575032c81",
+     "title": "히어로플레이파크 제주점 — 맘맘"
+    },
+    {
+     "url": "http://www.herokidspark.co.kr/",
+     "title": "히어로플레이파크 공식 사이트"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "제주",
+   "name": "아르떼 키즈파크",
+   "area": "제주 제주시",
+   "desc": "트램펄린존·카트놀이·미디어 체험 등 16가지 놀이로 구성된 실내 키즈 액티비티 파크 (애월읍 위치).",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.waug.com/ko/activities/137388",
+     "title": "제주 아르떼 키즈파크 입장권 — 와그"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "경상",
+   "name": "달성공원 동물원",
+   "area": "대구 중구",
+   "desc": "대구 도심 속 무료 동물원으로 호랑이·곰·기린 등 다양한 동물을 관람할 수 있는 가족 나들이 명소.",
+   "indoor": false,
+   "free": true,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://namu.wiki/w/%EB%8C%80%EA%B5%AC%EB%8F%99%EB%AC%BC%EC%9B%90",
+     "title": "대구동물원 - 나무위키"
+    },
+    {
+     "url": "https://www.gowithchild.com/%EB%8C%80%EA%B5%AC-%EC%95%84%EC%9D%B4%EC%99%80-%EA%B0%80%EB%B3%BC%EB%A7%8C%ED%95%9C%EA%B3%B3-7%EB%B2%88%EC%A7%B8i-%EB%8B%AC%EC%84%B1%EA%B3%B5%EC%9B%90%EB%8F%99%EB%AC%BC%EC%9B%90/",
+     "title": "대구 아이와 가볼만한곳 — 달성공원(동물원) | Go with Child"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "경상",
+   "name": "대구 아쿠아리움 (Alive Aquarium)",
+   "area": "대구 동구",
+   "desc": "신세계백화점 9층에 위치한 실내 아쿠아리움으로, 대구·경북 유일의 KAZA 회원 시설이며 다양한 해양 생물을 관람할 수 있다.",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://daeguaqua.com/aliveaqua/price",
+     "title": "대구아쿠아리움 공식 사이트 — 입장료"
+    },
+    {
+     "url": "https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B5%AC%EC%95%84%EC%BF%A0%EC%95%84%EB%A6%AC%EC%9B%80",
+     "title": "대구아쿠아리움 — 위키백과"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "경상",
+   "name": "주렁주렁 실내동물원 경주점",
+   "area": "경북 경주",
+   "desc": "보문단지 내 실내 동물원으로 페넥여우·수달 등 다양한 동물과 직접 교감할 수 있는 체험형 시설.",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://zoolungzoolung.com/",
+     "title": "주렁주렁 공식 홈페이지"
+    },
+    {
+     "url": "https://travel.interpark.com/tna/products/16e3da2e-5f21-4199-8daa-0dd2e17dfb48",
+     "title": "경북 주렁주렁 실내동물원 경주점 | 인터파크투어"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "동물·자연",
+   "region": "경상",
+   "name": "주토피움",
+   "area": "경북 안동",
+   "desc": "알파카·라쿤·왈라비 등 야외 동물 먹이체험과 150여 종 곤충·파충류 실내 관람이 가능한 경북 최대 규모 동식물체험 테마파크.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://tourandong.com/public/sub1/sub1_5.cshtml?seq=1425",
+     "title": "주토피움 — 안동관광"
+    },
+    {
+     "url": "https://www.waug.com/ko/activities/130478",
+     "title": "경북 안동 주토피움 입장권 — 와그"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "경상",
+   "name": "대구시민안전테마파크",
+   "area": "대구 동구",
+   "desc": "지하철 탈출·소화전·완강기·응급처치 등 실제 재난 상황을 체험하는 무료 안전체험관으로, 6세 이상 어린이 동반 가족에게 적합하다.",
+   "indoor": true,
+   "free": true,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.daegu.go.kr/safe119/index.do",
+     "title": "대구시민안전테마파크 공식 홈페이지"
+    },
+    {
+     "url": "https://namu.wiki/w/%EB%8C%80%EA%B5%AC%EC%8B%9C%EB%AF%BC%EC%95%88%EC%A0%84%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC",
+     "title": "대구시민안전테마파크 - 나무위키"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "경상",
+   "name": "대구어린이세상",
+   "area": "대구 달서구",
+   "desc": "아기꿈·자연·사회·시간 탐험대 4개 테마 체험존에서 오감 체험을 할 수 있는 시립 어린이 복합 체험 교육 시설이며, 무료로 운영된다.",
+   "indoor": true,
+   "free": true,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://dcw.daegu.go.kr/",
+     "title": "대구어린이세상 공식 홈페이지"
+    },
+    {
+     "url": "https://namu.wiki/w/%EB%8C%80%EA%B5%AC%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%84%B8%EC%83%81",
+     "title": "대구어린이세상 - 나무위키"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "경상",
+   "name": "국립경주박물관 어린이박물관",
+   "area": "경북 경주",
+   "desc": "신라 천년 역사를 손으로 만지고 직접 체험하며 배울 수 있는 어린이 전용 박물관으로, 무료 입장이며 사전 예약 후 관람한다.",
+   "indoor": true,
+   "free": true,
+   "age": "유아~초등",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://gyeongju.museum.go.kr/kid/",
+     "title": "국립경주박물관 어린이박물관 공식 페이지"
+    },
+    {
+     "url": "https://gyeongju.museum.go.kr/kor/html/sub01/0101.html",
+     "title": "국립경주박물관 관람안내"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "경상",
+   "name": "안동 온혜농부들마을",
+   "area": "경북 안동",
+   "desc": "도산면 온혜마을에서 손모내기·고구마캐기·우리밀쿠키만들기 등 계절별 농촌 체험을 가족 단위로 즐길 수 있는 농촌체험휴양마을이다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://tourandong.com/public/sub2/sub5.cshtml?page=1&search=&searchKey=0&seq=1462",
+     "title": "온혜농부들마을 - 안동관광 공식 페이지"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "경상",
+   "name": "경주 농촌교육장·체험마을",
+   "area": "경북 경주",
+   "desc": "경주시 공식 관광 포털에서 안내하는 농촌교육장·체험마을로, 자연환경 속에서 아이들이 직접 농촌 문화를 체험할 수 있다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2324",
+     "title": "경주문화관광 - 농촌교육장·체험마을 안내"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "체험·교육",
+   "region": "경상",
+   "name": "안동 하회마을",
+   "area": "경북 안동",
+   "desc": "유네스코 세계문화유산으로 지정된 전통 민속마을에서 탈 만들기·전통 떡 만들기·한복 체험 등 한국 전통문화 체험 프로그램을 운영한다.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://beanfarm77.com/entry/%EC%95%84%EC%9D%B4%EC%99%80-%ED%95%A8%EA%BB%98-%EA%B0%80%EA%B8%B0-%EC%A2%8B%EC%9D%80-%EC%95%88%EB%8F%99-%EB%AF%BC%EC%86%8D-%EB%A7%88%EC%9D%84-%EA%B0%80%EC%A1%B1%EC%97%AC%ED%96%89-%EC%B2%B4%ED%97%98%EA%B5%90%EC%9C%A1-%EC%95%84%EC%9D%B4%EC%B6%94%EC%B2%9C",
+     "title": "아이와 함께 가기 좋은 안동 민속마을 체험 후기"
+    },
+    {
+     "url": "https://www.tourandong.com/public/sub2/sub3.cshtml",
+     "title": "안동관광 공식 체험 소개"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "경상",
+   "name": "오아시스글램핑",
+   "area": "경북 경주",
+   "desc": "글램핑·카라반 15동, 야외수영장·미니동물원·트램펄린 등 아이 전용 놀이시설이 풍부한 경주 가족 글램핑장.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.gyeongju.go.kr/tour/page.do?mnu_uid=2339&con_uid=577&cmd=2",
+     "title": "경주문화관광 오아시스글램핑 소개"
+    },
+    {
+     "url": "https://www.yeogi.com/accommodation/camping/kr/%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84/%EA%B2%BD%EC%A3%BC%EC%8B%9C",
+     "title": "여기어때 경주 캠핑·글램핑 베스트 10"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "경상",
+   "name": "별자리캠핑랜드",
+   "area": "경북 경주",
+   "desc": "글램핑·카라반·오토캠핑을 모두 운영하며, 대형 야외수영장·모래놀이터·트램펄린·미니골프 등 아이 놀이시설이 풍부한 사계절 캠핑장.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://starcampingland.com/",
+     "title": "별자리캠핑랜드 공식 홈페이지"
+    },
+    {
+     "url": "https://www.yeogi.com/accommodation/camping/kr/%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84/%EA%B2%BD%EC%A3%BC%EC%8B%9C",
+     "title": "여기어때 경주 캠핑·글램핑 베스트 10"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "경상",
+   "name": "팔공산글램핑",
+   "area": "경북 칠곡",
+   "desc": "팔공산 자락 계곡 옆 글램핑 10동, 냇가 물놀이·수영장·어린이 놀이시설 갖춘 대구 근교 가족 글램핑장.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://www.gocamping.or.kr/bsite/camp/info/read.do?c_no=3201&viewType=read01",
+     "title": "고캠핑 팔공산글램핑 정보"
+    },
+    {
+     "url": "https://mimisolsol.com/entry/%ED%8C%94%EA%B3%B5%EC%82%B0%EA%B8%80%EB%9E%A8%ED%95%91",
+     "title": "팔공산글램핑 후기 블로그"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "경상",
+   "name": "경상북도교육청 포항산누리오토캠핑장",
+   "area": "경북 포항",
+   "desc": "포항 죽장면 산속 데크 오토캠핑 15면, 계곡 물놀이·어린이 놀이시설·산책로가 있는 공공 캠핑장(화·수 휴무).",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.gocamping.or.kr/bsite/camp/info/read.do?c_no=100228&viewType=read01",
+     "title": "고캠핑 포항산누리오토캠핑장 정보"
+    },
+    {
+     "url": "https://www.gbe.kr/sannuri/cm/cntnts/cntntsView.do?mi=17798&cntntsId=7668",
+     "title": "경상북도교육청 포항산누리오토캠핑장 공식"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "경상",
+   "name": "임하호캠핑수상레저타운",
+   "area": "경북 안동",
+   "desc": "안동 임하호 수변에 글램핑 8동·카라반 11동·오토캠핑 24동 운영, 바나나보트·제트스키 등 수상레저와 캠핑을 함께 즐길 수 있는 가족 명소.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.tourandong.com/public/sub1/sub1_4.cshtml?seq=1466",
+     "title": "안동관광 임하호캠핑수상레저타운 소개"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "캠핑",
+   "region": "경상",
+   "name": "구미시 낙동강 캠핑장",
+   "area": "경북 구미",
+   "desc": "낙동강변 체육공원 내 공공 오토캠핑장으로, 카라반·오토캠핑·일반캠핑·평상을 갖추고 구미도시공사가 운영하는 저렴한 가족 캠핑지.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을"
+   ],
+   "sources": [
+    {
+     "url": "https://www.gmuc.or.kr/camping/index.do",
+     "title": "구미시 낙동강 캠핑장 공식 홈페이지"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "경상",
+   "name": "경주루지월드",
+   "area": "경북 경주",
+   "desc": "보문호 조망 사계절 루지 트랙(화랑 1.6km·천마 1.4km) 2코스를 가족 모두 탈 수 있는 아웃도어 카트형 액티비티 시설.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://gyeongju-luge.kr/",
+     "title": "경주루지월드 공식 홈페이지"
+    },
+    {
+     "url": "https://mom-mom.net/travel/places/650ce9267b6f8db33b8df065",
+     "title": "경주루지월드 — 경북 경주시에서 아이와 갈 곳 추천 (맘맘)"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "경상",
+   "name": "구미 에코랜드 짚코스터",
+   "area": "경북 구미",
+   "desc": "산림문화단지 내 짚코스터와 생태탐방 모노레일을 함께 즐길 수 있는 야외 액티비티 공간으로 어린이 요금이 별도 책정됨.",
+   "indoor": false,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://access.visitkorea.or.kr/opentour/detail.do?cotId=b1b33be1-ccda-4a4f-a276-dc9d93996d4e",
+     "title": "구미 에코랜드 — 열린관광 모두의 여행(한국관광공사)"
+    },
+    {
+     "url": "https://www.hankookilbo.com/News/Read/A2025060510040003824",
+     "title": "구미에코랜드, 어린이숲&항공·과학 체험전 개최 (한국일보, 2025)"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "경상",
+   "name": "대구아이스파크",
+   "area": "대구 동구",
+   "desc": "대구 동구에 위치한 연중무휴 실내 아이스링크로 어린이 포함 가족 스케이팅 이용 가능하며 스케이트 렌탈 포함 입장.",
+   "indoor": true,
+   "free": false,
+   "age": "",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "http://icepark.co.kr/",
+     "title": "대구아이스파크 공식 홈페이지"
+    },
+    {
+     "url": "https://www.welfarehello.com/community/hometownNews/c65b120a-4a2f-4b2e-a4a4-7968aa4581c6",
+     "title": "아이들과 함께 가볼 만한 대구아이스파크 (웰로)"
+    }
+   ],
+   "amenities": []
+  },
+  {
+   "category": "액티비티",
+   "region": "경상",
+   "name": "팔거천 야외스케이트장",
+   "area": "대구 북구",
+   "desc": "매년 겨울 팔거천변에 조성되는 야외 스케이트장·얼음썰매장으로 이용료 저렴(회당 1,000원~)하고 아이 동반 가족이 많이 찾음.",
+   "indoor": false,
+   "free": false,
+   "age": "전 연령",
+   "season": [
+    "겨울"
+   ],
+   "sources": [
+    {
+     "url": "https://palgeo.wlsland.com/",
+     "title": "팔거천 야외스케이트장 공식 사이트"
+    },
+    {
+     "url": "https://dgmbc.com/NewsArticle/814193",
+     "title": "대구 북구 팔거천 야외 스케이트장 12월 19일 개장 (대구MBC)"
+    }
+   ],
+   "amenities": []
   }
  ]
 }
