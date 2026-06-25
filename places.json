@@ -18085,6 +18085,38 @@
     }
    ],
    "amenities": []
+  },
+  {
+   "category": "공원",
+   "region": "수도권",
+   "name": "북서울꿈의숲",
+   "area": "서울 강북",
+   "desc": "옛 드림랜드 부지에 조성된 68만㎡ 도심 숲 공원. 유아숲체험원·상상어린이놀이터·점핑분수·사슴방사장·전망대가 있어 아이와 하루 나들이에 제격",
+   "indoor": false,
+   "free": true,
+   "age": "전연령",
+   "season": [
+    "봄",
+    "여름",
+    "가을",
+    "겨울"
+   ],
+   "amenities": [
+    "주차",
+    "유아차",
+    "수유실"
+   ],
+   "sources": [
+    {
+     "url": "https://parks.seoul.go.kr/parks/detailView.do?pIdx=125",
+     "title": "서울의 공원 — 북서울꿈의숲"
+    },
+    {
+     "url": "https://namu.wiki/w/%EB%B6%81%EC%84%9C%EC%9A%B8%EA%BF%88%EC%9D%98%EC%88%B2",
+     "title": "나무위키 — 북서울꿈의숲"
+    }
+   ],
+   "src": "suggested"
   }
  ]
 }
