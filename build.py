@@ -507,7 +507,6 @@ PAGE = """<!DOCTYPE html>
     <button id="vCard" class="vbtn" type="button">🗂️ 카드</button>
   </span>
 </div>
-<div class="nav">__NAV__</div>
 
 __SECTIONS__
 
