@@ -8280,7 +8280,7 @@
    "amenities": []
   },
   {
-   "category": "동물·자연",
+   "category": "테마파크·놀이공원",
    "region": "충청",
    "name": "대전 오월드 (O-World)",
    "area": "대전 중구",
@@ -8454,7 +8454,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "동물·자연",
    "region": "충청",
    "name": "대전 한밭수목원 곤충생태관",
    "area": "대전 서구",
@@ -8480,7 +8480,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "충청",
    "name": "국립중앙과학관 (꿈아띠체험관)",
    "area": "대전 유성구",
@@ -8871,7 +8871,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "충청",
    "name": "청주랜드 놀이공원",
    "area": "충북 청주",
@@ -8921,7 +8921,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "충청",
    "name": "의림지 파크랜드",
    "area": "충북 제천",
@@ -9073,7 +9073,7 @@
    "amenities": []
   },
   {
-   "category": "공원",
+   "category": "체험·교육",
    "region": "충청",
    "name": "충주자연생태체험관 (용교생태공원)",
    "area": "충북 충주",
@@ -9851,7 +9851,7 @@
    "amenities": []
   },
   {
-   "category": "숙소",
+   "category": "물놀이터",
    "region": "충청",
    "name": "스플라스 리솜 (덕산)",
    "area": "충남 예산",
@@ -9925,7 +9925,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "충청",
    "name": "삽교호놀이동산",
    "area": "충남 당진",
@@ -9949,7 +9949,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "충청",
    "name": "상록랜드(천안상록리조트 놀이공원)",
    "area": "충남 천안",
@@ -10587,7 +10587,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "충청",
    "name": "국립해양생물자원관 (씨큐리움)",
    "area": "충남 서천",
@@ -11004,7 +11004,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "전라",
    "name": "전주드림랜드",
    "area": "전북 전주",
@@ -11874,7 +11874,7 @@
    "amenities": []
   },
   {
-   "category": "액티비티",
+   "category": "놀이터",
    "region": "전라",
    "name": "덕진공원 야호맘껏숲놀이터",
    "area": "전북 전주",
@@ -13784,7 +13784,7 @@
    "amenities": []
   },
   {
-   "category": "동물·자연",
+   "category": "박물관·과학·전시",
    "region": "경상",
    "name": "국립수산과학관",
    "area": "부산 기장",
@@ -15150,7 +15150,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "경상",
    "name": "경남수학문화관",
    "area": "경남 창원",
@@ -15694,7 +15694,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "경상",
    "name": "이월드",
    "area": "대구 달서구",
@@ -15721,7 +15721,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "경상",
    "name": "경주월드",
    "area": "경북 경주",
@@ -15748,7 +15748,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "경상",
    "name": "금오랜드",
    "area": "경북 구미",
@@ -17126,7 +17126,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "제주",
    "name": "넥슨뮤지엄 (구 넥슨컴퓨터박물관)",
    "area": "제주 제주시",
@@ -17180,7 +17180,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "제주",
    "name": "제주특별자치도민속자연사박물관",
    "area": "제주 제주시",
@@ -17734,7 +17734,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "경상",
    "name": "국립경주박물관 어린이박물관",
    "area": "경북 경주",
