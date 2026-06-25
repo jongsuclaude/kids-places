@@ -446,7 +446,8 @@ PAGE = """<!DOCTYPE html>
   .rv-msg { font-size: 13px; color: #1a7f37; }
 
   /* 보기 토글 · 리스트뷰 · 아코디언 */
-  .resultbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; }
+  .resultbar { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 6px;
+               border-top: 1px solid #d4d4d9; margin-top: 16px; padding-top: 14px; }
   .viewtoggle { display: flex; gap: 4px; }
   .vbtn { font-size: 12px; padding: 5px 10px; border: 1px solid #ddd; border-radius: 8px;
           background: #fff; color: #515154; cursor: pointer; }
@@ -483,8 +484,7 @@ PAGE = """<!DOCTYPE html>
 </style></head><body class="view-list">
 <a id="top"></a>
 <h1>👨‍👩‍👧 아이랑 갈 만한 곳</h1>
-<div class="meta">전국 권역별 가이드 · 총 <b>__TOTAL__</b>곳
-  (★ 큐레이션 <b>__CUR__</b> · 🤖 자동수집 <b>__AUTO__</b>)</div>
+<div class="meta">전국 권역별 가이드 · 표시 <b id="vcount">0</b>곳 / 전체 __TOTAL__곳</div>
 
 <div class="topbar">
   <input id="q" class="search" type="search" placeholder="🔍 이름·지역 검색">
@@ -500,7 +500,6 @@ PAGE = """<!DOCTYPE html>
 </div>
 
 <div class="resultbar">
-  <span>표시 <b id="vcount">0</b>곳 / 전체 __TOTAL__곳</span>
   <span class="viewtoggle">
     <button id="expAll" class="vbtn" type="button">모두 펼치기</button>
     <button id="vList" class="vbtn active" type="button">📋 리스트</button>
