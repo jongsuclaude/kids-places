@@ -210,7 +210,7 @@ def card_html(p):
         f'data-region="{html.escape(display_region(p))}" '
         f'data-cat="{html.escape(p.get("category",""))}" '
         f'data-indoor="{indoor}" data-free="{free}" '
-        f'data-season="{html.escape(season_attr)}" data-source="{kind}" '
+        f'data-season="{html.escape(season_attr)}" data-source="{kind}" data-fav="0" '
         f'data-search="{search}">'
         f"{thumb}"
         f'<div class="card-h"><span class="cname">{name}</span>'
@@ -518,7 +518,7 @@ __SECTIONS__
 
 <script>
   var CAP = 8;
-  var DEF = { region: [], cat: "all", source: "curated", place: "all", cost: "all", season: "all", q: "" };
+  var DEF = { region: [], cat: "all", source: "curated", place: "all", cost: "all", season: "all", fav: "all", q: "" };
   var F = JSON.parse(JSON.stringify(DEF));
   var expanded = {};
 
@@ -535,6 +535,7 @@ __SECTIONS__
         if (arr.indexOf(F.season) < 0 && arr.indexOf("올시즌") < 0) return false;
       }
     }
+    if (F.fav === "1" && card.dataset.fav !== "1") return false;
     if (F.qtoks && F.qtoks.length) {
       var hay = card.dataset.search;
       for (var qi = 0; qi < F.qtoks.length; qi++) {
@@ -552,6 +553,7 @@ __SECTIONS__
     if (F.place !== "all") n++;
     if (F.cost !== "all") n++;
     if (F.season !== "all") n++;
+    if (F.fav !== "all") n++;
     return n;
   }
 
