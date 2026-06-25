@@ -132,7 +132,10 @@ def card_html(p):
         tags.append(tag("🤖 자동수집", "tag auto"))
     else:
         cat = p.get("category", "")
-        tags.append(tag("★ 큐레이션", "tag cur"))
+        if kind == "suggested":
+            tags.append(tag("🙋 우리 추천", "tag sug"))
+        else:
+            tags.append(tag("★ 큐레이션", "tag cur"))
         if cat in SHOW_PLACE:
             tags.append(tag("🏠 실내" if indoor == "y" else "🌳 실외", "tag place"))
         if cat in SHOW_COST:
@@ -223,7 +226,7 @@ def build():
     curated = load(DATA)
     auto = load(AUTO)
     for p in curated:
-        p["_kind"] = "curated"
+        p["_kind"] = "suggested" if p.get("src") == "suggested" else "curated"
     have = {norm(p.get("name", "")) for p in curated}
     auto_dedup = []
     for p in auto:
@@ -251,6 +254,8 @@ def build():
             in_region = [p for p in in_cat if p.get("region") == region]
             if not in_region:
                 continue
+            # 같은 시(area)끼리 묶이도록 정렬 (큐레이션·제보 먼저, 그다음 자동수집)
+            in_region.sort(key=lambda p: (p.get("area", ""), 0 if p.get("_kind") != "auto" else 1))
             cards = "\n".join(card_html(p) for p in in_region)
             groups.append(
                 f'<div class="region-group" data-region="{region}">'
@@ -281,7 +286,7 @@ def build():
     filters_html = "\n".join([
         chip_row("권역", "region", region_vals),
         chip_row("분류", "cat", cat_vals),
-        chip_row("출처", "source", [("all", "전체", False), ("curated", "★ 큐레이션", True), ("auto", "🤖 자동수집", False)]),
+        chip_row("출처", "source", [("all", "전체", False), ("curated", "★ 큐레이션", True), ("suggested", "🙋 우리 추천", False), ("auto", "🤖 자동수집", False)]),
         chip_row("실내외", "place", [("all", "전체", True), ("y", "🏠 실내", False), ("n", "🌳 실외", False)]),
         chip_row("비용", "cost", [("all", "전체", True), ("y", "무료", False), ("n", "유료", False)]),
         chip_row("계절", "season", [("all", "전체", True), ("봄", "봄", False), ("여름", "여름", False), ("가을", "가을", False), ("겨울", "겨울", False)]),
@@ -375,6 +380,7 @@ PAGE = """<!DOCTYPE html>
   .tag.cost { background: #e3f6e9; color: #1a7f37; }
   .tag.season { background: #fff1e0; color: #9a5b00; }
   .tag.cur { background: #efe6ff; color: #6b1ac4; }
+  .tag.sug { background: #e7f6ec; color: #1a7f37; }
   .tag.auto { background: #eef0f2; color: #8a8a8e; }
   .clinks { display: none; flex-wrap: wrap; gap: 8px; margin-top: 12px; align-items: center; }
   .card.open .clinks { display: flex; }
@@ -503,7 +509,7 @@ __SECTIONS__
   function pass(card) {
     if (F.region.length && F.region.indexOf(card.dataset.region) < 0) return false;
     if (F.cat !== "all" && card.dataset.cat !== F.cat) return false;
-    if (F.source !== "all" && card.dataset.source !== F.source) return false;
+    if (F.source !== "all") { var ds = card.dataset.source; if (F.source === "curated") { if (ds !== "curated" && ds !== "suggested") return false; } else if (ds !== F.source) return false; }
     if (F.place  !== "all" && card.dataset.indoor !== F.place) return false;
     if (F.cost   !== "all" && card.dataset.free !== F.cost) return false;
     if (F.season !== "all") {
