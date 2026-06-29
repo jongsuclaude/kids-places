@@ -19670,7 +19670,7 @@
    "amenities": []
   },
   {
-   "category": "공원",
+   "category": "동물·자연",
    "region": "수도권",
    "name": "한택식물원",
    "area": "경기 용인",
@@ -21401,7 +21401,7 @@
    "amenities": []
   },
   {
-   "category": "동물·자연",
+   "category": "박물관·과학·전시",
    "region": "수도권",
    "name": "의왕조류생태과학관",
    "area": "경기 의왕",
@@ -21428,7 +21428,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "수도권",
    "name": "국립과천과학관 (유아체험관)",
    "area": "경기 과천",
@@ -22056,7 +22056,7 @@
    "amenities": []
   },
   {
-   "category": "공원",
+   "category": "동물·자연",
    "region": "수도권",
    "name": "부천자연생태공원 (무릉도원수목원·부천식물원)",
    "area": "경기 부천",
@@ -22889,7 +22889,7 @@
    "amenities": []
   },
   {
-   "category": "체험·교육",
+   "category": "박물관·과학·전시",
    "region": "수도권",
    "name": "안산 어린이 천문대",
    "area": "경기 안산",
@@ -25804,7 +25804,7 @@
    "amenities": []
   },
   {
-   "category": "액티비티",
+   "category": "테마파크·놀이공원",
    "region": "수도권",
    "name": "파주 임진각 평화랜드",
    "area": "경기 파주",
@@ -26061,7 +26061,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "액티비티",
    "region": "수도권",
    "name": "동두천 놀자숲 야외 어드벤처",
    "area": "경기 동두천",
@@ -26163,7 +26163,7 @@
    "amenities": []
   },
   {
-   "category": "공원",
+   "category": "액티비티",
    "region": "수도권",
    "name": "동두천 놀자숲",
    "area": "경기 동두천",
@@ -27238,7 +27238,7 @@
    "amenities": []
   },
   {
-   "category": "공원",
+   "category": "동물·자연",
    "region": "수도권",
    "name": "평강랜드 (구 평강식물원)",
    "area": "경기 포천",
@@ -28414,7 +28414,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "테마파크·놀이공원",
    "region": "수도권",
    "name": "라바파크 (남양주 어린이비전센터)",
    "area": "경기 남양주",
@@ -28488,7 +28488,7 @@
    "amenities": []
   },
   {
-   "category": "놀이터",
+   "category": "공원",
    "region": "수도권",
    "name": "구리역공원",
    "area": "경기 구리",
