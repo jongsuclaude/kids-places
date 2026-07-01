@@ -27,3 +27,12 @@ public/
 __pycache__/
 *.pyc
 .DS_Store
+
+# === 비공개 백엔드·로컬 설정 — 공개 repo 노출 절대 금지 ===
+# 평가/블로그 백엔드(평가·휴게소 코드, D1/R2 바인딩, 시크릿 참조), 로컬 Claude 설정/스킬/훅,
+# 인수인계 문서(계정ID·암호·키 포함), 데이터 백업. git add -A 사고로도 안 새게 명시 차단.
+cloudflare/
+.claude/
+HANDOFF.md
+*.bak
+.wrangler/
